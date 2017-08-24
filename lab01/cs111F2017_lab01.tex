@@ -1,31 +1,33 @@
-% \input{111pre}
+\documentclass[11pt]{article}
 
-\documentclass[11pt, twosided]{article}
+\newcommand{\labyear}{2017}
+\newcommand{\labday}{Thursday}
+\newcommand{\labtime}{2:30 pm}
+
+\newcommand{\assigneddate}{Assigned: \labday, August 31, \labyear{} at \labtime{}}
+\newcommand{\duedate}{Due: \labday, September 7, \labyear{} at \labtime{}}
 
 \usepackage{fancyhdr}
+\usepackage{url}
 
 \usepackage[margin=1in]{geometry}
 \usepackage{fancyhdr}
-\pagestyle{fancy}
 
 \pagestyle{fancy}
+
 \fancyhf{}
-\rhead{Share\LaTeX}
-\lhead{Guides and tutorials}
+\rhead{Computer Science 111}
+\lhead{Laboratory Assignment One}
 \rfoot{Page \thepage}
-
-% \setlength{\topmargin}{0in}
-% \setlength{\textheight}{8.5in}
-% \setlength{\oddsidemargin}{0in}
-% \setlength{\evensidemargin}{0in}
-% \setlength{\textwidth}{6.5in}
+\lfoot{\duedate}
 
 \newcommand{\labtitle}[1]
-{\begin{center}
+{
+  \begin{center}
     \begin{center}
       \bf
       CMPSC 111\\Introduction to Computer Science I\\
-      Spring 2017\\
+      Fall 2017\\
       \medskip
     \end{center}
     \bf
@@ -37,7 +39,7 @@
 
 \thispagestyle{empty}
 
-\labtitle{Lab 1 \\ Assigned: Thursday, January 19, 2017 \\ Due: Thursday, January 26, 2017 at 2:30 pm}
+\labtitle{Laboratory 1 \\ \assigneddate{} \\ \duedate{}}
 
 \subsection*{Objective}
 
