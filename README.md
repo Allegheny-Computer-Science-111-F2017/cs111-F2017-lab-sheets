@@ -8,7 +8,7 @@ which these assignments were completed, please visit the [Computer Science 111
 Fall 2017 GitHub
 Organization](https://github.com/Allegheny-Computer-Science-111-F2017).
 
-# Problems or Praise
+## Problems or Praise
 
 If you have any problems with compiling or running these laboratory assignment
 sheets, then please create an issue in this repository using the "Issues" link
