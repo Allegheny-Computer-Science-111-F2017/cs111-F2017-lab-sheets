@@ -6,7 +6,8 @@ a laboratory assignment designed for use with [GitHub
 Classroom](https://classroom.github.com/). To learn more about the course in
 which these assignments were completed, please visit the [Computer Science 111
 Fall 2017 GitHub
-Organization](https://github.com/Allegheny-Computer-Science-111-F2017).
+Organization](https://github.com/Allegheny-Computer-Science-111-F2017). All of
+the LaTeX files in this repository are automatically compiled with Travis CI.
 
 ## Problems or Praise
 
