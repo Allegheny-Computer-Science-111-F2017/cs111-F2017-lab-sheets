@@ -1,12 +1,17 @@
+# install latex
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends latexmk
   texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra
   texlive-latex-recommended
 
+# create the _build directory
+# compile the LaTeX file and save the PDF in _build
 script:
 - mkdir _build
 - latexmk -pdf -outdir=_build lab01/cs111F2017_lab01.tex
 
+# securely deploy the PDF to the specified tag on GitHub
+# GitHub's web site provides "releases" as a link near "commits"
 deploy:
   provider: releases
   api_key:
@@ -15,5 +20,9 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
+
+# I could not get this to work correctly even though
+# the travis command-line tool automatically generated it
+
   # on:
     # repo: Allegheny-Computer-Science-111-F2017/cs111-F2017-labs
