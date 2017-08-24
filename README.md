@@ -7,7 +7,9 @@ Classroom](https://classroom.github.com/). To learn more about the course in
 which these assignments were completed, please visit the [Computer Science 111
 Fall 2017 GitHub
 Organization](https://github.com/Allegheny-Computer-Science-111-F2017). All of
-the LaTeX files in this repository are automatically compiled with Travis CI.
+the LaTeX files in this repository are automatically compiled with [Travis
+CI](https://travis-ci.org/), thus ensuring that they compile correctly and
+making the PDFs available in the GitHub repository.
 
 ## Problems or Praise
 
