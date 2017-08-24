@@ -14,4 +14,6 @@ deploy:
   file: _build/cs111F2017_lab01.pdf
   skip_cleanup: true
   on:
-    repo: Allegheny-Computer-Science-111-F2017/cs111-F2017-labs
+    tags: true
+  # on:
+    # repo: Allegheny-Computer-Science-111-F2017/cs111-F2017-labs
