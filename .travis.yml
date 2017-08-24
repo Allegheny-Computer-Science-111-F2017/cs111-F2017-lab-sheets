@@ -6,7 +6,7 @@ before_install:
 script:
 - mkdir _build
 - latexmk -pdf lab01/cs111F2017_lab01.tex
-- cp cs111F2017_lab01.pdf _build
+- cp lab01/cs111F2017_lab01.pdf _build
 
 deploy:
   provider: releases
