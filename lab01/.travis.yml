@@ -4,7 +4,7 @@ before_install:
   texlive-latex-recommended
 
 script:
-- latexmk -pdf cs111F2017_lab01.tex
+- latexmk -pdf lab01/cs111F2017_lab01.tex
 
 deploy:
   provider: releases
