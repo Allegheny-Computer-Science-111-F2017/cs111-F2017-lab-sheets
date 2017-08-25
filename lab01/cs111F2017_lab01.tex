@@ -1,5 +1,7 @@
 \documentclass[11pt]{article}
 
+% NOTE: The "Edit" sections are changed for each assignment
+
 % Edit these commands for each assignment
 
 \newcommand{\assignmentduedate}{September 7}
@@ -15,25 +17,27 @@
 
 % Edit this command to give the name to the main program
 
-\newcommand{\mainprogram}[1]{\lstinline{DisplayOutput}}
-\newcommand{\mainprogramsource}[1]{\lstinline{DisplayOutput.java}}
+\newcommand{\mainprogram}{\lstinline{DisplayOutput}}
+\newcommand{\mainprogramsource}{\lstinline{DisplayOutput.java}}
+
+% Edit this commands to describe key deliverables
+
+\newcommand{\reflection}{\lstinline{writing/reflection.md}}
 
 % Commands to describe key development tasks
 
-\newcommand{\gatorgraderstart}[1]{\command{./gatorgrader --start}}
-\newcommand{\gatorgradercheck}[1]{\command{./gatorgrader --check}}
-\newcommand{\gradlebuild}[1]{\command{gradle build}}
-\newcommand{\gradlerun}[1]{\command{gradle run}}
+\newcommand{\gatorgraderstart}{\command{./gatorgrader --start}}
+\newcommand{\gatorgradercheck}{\command{./gatorgrader --check}}
+\newcommand{\gradlebuild}{\command{gradle build}}
+\newcommand{\gradlerun}{\command{gradle run}}
 
 % Commands to describe key git tasks
 
-\newcommand{\gitcommit}[1]{\command{git commit}}
-\newcommand{\gitpush}[1]{\command{git push}}
-\newcommand{\gitpull}[1]{\command{git push}}
+\newcommand{\gitcommitfile}[1]{``\lstinline{git commit #1}''}
 
-% Use commands to describe key deliverables
-
-\newcommand{\reflection}[1]{\command{writing/reflection.md}}
+\newcommand{\gitcommit}{\command{git commit}}
+\newcommand{\gitpush}{\command{git push}}
+\newcommand{\gitpull}{\command{git pull}}
 
 % Use this when displaying a new command
 
@@ -325,15 +329,15 @@ to automatically check if your submission meets the standards for correctness. F
 ensure that \mainprogram{} produces exactly four lines of output and that you use the \command{new Date()} construct in
 the Java source code.
 
-To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. If your
-one or more of deliverables do not meet all of the assignment's requirements, then you will see the following output in
-your terminal: \command{Overall, are there any mistakes in the assignment? Yes}. If you do have mistakes in your
-assignment, then you will need to review GatorGrader's output, find the mistake, and try to fix it. Once your program is
-compiling correctly and correctly fulfilling at least some of the assignment's requirements, you should transfer your
-files to GitHub using the \gitcommit{} and \gitpush{} commands.
-
-
-
+To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. If your one or
+more of deliverables do not meet all of the assignment's requirements, then you will see the following output in your
+terminal: \command{Overall, are there any mistakes in the assignment? Yes}. If you do have mistakes in your assignment,
+then you will need to review GatorGrader's output, find the mistake, and try to fix it. Once your program is compiling
+correctly and correctly fulfilling at least some of the assignment's requirements, you should transfer your files to
+GitHub using the \gitcommit{} and \gitpush{} commands. For instance, if you want to signal that the \mainprogramsource{}
+file is ready for transfer to GitHub you would first type the command \gitcommitfile{src/main/DisplayOutput.java} in
+your terminal. After typing and saving a commit message using a version of \command{gvim} that runs in your terminal,
+you can now type \gitpush{} in your terminal and see that the transfer to GitHub occurs.
 
 % TODO: Explain the steps for committing and pushing the code.
 
