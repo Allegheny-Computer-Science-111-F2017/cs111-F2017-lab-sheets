@@ -224,13 +224,16 @@ you should have created a GitHub repository with a name like
 instructor with documentation of the extenuating circumstances that you are facing, not accepting the assignment means
 that you automatically receiving a failing grade for it.
 
-Now you are ready to download the starting materials to your laboratory computer. Click the ``Clone or download'' button
-and, after ensuring that you have selected ``Clone with SSH'', please copy this command to your clipboard. At this
-point, you can open a new terminal window and type the command \command{mkdir cs111F2017}. To enter into this directory
-you should now type \command{cd cs111F2017}. Next, you can type the command \command{ls} and see that there are no files
-or directories inside of this directory. By typing \command{git clone} in your terminal and then pasting in the string
-that you copied from the GitHub site you will download all of the code for this assignment. For instance, if the course
-instructor ran the \command{git clone} command it the terminal, it would look like:
+Before you move to the next step of this assignment, please make sure that you read all of the content on the web site
+for your new GitHub repository, paying attention to the technical details about the commands that you will type and the
+output that your program must produce. Now you are ready to download the starting materials to your laboratory computer.
+Click the ``Clone or download'' button and, after ensuring that you have selected ``Clone with SSH'', please copy this
+command to your clipboard. At this point, you can open a new terminal window and type the command \command{mkdir
+cs111F2017}. To enter into this directory you should now type \command{cd cs111F2017}. Next, you can type the command
+\command{ls} and see that there are no files or directories inside of this directory. By typing \command{git clone} in
+your terminal and then pasting in the string that you copied from the GitHub site you will download all of the code for
+this assignment. For instance, if the course instructor ran the \command{git clone} command it the terminal, it would
+look like:
 
 \begin{lstlisting}
   git clone https://github.com/Allegheny-Computer-Science-111-F2017/computer-science-111-fall-2017-lab-1-gkapfham.git
@@ -254,14 +257,15 @@ nothing appears (unless you happen to hit certain letters such as \command{i}, \
 others). This is because you are not in ``insert mode.'' To get into insert mode, just type the letter \command{i}
 (lower case). Once you do this, the window should show the word \command{--INSERT--} in the lower left corner.
 
-This laboratory assignment invites you to implement a Java program that displays four lines of output. The first line of
-output should display your name and then today's date. The next three lines should each display some words of advice
-that you want to share with the person running your program. You can accomplish the first task by typing
+This laboratory assignment invites you to implement a Java program that displays exactly four lines of output. The first
+output line should display your name and then today's date. The next three lines should each display some words of
+advice that you want to share with the person running your program. You can accomplish the first task by typing
 \command{System.out.println("Gregory M. Kapfhammer " + new Date());}, substituting your name for the name of the course
-instructor. When you are finished typing text in \program{gvim}, press the ESC key located in the upper left corner of
-the keyboard. This should remove the word \command{--INSERT--} from the bottom of the screen and take you out of insert
-mode. Use the \option{File/Save} menu to save your program. Alternatively, if you would like to use the keyboard to save
-your file, you can press \command{:w} when you are not in insert mode.
+instructor. Your program will produce three additional lines of output once you add three more
+\command{System.out.println} statements. When you are finished typing text in \program{gvim}, press the ESC key located
+in the upper left corner of the keyboard. This should remove the word \command{--INSERT--} from the bottom of the screen
+and take you out of insert mode. Use the \option{File/Save} menu to save your program. Alternatively, if you would like
+to use the keyboard to save your file, you can press \command{:w} when you are not in insert mode.
 
 Leaving the {\tt gvim} window open, go back to your terminal window. Type the command \command{javac Lab1.java} at the
 terminal window's prompt---this is the ``compile'' step of writing a Java program that transforms the source code into a
