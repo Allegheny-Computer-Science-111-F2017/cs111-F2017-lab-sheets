@@ -24,6 +24,10 @@
 \newcommand{\gradlebuild}[1]{\command{gradle build}}
 \newcommand{\gradlerun}[1]{\command{gradle run}}
 
+% Use commands to describe key deliverables
+
+\newcommand{\reflection}[1]{\command{writing/reflection.md}}
+
 % Use this when displaying a new command
 
 \newcommand{\command}[1]{``\lstinline{#1}''}
@@ -281,11 +285,15 @@ Java compiler to check your program for errors and get it ready to run. If you g
 error and the solution for resolving it. Re-save your program and then build it again by re-running the \gradlebuild{}.
 If you cannot build \mainprogram{} correctly, then please talk with a teaching assistant or the instructor.
 
-When all errors are eliminated, type \command{java Lab1} in the terminal window---this is the ``execute'' step that will
-run your program and produce the designated output.  You should see your name, today's date, the lab number, and two
-more lines of text. Make sure there are spaces separating words in your output (did you forget to put a space inside the
-quotation marks after your last name?). If not, then repair the program and re-compile and re-run it.  Once the program
-runs, please reflect on this process.  What step did you find to be the most challenging? Why?
+When all of the errors are eliminated, you can run your program by typing \gradlerun{} in the terminal window---this is
+the ``execute'' step that will run your program and produce the designated output. You should see your name, today's
+date and three more lines of text. Make sure there are spaces separating words in your output (did you forget to put a
+space inside the quotation marks after your last name?). If not, then repair the program and re-build and re-run it.
+Once the program runs, please reflect on this process. What step did you find to be the most challenging? Why? You
+should write your reflections in the file, called \reflection{}, that uses the Markdown writing language. You can learn
+more about Markdown by viewing the aforementioned GitHub guide. To complete this aspect of the assignment, you should
+write one high-quality paragraph that reports on your experiences. Now, share your experiences with another member of
+the class!
 
 Since this is our first laboratory assignment and you are still learning how to use the appropriate hardware and
 software, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
