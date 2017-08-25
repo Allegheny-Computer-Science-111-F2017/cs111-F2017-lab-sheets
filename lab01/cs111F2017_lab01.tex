@@ -21,14 +21,14 @@
 
 % Use this when displaying a new command
 
-\newcommand{\command}[1]{``\lstinline{#1}''}
+\newcommand{\command}[1]{``\lstinline{#1}}
 \newcommand{\program}[1]{\lstinline{#1}}
 
 \usepackage{listings}
 \lstset{
-basicstyle=\small\ttfamily,
-columns=flexible,
-breaklines=true
+  basicstyle=\small\ttfamily,
+  columns=flexible,
+  breaklines=true
 }
 
 \usepackage{fancyhdr}
@@ -99,7 +99,7 @@ course's automated grading tool to assess your progress towards correctly comple
 
 \item {\bf Store your files in GitHub}. Starting with this laboratory assignment, you will be responsible for storing
   all of your files (e.g., Java source code and Markdown-based writing) in a Git repository using GitHub Classroom.
-  Please verify that you have saved your source code in your Git repository by using the ``{\tt git status}'' to ensure
+  Please verify that you have saved your source code in your Git repository by using the \command{git status} to ensure
   that everything is updated. You can see if your assignment submission meets the established correctness requirements
   by using the provided checking tools on your local computer and in checking the commits in GitHub.
 
@@ -177,16 +177,16 @@ to proceed.
   \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that you
     can use to support your communication with the GitHub servers. But, to start, this task requires you to type
     commands in a program that is known as a terminal. To run it, on the left side of your screen, click on the icon
-    that contains the ``{\tt >}'' symbol. Alternatively, you can type the ``Super'' key, start typing the word
+    that contains the \command{>} symbol. Alternatively, you can type the ``Super'' key, start typing the word
     ``terminal'', and then select that program. Another way to open a terminal involves typing the key combination {\tt
     <Ctrl>-<Alt>-t}. Once the terminal starts on Ubuntu, it will display as a box into which you can type commands.
 
-  \item Now that you have started the terminal, you will now need to type the {\tt ssh-keygen} command in it. Follow the
-    prompts to create your keys and save them in the default directory. That is, you should press ``Enter'' after you
-    are prompted ``{\tt Enter file in which to save the key ...  :}'' and then type your selected passphrase whenever
-    you are prompted to do so. Please note that a ``passphrase'' is like a password that you will type when you need to
-    prove your identify to GitHub. What files does {\tt ssh-keygen} produce? Where does this program store these files
-    by default? Do you have any questions about completing this step?
+  \item Now that you have started the terminal, you will now need to type the \command{ssh-keygen} command in it. Follow
+    the prompts to create your keys and save them in the default directory. That is, you should press ``Enter'' after you
+    are prompted \command{Enter file in which to save the key ...  :} and then type your selected passphrase whenever you
+    are prompted to do so. Please note that a ``passphrase'' is like a password that you will type when you need to prove
+    your identify to GitHub. What files does \command{ssh-keygen} produce? Where does this program store these files by
+    default? Do you have any questions about completing this step?
 
   \item Once you have created your ssh keys, you should raise your hand to invite either a teaching assistant or the
     course instructor to help you with the next steps. First, you must log into GitHub and look in the right corner for
@@ -206,7 +206,7 @@ to proceed.
     don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both about
     the necessary technology and the background and expertise of the other students in the class, the teaching
     assistants, and the course instructor. Remember, you can use Slack to talk with the instructor by using ``{\tt
-    @gkapfham}'' in a channel.
+    @gkapfham} in a channel.
 
 \end{enumerate}
 
@@ -225,9 +225,9 @@ that you automatically receiving a failing grade for it.
 
 Now you are ready to download the starting materials to your laboratory computer. Click the ``Clone or download'' button
 and, after ensuring that you have selected ``Clone with SSH'', please copy this command to your clipboard. At this
-point, you can open a new terminal window and type the command ``{\tt mkdir cs111F2017}''. To enter into this directory
-you should now type ``{\tt cd cs111F2017}''. Next, you can type the command ``{\tt ls}'' and see that there are no files
-or directories inside of this directory. By typing ``{\tt git clone}'' in your terminal and then pasting in the string
+point, you can open a new terminal window and type the command \command{mkdir cs111F2017}. To enter into this directory
+you should now type \command{cd cs111F2017}. Next, you can type the command \command{ls} and see that there are no files
+or directories inside of this directory. By typing \command{git clone} in your terminal and then pasting in the string
 that you copied from the GitHub site you will download all of the code for this assignment. For instance, if the course
 instructor ran the \command{git clone} command it the terminal, it would look like:
 
@@ -242,43 +242,43 @@ neighbor or a teaching assistant what you have discovered. In order view the sou
 Markdown-based writing assignment, you need a text editor. There are many different text editors on your workstation and
 you should feel free to explore these on your own. Since it is a powerful text editor known for helping computer
 scientists ``edit text at the speed of thought'', in this class we will normally use the text editor called ``{\tt
-gvim}''. Today, you will view and improve your first Java program in {\tt gvim}!
+gvim}. Today, you will view and improve your first Java program in {\tt gvim}!
 
 To load the source code of today's Java program into \program{gvim}, you should type \command{gvim
 src/main/java/labone/DisplayOutput.java}
 
-Now, you should type the following commands---exactly as shown---into the terminal window.  (The ``{\tt 1}'' is the
+Now, you should type the following commands---exactly as shown---into the terminal window.  (The \command{1} is the
 digit ``one'', not the letter ``ell.'') All Linux, Java, and {\tt gvim} commands are case-sensitive, so be sure to
-capitalize the file name ``{\tt Lab1.java}'' but nothing else.  Don't worry if you make a mistake---just ask the course
+capitalize the file name \command{Lab1.java} but nothing else.  Don't worry if you make a mistake---just ask the course
 instructor or a teaching assistant for help and then try again.
 
-After typing ``{\tt gvim Lab1.java}'', a new window should appear. This is the {\tt gvim} editor.  Since {\tt gvim} is a
+After typing \command{gvim Lab1.java}, a new window should appear. This is the {\tt gvim} editor.  Since {\tt gvim} is a
 modal editor, you may notice that if you start typing, nothing appears (unless you happen to hit certain letters such as
-``{\tt i},'' ``{\tt o}'', ``{\tt a}'', and a few others). This is because you are not in ``insert mode.'' To get into
-insert mode, just type the letter ``{\tt i}'' (lower case). Once you do this, the window should look like the one in
-Figure \ref{gvim-insert}. Note the word ``{\tt --INSERT--}'' in the lower left corner!
+\command{i},'' \command{o}, \command{a}, and a few others). This is because you are not in ``insert mode.'' To get into
+insert mode, just type the letter \command{i} (lower case). Once you do this, the window should look like the one in
+Figure \ref{gvim-insert}. Note the word \command{--INSERT--} in the lower left corner!
 
 Type the program from Figure \ref{lab1prog} into the window, substituting your actual name for the words ``Your Name''
 and including today's date in place of that which is listed on the fourth line.
 
 
 When you are finished, press the ESC
-key located in the upper left corner of the keyboard. This should remove the word ``{\tt --INSERT--}'' from the bottom
+key located in the upper left corner of the keyboard. This should remove the word \command{--INSERT--} from the bottom
 of the screen and take you out of insert mode.
 
 Use the ``File/Save'' command to save your program. Alternatively, if you would like to use the keyboard to save your
 file, you can press ``:w'' when you are not in insert mode.
 
-Leaving the {\tt gvim} window open, go back to your terminal window. Type the command ``{\tt javac Lab1.java}'' at the
+Leaving the {\tt gvim} window open, go back to your terminal window. Type the command \command{javac Lab1.java} at the
 terminal window's prompt---this is the ``compile'' step of writing a Java program that transforms the source code into a
 form that can be run on your computer.
 
 If you get any error messages, go back into {\tt gvim} and try to figure out what you mis-typed and fix it. Once you
 have solved the problem, make a note of the error and the solution for resolving it. Re-save your program and then
-re-compile it (i.e., re-run the ``{\tt javac}'' command). If you cannot get the program to compile correctly, then
+re-compile it (i.e., re-run the \command{javac} command). If you cannot get the program to compile correctly, then
 please talk with a teaching assistant or the course instructor.
 
-When all errors are eliminated, type ``{\tt java Lab1}'' in the terminal window---this is the ``execute'' step that will
+When all errors are eliminated, type \command{java Lab1} in the terminal window---this is the ``execute'' step that will
 run your program and produce the designated output.  You should see your name, today's date, the lab number, and two
 more lines of text. Make sure there are spaces separating words in your output (did you forget to put a space inside the
 quotation marks after your last name?). If not, then repair the program and re-compile and re-run it.  Once the program
@@ -294,14 +294,14 @@ Allegheny College's Honor Code.
 \vspace*{-.05in}
 
 Following the steps from the previous part of this laboratory assignment, create a program with a different name (e.g.,
-``{\tt Lab1Part2.java}''). Note that the name in your ``{\tt public class}'' statement must exactly match the portion of
-the file name preceding the ``{\tt .java}''.  For instance, you must have ``{\tt public class Lab1Part2}'' if the file
-name is ``{\tt Lab1Part2.java}''.
+\command{Lab1Part2.java}). Note that the name in your \command{public class} statement must exactly match the portion of
+the file name preceding the \command{.java}.  For instance, you must have \command{public class Lab1Part2} if the file
+name is \command{Lab1Part2.java}.
 
 Make sure that your program outputs something different than the program that you wrote previously---but still include
 your name and the date as shown in the example. Experiment with creating output that includes quotations, art work, or
 technical diagrams.  At minimum, this program should create more lines of output than your first one. Try to
-purposefully include errors in your program by, for instance, omitting the ``{\tt ;}'', capitalizing something
+purposefully include errors in your program by, for instance, omitting the \command{;}, capitalizing something
 incorrectly, misspelling a Java keyword, or making other mistakes. As you learn by trying new things, ask additional
 questions of or give a status update to the course instructor and a teaching assistant.
 
