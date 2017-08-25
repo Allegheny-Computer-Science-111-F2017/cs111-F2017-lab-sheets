@@ -248,25 +248,20 @@ are many different text editors on your workstation and you should feel free to 
 powerful text editor known for helping computer scientists ``edit text at the speed of thought'', in this class we will
 normally use the text editor called ``{\tt gvim}. Today, you will view and improve your first Java program in {\tt
 gvim}! To load the source code of today's Java program into \program{gvim}, you should type \command{gvim
-src/main/java/labone/DisplayOutput.java} in your terminal window.
+src/main/java/labone/DisplayOutput.java} in your terminal window. This should cause a new window, the \program{gvim}
+text editor, to appear on your screen. Since {\tt gvim} is a modal editor, you may notice that if you start typing,
+nothing appears (unless you happen to hit certain letters such as \command{i}, \command{o}, \command{a}, and a few
+others). This is because you are not in ``insert mode.'' To get into insert mode, just type the letter \command{i}
+(lower case). Once you do this, the window should show the word \command{--INSERT--} in the lower left corner.
 
-
-After typing \command{gvim Lab1.java}, a new window should appear. This is the {\tt gvim} editor.  Since {\tt gvim} is a
-modal editor, you may notice that if you start typing, nothing appears (unless you happen to hit certain letters such as
-\command{i},'' \command{o}, \command{a}, and a few others). This is because you are not in ``insert mode.'' To get into
-insert mode, just type the letter \command{i} (lower case). Once you do this, the window should look like the one in
-Figure \ref{gvim-insert}. Note the word \command{--INSERT--} in the lower left corner!
-
-Type the program from Figure \ref{lab1prog} into the window, substituting your actual name for the words ``Your Name''
-and including today's date in place of that which is listed on the fourth line.
-
-
-When you are finished, press the ESC
-key located in the upper left corner of the keyboard. This should remove the word \command{--INSERT--} from the bottom
-of the screen and take you out of insert mode.
-
-Use the ``File/Save'' command to save your program. Alternatively, if you would like to use the keyboard to save your
-file, you can press ``:w'' when you are not in insert mode.
+This laboratory assignment invites you to implement a Java program that displays four lines of output. The first line of
+output should display your name and then today's date. The next three lines should each display some words of advice
+that you want to share with the person running your program. You can accomplish the first task by typing
+\command{System.out.println("Gregory M. Kapfhammer " + new Date());}, substituting your name for the name of the course
+instructor. When you are finished typing text in \program{gvim}, press the ESC key located in the upper left corner of
+the keyboard. This should remove the word \command{--INSERT--} from the bottom of the screen and take you out of insert
+mode. Use the \option{File/Save} menu to save your program. Alternatively, if you would like to use the keyboard to save
+your file, you can press \command{:w} when you are not in insert mode.
 
 Leaving the {\tt gvim} window open, go back to your terminal window. Type the command \command{javac Lab1.java} at the
 terminal window's prompt---this is the ``compile'' step of writing a Java program that transforms the source code into a
