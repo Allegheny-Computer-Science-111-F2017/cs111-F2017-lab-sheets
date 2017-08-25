@@ -234,42 +234,19 @@ instructor ran the \command{git clone} command it the terminal, it would look li
   git clone https://github.com/Allegheny-Computer-Science-111-F2017/computer-science-111-fall-2017-lab-1-gkapfham.git
 \end{lstlisting}
 
-In order to create a program, you need a text editor. There are many different text editors on your workstation and
+After this command finishes, you can use \command{cd} to change into the new directory. Please continue to use the
+\command{cd} and \command{ls} commands to explore the files that have been automatically downloaded from GitHub. What
+files and directories do you see? What do you think is your purpose? Spend some time exploring, sharing with your
+neighbor or a teaching assistant what you have discovered. In order view the source code of a Java program or a
+Markdown-based writing assignment, you need a text editor. There are many different text editors on your workstation and
 you should feel free to explore these on your own. Since it is a powerful text editor known for helping computer
 scientists ``edit text at the speed of thought'', in this class we will use the text editor called ``{\tt gvim}''.
-Today, you will write your first program in {\tt gvim}.
-
-There are several ways to launch {\tt gvim}, but for today please use a method described in this paragraph.  On the
-left side of your screen, click on the icon that contains the ``{\tt >}'' symbol.  Alternatively, you can type the
-``Super'' key, start typing the word ``terminal'', and then select that program.  Another way to open a terminal
-involves typing the key combination {\tt <Ctrl>-<Alt>-t}.
-
-% (If you don't see it, right-click on the desktop and choose ``Open in Terminal'' from the menu.)  This opens a {\em
-%   terminal} window, a plain window with text. For today, you'll work with the terminal window rather than with folders,
-% icons, and the mouse.
+Today, you will view and improve your first Java program in {\tt gvim}.
 
 Now, you should type the following commands---exactly as shown---into the terminal window.  (The ``{\tt 1}'' is the
 digit ``one'', not the letter ``ell.'') All Linux, Java, and {\tt gvim} commands are case-sensitive, so be sure to
 capitalize the file name ``{\tt Lab1.java}'' but nothing else.  Don't worry if you make a mistake---just ask the course
 instructor or a teaching assistant for help and then try again.
-
-\vspace*{-.1in}
-\begin{verbatim}
-       mkdir cs111S2017
-       cd cs111S2017
-       mkdir labs
-       cd labs
-       mkdir lab1
-       cd lab1
-       gvim Lab1.java
-\end{verbatim}
-\vspace*{-.1in}
-
-Once you have finished typing these commands and you are sure that they worked correctly, please reflect on what these
-steps accomplished and then make a few notes about the process. Once you think that you understand the process
-completely, please turn to a person sitting near you and explain it verbally. After discussing these steps with your
-neighbor, did you both arrive at the same understanding of their purpose? If you did not, then please talk with a
-teaching assistant.
 
 After typing ``{\tt gvim Lab1.java}'', a new window should appear. This is the {\tt gvim} editor.  Since {\tt gvim} is a
 modal editor, you may notice that if you start typing, nothing appears (unless you happen to hit certain letters such as
@@ -278,7 +255,10 @@ insert mode, just type the letter ``{\tt i}'' (lower case). Once you do this, th
 Figure \ref{gvim-insert}. Note the word ``{\tt --INSERT--}'' in the lower left corner!
 
 Type the program from Figure \ref{lab1prog} into the window, substituting your actual name for the words ``Your Name''
-and including today's date in place of that which is listed on the fourth line. When you are finished, press the ESC
+and including today's date in place of that which is listed on the fourth line.
+
+
+When you are finished, press the ESC
 key located in the upper left corner of the keyboard. This should remove the word ``{\tt --INSERT--}'' from the bottom
 of the screen and take you out of insert mode.
 
