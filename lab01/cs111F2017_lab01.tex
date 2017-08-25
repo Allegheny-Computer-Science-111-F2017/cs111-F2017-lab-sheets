@@ -1,5 +1,7 @@
 \documentclass[11pt]{article}
 
+% Edit these commands for each assignment
+
 \newcommand{\assignmentduedate}{September 7}
 \newcommand{\assignmentassignedate}{August 31}
 \newcommand{\assignmentnumber}{One}
@@ -10,6 +12,14 @@
 
 \newcommand{\assigneddate}{Assigned: \labday, \assignmentassignedate, \labyear{} at \labtime{}}
 \newcommand{\duedate}{Due: \labday, \assignmentduedate, \labyear{} at \labtime{}}
+
+% Use commands to describe key tasks
+
+\newcommand{\gatorgraderstart}[1]{\command{./gatorgrader --start}}
+\newcommand{\gradlebuild}[1]{\command{gradle build}}
+\newcommand{\gradlerun}[1]{\command{gradle run}}
+
+% Use this when displaying a new command
 
 \newcommand{\command}[1]{``{\tt #1}''}
 
