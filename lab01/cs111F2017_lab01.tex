@@ -335,22 +335,25 @@ will see the following output in your terminal: \command{Overall, are there any 
 do have mistakes in your assignment, then you will need to review GatorGrader's output, find the mistake, and try to fix
 it. Once your program is building correctly, fulfilling at least some of the assignment's requirements, you should
 transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For instance, if you want to signal that
-the \mainprogramsource{} file is ready for transfer to GitHub you would first type the command
-\gitcommitfile{src/main/DisplayOutput.java} in your terminal. After typing and saving a commit message using a version
-of \command{gvim} that runs in your terminal, you can also type \gitpush{} in your terminal and see that the transfer to
-GitHub occurs.
+the \mainprogramsource{} file is ready for transfer to GitHub you would first type
+\gitcommitfile{src/main/labone/DisplayOutput.java} in your terminal. After typing and saving a commit message using a
+version of \command{gvim} that runs in your terminal, you can now type \gitpush{} in your terminal and see that the
+transfer to GitHub successfully occurs.
 
-% TODO: Explain the steps for committing and pushing the code.
-
-After the course instructor enables \step{continuous integration} with Travis CI, When you use the `git commit` command
-to transfer your source code to your GitHub repository, Travis CI will initialize a build of your assignment, checking
-to see if it meets all of the requirements. If both your source code and writing meet all of the established
-requirements, then you will see a green \checkmark{} in the listing of commits in GitHub. If your submission does not
-meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a programmer's grade for this
-assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the assignment's due date.
+After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
+\gitcommit{} command to transfer your source code to your GitHub repository, Travis CI will initialize a build of your
+assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of the
+established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub. If your submission
+does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a programmer's grade
+for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the assignment's
+due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you satisfied all of
+the main checks, allowing the course instructor to evaluate other aspects of your source code and writing. Unless you
+provide the instructor with documentation of the extenuating circumstances that you are facing, no late work will be
+considered towards your grade for this laboratory assignment.
 
 \section*{Summary of the Required Deliverables}
 
+\noindent
 This assignment invites you to submit printed and signed versions of the following deliverables:
 
 \vspace*{-.1in}
