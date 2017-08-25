@@ -13,6 +13,11 @@
 \newcommand{\assigneddate}{Assigned: \labday, \assignmentassignedate, \labyear{} at \labtime{}}
 \newcommand{\duedate}{Due: \labday, \assignmentduedate, \labyear{} at \labtime{}}
 
+% Edit this command to give the name to the main program
+
+\newcommand{\mainprogram}[1]{\lstinline{DisplayOutput}}
+\newcommand{\mainprogramsource}[1]{\lstinline{DisplayOutput.java}}
+
 % Use commands to describe key tasks
 
 \newcommand{\gatorgraderstart}[1]{\command{./gatorgrader --start}}
@@ -24,6 +29,7 @@
 \newcommand{\command}[1]{``\lstinline{#1}''}
 \newcommand{\program}[1]{\lstinline{#1}}
 \newcommand{\option}[1]{``{#1}''}
+\newcommand{\step}[1]{``{#1}''}
 
 \usepackage{listings}
 \lstset{
@@ -269,10 +275,11 @@ to use the keyboard to save your file, you can press \command{:w} when you are n
 gvim} window open, go back to your terminal window. Now, you are ready to learn to use new tools that build and run your
 program and check its correctness!
 
-If you get any error messages, go back into {\tt gvim} and try to figure out what you mis-typed and fix it. Once you
-have solved the problem, make a note of the error and the solution for resolving it. Re-save your program and then
-re-compile it (i.e., re-run the \command{javac} command). If you cannot get the program to compile correctly, then
-please talk with a teaching assistant or the course instructor.
+If you want to \step{build} your program you can type the command \gradlebuild{} in your terminal, thereby causing the
+Java compiler to check your program for errors and get it ready to run. If you get any error messages, go back into
+\program{gvim} and try to figure out what you mis-typed and fix it. Once you have solved the problem, make a note of the
+error and the solution for resolving it. Re-save your program and then build it again by re-running the \gradlebuild{}.
+If you cannot build \mainprogram{} correctly, then please talk with a teaching assistant or the instructor.
 
 When all errors are eliminated, type \command{java Lab1} in the terminal window---this is the ``execute'' step that will
 run your program and produce the designated output.  You should see your name, today's date, the lab number, and two
