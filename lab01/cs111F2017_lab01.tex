@@ -18,7 +18,7 @@
 % Edit this command to give the name to the main program
 
 \newcommand{\mainprogram}{\lstinline{DisplayOutput}}
-\newcommand{\mainprogramsource}{\lstinline{DisplayOutput.java}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/labone/DisplayOutput.java}}
 
 % Edit this commands to describe key deliverables
 
@@ -275,7 +275,7 @@ In order view the source code of a Java program or a Markdown-based writing assi
 are many different text editors on your workstation and you should feel free to explore these on your own. Since it is a
 powerful text editor known for helping computer scientists ``edit text at the speed of thought'', in this class we will
 normally use the text editor called ``{\tt gvim}. Today, you will view and improve your first Java program in {\tt
-gvim}! To load the source code of today's Java program into \program{gvim}, you should type \command{gvim
+  gvim}! To load the source code of today's Java program into \program{gvim}, you should type \command{gvim
 src/main/java/labone/DisplayOutput.java} in your terminal window. This should cause a new window, the \program{gvim}
 text editor, to appear on your screen. Since {\tt gvim} is a modal editor, you may notice that if you start typing,
 nothing appears (unless you happen to hit certain letters such as \command{i}, \command{o}, \command{a}, and a few
@@ -337,8 +337,8 @@ it. Once your program is building correctly, fulfilling at least some of the ass
 transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For instance, if you want to signal that
 the \mainprogramsource{} file is ready for transfer to GitHub you would first type
 \gitcommitfile{src/main/labone/DisplayOutput.java} in your terminal. After typing and saving a commit message using a
-version of \command{gvim} that runs in your terminal, you can now type \gitpush{} in your terminal and see that the
-transfer to GitHub successfully occurs.
+version of \command{gvim} that runs in your terminal, you can now type \gitpush{} and see that the transfer to GitHub is
+successful.
 
 After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
 \gitcommit{} command to transfer your source code to your GitHub repository, Travis CI will initialize a build of your
@@ -356,15 +356,18 @@ considered towards your grade for this laboratory assignment.
 \noindent
 This assignment invites you to submit, using GitHub, the following deliverables.
 
-\vspace*{-.1in}
 \begin{enumerate}
   \setlength{\itemsep}{0in}
-\item A commentary on the meaning and purpose of all the commands you typed in the terminal.
-\item A properly commented and formatted version of {\tt Lab1.java} and {\tt Lab1Part2.java}.
-\item The output from running {\tt Lab1} in the terminal window.
-\item The output from running {\tt Lab1Part2} in the terminal window.
+
+\item Stored in \reflection{}, a one-paragraph reflection on the commands that you typed in \gvim{} and the terminal
+  window. This Markdown-based document should explain on the input, output, and behavior of each command and the
+  challenges that you confronted when using them. For every challenge that your confronted, please explain your solution
+  for it.
+
+\item A properly commented, formatted, and correct version of \mainprogramsource{} that both meets all of the established
+  requirements and produces the desired output.
+
 \end{enumerate}
-\vspace*{-.1in}
 
 You will privately received a grade on this assignment and feedback on your submitted deliverables through GitHub.
 
