@@ -307,10 +307,10 @@ the ``execute'' step that will run your program and produce the designated outpu
 date and three more lines of text. Make sure there are spaces separating words in your output (did you forget to put a
 space inside the quotation marks after your last name?). If not, then repair the program and re-build and re-run it.
 Once the program runs, please reflect on this process. What step did you find to be the most challenging? Why? You
-should write your reflections in the file, called \reflection{}, that uses the Markdown writing language. You can learn
+should write your reflections in a file, called \reflection{}, that uses the Markdown writing language. You can learn
 more about Markdown by viewing the aforementioned GitHub guide. To complete this aspect of the assignment, you should
-write one high-quality paragraph that reports on your experiences. Now, share your experiences with another member of
-the class!
+write one high-quality paragraph that reports on your experiences. Now, verbally share your experiences with another
+class member!
 
 Since this is our first laboratory assignment and you are still learning how to use the appropriate hardware and
 software, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
@@ -324,12 +324,12 @@ the Google Java Style Guide available at \url{https://google.github.io/styleguid
 that contains your reflection must adhere to the standards described in the Markdown Syntax Guide
 \url{https://guides.github.com/features/mastering-markdown/}. Finally, your \reflection{} file should adhere to the
 Markdown standards established by the \step{Markdown linting} tool available at
-\url{https://github.com/markdownlint/markdownlint} and the writing standards set by the \step{prose linting} tool from
+\url{https://github.com/markdownlint/markdownlint/} and the writing standards set by the \step{prose linting} tool from
 \url{http://proselint.com/}. Instead of requiring you to manually check that your deliverables adhere to these
 industry-accepted standards, the GatorGrader tool that you will use in this laboratory assignment makes it easy for you
 to automatically check if your submission meets the standards for correctness. For instance, GatorGrader will check to
 ensure that \mainprogram{} produces exactly four lines of output and that you use the \command{new Date()} construct in
-the Java source code.
+the Java source code to cause the program to display today's date.
 
 To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. Once this step
 completes you can type \gatorgradercheck{}. If your work does not meet all of the assignment's requirements, then you
@@ -343,15 +343,16 @@ version of \command{gvim} that runs in your terminal, you can now type \gitpush{
 successful.
 
 After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
-\gitcommit{} command to transfer your source code to your GitHub repository, Travis CI will initialize a build of your
-assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of the
-established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub. If your submission
-does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a student's grade
-for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the assignment's
-due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you satisfied all of
-the main checks, allowing the course instructor to evaluate other aspects of your source code and writing. Unless you
-provide the instructor with documentation of the extenuating circumstances that you are facing, no late work will be
-considered towards your grade for this laboratory assignment.
+\gitcommit{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
+your assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of
+the established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub. If your
+submission does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a
+student's grade for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the
+assignment's due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you
+satisfied all of the main checks, thereby allowing the course instructor to evaluate other aspects of your source code
+and writing, as further described in \step{Evaluation} section of this assignment sheet. Unless you provide the
+instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
+towards your grade for this laboratory assignment.
 
 \section*{Summary of the Required Deliverables}
 
@@ -371,7 +372,7 @@ assignment invites you to submit, using GitHub, the following deliverables.
 
 \end{enumerate}
 
-\section*{Evaluating Your Laboratory Assignment}
+\section*{Evaluation of Your Laboratory Assignment}
 
 Using a report that the instructor shares with you through the commit log in GitHub, you will privately received a grade
 on this assignment and feedback on your submitted deliverables. Your grade for the assignment will be a function of the
