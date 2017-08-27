@@ -43,6 +43,8 @@
 
 \newcommand{\command}[1]{``\lstinline{#1}''}
 \newcommand{\program}[1]{\lstinline{#1}}
+\newcommand{\url}[1]{\lstinline{#1}}
+\newcommand{\channel}[1]{\lstinline{#1}}
 \newcommand{\option}[1]{``{#1}''}
 \newcommand{\step}[1]{``{#1}''}
 
@@ -58,7 +60,7 @@
 }
 
 \usepackage{fancyhdr}
-\usepackage{url}
+% \usepackage{url}
 
 \usepackage[margin=1in]{geometry}
 \usepackage{fancyhdr}
@@ -191,21 +193,21 @@ to proceed.
 \begin{enumerate}
 
   \item If you do not already have a GitHub account, then please go to the GitHub web site and create one, making sure
-    that you use your {\tt allegheny.edu} email address so that you can join GitHub as a student at an accredited
+    that you use your \command{allegheny.edu} email address so that you can join GitHub as a student at an accredited
     educational institution. You are also encouraged to sign up for GitHub's ``Student Developer Pack'' at
-    \url{https://education.github.com/pack}, qualifying you to receive free software development tools. Also, please
-    make sure that you add a description of yourself and an appropriate professional photograph to your GitHub profile.
-    Unless your username is taken, you should also pick your GitHub username to be the same as Allegheny's Google
-    account. Now, in the {\tt \#labs} channel of our Slack team, please type your full name, {\tt allegheny.edu} email
+    \url{https://education.github.com/pack}, qualifying you to receive free software development tools. Additionally,
+    please add a description of yourself and an appropriate professional photograph to your GitHub profile. Unless your
+    username is taken, you should also pick your GitHub username to be the same as Allegheny's Google email account.
+    Now, in the \channel{#labs} channel of our Slack team, please type your full name, \command{allegheny.edu} email
     address, and your new GitHub username. If you have already typed this information into Slack during a prior class,
     you do not need to do so again.
 
-  \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that you
-    can use to support your communication with the GitHub servers. But, to start, this task requires you to type
-    commands in a program that is known as a terminal. To run it, on the left side of your screen, click on the icon
-    that contains the \command{>} symbol. Alternatively, you can type the ``Super'' key, start typing the word
-    ``terminal'', and then select that program. Another way to open a terminal involves typing the key combination {\tt
-    <Ctrl>-<Alt>-t}. Once the terminal starts on Ubuntu, it will display as a box into which you can type commands.
+  \item If you have never done so before, you must use the \command{ssh-keygen} program to create secure-shell keys that
+    you can use to support your communication with GitHub. But, to start, this task requires you to type commands in a
+    program that is known as a terminal. To run it, on the left side of your screen, click on the icon that contains the
+    \command{>} symbol. Alternatively, you can type the ``Super'' key, start typing the word ``terminal'', and then
+    select that program. Another way to open a terminal involves typing the key combination \command{<Ctrl>-<Alt>-t}.
+    Once the Ubuntu terminal starts, it will display as a box into which you can type commands.
 
   \item Now that you have started the terminal, you will now need to type the \command{ssh-keygen} command in it. Follow
     the prompts to create your keys and save them in the default directory. That is, you should press ``Enter'' after you
