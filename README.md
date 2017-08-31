@@ -23,6 +23,11 @@ the [Releases](https://github.com/Allegheny-Computer-Science-111-F2017/cs111-F20
 for this repository. All release numbers in this repository adhere to the
 [Semantic Versioning](http://semver.org/) standard.
 
+## Acknowledgements
+
+We gratefully acknowledge Cassandra Colon for finding and explaining how to fix
+a mistake in the commands for running the GatorGrader program.
+
 ## Problems or Praise
 
 If you have any problems with compiling or using these laboratory assignment
