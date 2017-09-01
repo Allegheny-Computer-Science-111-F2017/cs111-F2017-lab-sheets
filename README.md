@@ -26,7 +26,8 @@ for this repository. All release numbers in this repository adhere to the
 ## Acknowledgements
 
 We gratefully acknowledge Cassandra Colon for finding and explaining how to fix
-a mistake in the commands for running the GatorGrader program.
+a mistake in the commands for running the GatorGrader program. Also, we thank
+Ness T. for finding a mistake in a directory specification in an assignment.
 
 ## Problems or Praise
 
