@@ -37,7 +37,9 @@
 % Commands to describe key git tasks
 
 \newcommand{\gitcommitfile}[1]{\command{git commit #1}}
+\newcommand{\gitaddfile}[1]{\command{git add #1}}
 
+\newcommand{\gitadd}{\command{git add}}
 \newcommand{\gitcommit}{\command{git commit}}
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
@@ -339,12 +341,12 @@ completes you can type \gatorgradercheck{}. If your work does not meet all of th
 will see the following output in your terminal: \command{Overall, are there any mistakes in the assignment? Yes}. If you
 do have mistakes in your assignment, then you will need to review GatorGrader's output, find the mistake, and try to fix
 it. Once your program is building correctly, fulfilling at least some of the assignment's requirements, you should
-transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For instance, if you want to signal that
+transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that
 the \mainprogramsource{} file is ready for transfer to GitHub you would first type
-\gitcommitfile{src/main/labone/DisplayOutput.java} in your terminal. After typing and saving a commit message using a
-version of \command{gvim} that runs in your terminal, you can now type \gitpush{} and see that the transfer to GitHub is
-successful. If you notice that transferring your code or writing to GitHub did not work correctly, then please try to
-determine why, asking a teaching assistant or the course instructor for assistance, if necessary.
+\gitaddfile{src/main/java/labone/DisplayOutput.java} in your terminal. Then you can type \command{git commit -a -m "Type
+your own message"}, followed by typing \gitpush{} and see that the transfer to GitHub is successful. If you notice that
+transferring your code or writing to GitHub did not work correctly, then please try to determine why, asking a teaching
+assistant or the course instructor for assistance, if necessary.
 
 After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
 \gitcommit{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
