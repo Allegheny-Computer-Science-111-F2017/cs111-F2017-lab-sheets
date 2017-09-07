@@ -233,14 +233,14 @@ output line should display your name and then today's date. You can accomplish t
 \command{System.out.println("Gregory M. Kapfhammer " + new Date());}, substituting your name for the name of the course
 instructor. Your program will produce three additional lines of output once you add three more
 \command{System.out.println} statements. The next three lines will feature the output of numerical values, with the
-final line outputting the result of a computation with variables. Please see the source code for more details!
+final line outputting the result of a computation with variables. Please see the Java source code comments for more
+details!
 
 When you are finished typing text Java code in \program{gvim}, press the ESC key located in the upper left corner of the
 keyboard. This should remove the word \command{--INSERT--} from the bottom of the screen and take you out of insert
 mode. Use the \option{File/Save} menu to save your program. Alternatively, if you would like to use the keyboard to save
 your file, you can press \command{:w} when you are not in insert mode. Leaving the {\tt gvim} window open, go back to
-your terminal window. Now, you are ready to learn to use new tools that build and run your program and check its
-correctness!
+your terminal window.
 
 If you want to \step{build} your program you can type the command \gradlebuild{} in your terminal, thereby causing the
 Java compiler to check your program for errors and get it ready to run. If you get any error messages, go back into
@@ -255,10 +255,10 @@ space inside the quotation marks after your last name?). If not, then repair the
 Once the program runs, please reflect on this process. What step did you find to be the most challenging? Why? You
 should write your reflections in a file, called \reflection{}, that uses the Markdown writing language. You can learn
 more about Markdown by viewing the aforementioned GitHub guide. To complete this aspect of the assignment, you should
-write one high-quality paragraph that reports on your experiences. Now, verbally share your experiences with another
-class member!
+write one high-quality paragraph that reports on your experiences. Today, you should focus on building a better
+understanding of each command --- if there is one that you do not understand, please ask someone!
 
-Since this is our first laboratory assignment and you are still learning how to use the appropriate hardware and
+Since this is our second laboratory assignment and you are still learning how to use the appropriate hardware and
 software, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
 about the necessary technology and the background and expertise of the other students in the class, the teaching
 assistants, and the course instructor.
@@ -286,8 +286,8 @@ transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. Fo
 the \mainprogramsource{} file is ready for transfer to GitHub you would first type
 \gitaddfile{src/main/java/labone/DisplayOutput.java} in your terminal. Then you can type \command{git commit -a -m "Type
 your own message"}, followed by typing \gitpush{} and see that the transfer to GitHub is successful. If you notice that
-transferring your code or writing to GitHub did not work correctly, then please try to determine why, asking a teaching
-assistant or the course instructor for assistance, if necessary.
+the network communication with GitHub did not work correctly, then please try to determine why, asking an assistant or
+the instructor for assistance, if necessary.
 
 After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
 \gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
@@ -331,6 +331,11 @@ both your technical writing and the comments in your source code. If your submis
 instructor will reduce your grade for the assignment while still considering the regularity with which you committed to
 your GitHub repository and the overall quality of your partially completed work. Please see the instructor if you have
 questions about the evaluation of this laboratory assignment.
+
+Please note that at the time this assignment was released, the Travis CI servers were not available for testing and thus
+you will not immediately be able to observe the \checkmark{} or \naughtmark{} in your commit listing on GitHub. Once
+this service again becomes available, you will be able to complete this step of the assignment. Please see the
+instructor if you have questions about this issue.
 
 \section*{Adhering to the Honor Code}
 
