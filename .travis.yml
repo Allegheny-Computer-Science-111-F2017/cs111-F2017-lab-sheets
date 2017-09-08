@@ -22,9 +22,3 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-
-# I could not get this to work correctly even though
-# the travis command-line tool automatically generated it
-
-  # on:
-    # repo: Allegheny-Computer-Science-111-F2017/cs111-F2017-labs
