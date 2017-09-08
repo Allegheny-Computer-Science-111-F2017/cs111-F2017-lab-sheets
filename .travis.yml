@@ -5,13 +5,13 @@ before_install:
   texlive-latex-recommended
 
 # create the _build directory
-# compile the LaTeX file and save the PDF in _build
+# compile the LaTeX files and save the PDF in _build
 script:
 - mkdir _build
 - latexmk -pdf -outdir=_build lab01/cs111F2017_lab01.tex
 - latexmk -pdf -outdir=_build lab02/cs111F2017_lab02.tex
 
-# securely deploy the PDF to the specified tag on GitHub
+# securely deploy the PDFs to the specified tag on GitHub
 # GitHub's web site provides "releases" as a link near "commits"
 deploy:
   provider: releases
