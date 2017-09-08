@@ -44,6 +44,9 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
+\newcommand{\gitaddmainprogram}{\command{git add src/main/java/labtwo/ComputeMoonDistance.java}}
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/labtwo/ComputeMoonDistance.java -m "Your message"}}
+
 % Use this when displaying a new command
 
 \newcommand{\command}[1]{``\lstinline{#1}''}
@@ -283,11 +286,10 @@ will see the following output in your terminal: \command{Overall, are there any 
 do have mistakes in your assignment, then you will need to review GatorGrader's output, find the mistake, and try to fix
 it. Once your program is building correctly, fulfilling at least some of the assignment's requirements, you should
 transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that
-the \mainprogramsource{} file is ready for transfer to GitHub you would first type
-\gitaddfile{src/main/java/labtwo/ComputeMoonDistance.java} in your terminal. Then you can type \command{git commit -a -m "Type
-your own message"}, followed by typing \gitpush{} and see that the transfer to GitHub is successful. If you notice that
-the network communication with GitHub did not work correctly, then please try to determine why, asking an assistant or
-the instructor for assistance, if necessary.
+the \mainprogramsource{} file has been changed and is ready for transfer to GitHub you would first type
+\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and checking to see that the transfer to GitHub
+is successful. If you notice that the network communication with GitHub did not work correctly, then please try to
+determine why, asking a teaching assistant or the instructor for assistance, if necessary.
 
 After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
 \gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
