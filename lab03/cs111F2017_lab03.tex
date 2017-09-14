@@ -19,6 +19,7 @@
 
 \newcommand{\mainprogram}{\lstinline{TipCalculator}}
 \newcommand{\mainprogramsource}{\lstinline{src/main/java/labthree/TipCalculator.java}}
+\newcommand{\mainprograminput}{\lstinline{input/tip_inputs.txt}}
 
 % Edit this commands to describe key deliverables
 
@@ -275,25 +276,21 @@ particular, your program needs to do the following:
 A sample run of this program is shown below:
 
 \begin{verbatim}
-      gkapfham@aldenv5:~/lab3$ javac Lab3.java
-      gkapfham@aldenv5:~/lab3$ java Lab3
-      Gregory Kapfhammer
-      Lab 3
-      Wed Feb 3 13:15:39 EST 2016
-      Please enter your name: Timothy
-      Timothy, welcome to the Tip Calculator!
-      Please enter the amount of your bill: 50
-      Please enter the percentage that you want to tip: 15
-      Your original bill was $50
-      Your tip amount is $7.5
-      Your total bill is $57.50
-      How many people will be splitting the bill? 2
-      Each person should pay $28.75
-      Have a nice day! Thank you for using our service.
-
+  Gregory M. Kapfhammer Thu Sep 14 12:50:07 EDT 2017
+  Timothy, welcome to the tip calculator.
+  The amount of your bill is: $50.0
+  The percentage you want to tip is: 15.0%
+  Alright, that means your total tip will be: $7.5
+  Timothy, your total bill is: $57.5
+  Okay, I see that there are 2 people in your group.
+  So, that means each person must pay: $28.75
+  Thanks for using the tip calculator.
+  Have an awesome day.
 \end{verbatim}
 
-
+With the exception of the name and date on which the program was run, your \mainprogramsource{} should produce the same
+output as seen in the above example. Additionally, you should try to edit the \mainprograminput{} file so that it
+provides different inputs to the program. Does your \mainprogram{} still produce appropriate output?
 
 % When you are finished typing text Java code in \program{gvim}, press the ESC key located in the upper left corner of the
 % keyboard. This should remove the word \command{--INSERT--} from the bottom of the screen and take you out of insert
@@ -316,11 +313,6 @@ should write your reflections in a file, called \reflection{}, that uses the Mar
 more about Markdown by viewing the aforementioned GitHub guide. To complete this aspect of the assignment, you should
 write one high-quality paragraph that reports on your experiences. Today, you should focus on building a better
 understanding of each command --- if there is one that you do not understand, please ask someone!
-
-Since this is our second laboratory assignment and you are still learning how to use the appropriate hardware and
-software, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
-about the necessary technology and the background and expertise of the other students in the class, the teaching
-assistants, and the course instructor.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
