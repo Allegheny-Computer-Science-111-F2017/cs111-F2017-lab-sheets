@@ -134,7 +134,7 @@ explore how to use a variable and perform a computation in a Java program.
   post it to the designated channel. Or, you can ask a student sitting next to you or talk with a teaching assistant or
   the course instructor.
 
-\item {\bf Store your files in GitHub}. Starting with this laboratory assignment, you will be responsible for storing
+\item {\bf Store your files in GitHub}. Like in a past laboratory assignment, you will be responsible for storing
   all of your files (e.g., Java source code and Markdown-based writing) in a Git repository using GitHub Classroom.
   Please verify that you have saved your source code in your Git repository by using \command{git status} to ensure that
   everything is updated. You can see if your assignment submission meets the established correctness requirements by
@@ -241,21 +241,21 @@ instructor. Your program will produce three additional lines of output once you 
 final line outputting the result of a computation with variables. Please see the Java source code comments for more
 details!
 
-When you are finished typing text Java code in \program{gvim}, press the ESC key located in the upper left corner of the
+When you are finished typing Java code in \program{gvim}, press the ESC key located in the upper left corner of the
 keyboard. This should remove the word \command{--INSERT--} from the bottom of the screen and take you out of insert
 mode. Use the \option{File/Save} menu to save your program. Alternatively, if you would like to use the keyboard to save
 your file, you can press \command{:w} when you are not in insert mode. Leaving the {\tt gvim} window open, go back to
 your terminal window.
 
 If you want to \step{build} your program you can type the command \gradlebuild{} in your terminal, thereby causing the
-Java compiler to check your program for errors and get it ready to run. If you get any error messages, go back into
+Java compiler to check your program for errors and get it ready to run. If you see any error messages, go back into
 \program{gvim} and try to figure out what you mis-typed and fix it. Once you have solved the problem, make a note of the
 error and the solution for resolving it. Re-save your program and then build it again by re-running the \gradlebuild{}.
 If you cannot build \mainprogram{} correctly, then please talk with a teaching assistant or the instructor.
 
 When all of the errors are eliminated, you can run your program by typing \gradlerun{} in the terminal window---this is
 the ``execute'' step that will run your program and produce the designated output. You should see your name, today's
-date and three more lines of text. Make sure there are spaces separating words in your output (did you forget to put a
+date, and three more lines of text. Make sure there are spaces separating words in your output (did you forget to put a
 space inside the quotation marks after your last name?). If not, then repair the program and re-build and re-run it.
 Once the program runs, please reflect on this process. What step did you find to be the most challenging? Why? You
 should write your reflections in a file, called \reflection{}, that uses the Markdown writing language. You can learn
@@ -278,9 +278,9 @@ Markdown standards established by the \step{Markdown linting} tool available at
 \url{https://github.com/markdownlint/markdownlint/} and the writing standards set by the \step{prose linting} tool from
 \url{http://proselint.com/}. Instead of requiring you to manually check that your deliverables adhere to these
 industry-accepted standards, the GatorGrader tool that you will use in this laboratory assignment makes it easy for you
-to automatically check if your submission meets the standards for correctness. For instance, GatorGrader will check to
-ensure that \mainprogram{} produces exactly four lines of output and that you use the \command{new Date()} construct in
-the Java source code, and that you correctly compute the average distance to the moon in yards.
+to automatically check if your submission meets the established standards for correctness. For instance, GatorGrader
+will check to ensure that \mainprogram{} produces exactly four lines of output, that you use the \command{new Date()}
+construct in the Java source code, and that you correctly compute the average distance to the moon in yards.
 
 To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. Once this step
 completes you can type \gatorgradercheck{}. If your work does not meet all of the assignment's requirements, then you
