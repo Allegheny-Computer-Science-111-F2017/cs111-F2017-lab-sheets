@@ -291,6 +291,12 @@ With the exception of the name and date on which the program was run, your \main
 output as seen in the above example. Additionally, you should try to edit the \mainprograminput{} file so that it
 provides different inputs to the program. Does your \mainprogram{} still produce the expected output?
 
+Whenever you are finished typing text Java code in \program{gvim}, press the ESC key located in the upper left corner of
+the keyboard. This should remove the word \command{--INSERT--} from the bottom of the screen and take you out of insert
+mode. Use the \option{File/Save} menu to save your program. Alternatively, if you would like to use the keyboard to save
+your file, you can press \command{:w} when you are not in insert mode. Leaving the {\tt gvim} window open, go back to
+your terminal window.
+
 If you want to \step{build} your program you can type the command \gradlebuild{} in your terminal, thereby causing the
 Java compiler to check your program for errors and get it ready to run. If you get any error messages, go back into
 \program{gvim} and try to figure out what you mis-typed and fix it. Once you have solved the problem, make a note of the
@@ -299,7 +305,7 @@ If you cannot build \mainprogram{} correctly, then please talk with a teaching a
 
 When all of the errors are eliminated, you can run your program by typing \gradlerun{} in the terminal window---this is
 the ``execute'' step that will run your program and produce the designated output. You should see your name, today's
-date and three more lines of text. Make sure there are spaces separating words in your output (did you forget to put a
+date, and nine more lines of text. Make sure there are spaces separating words in your output (did you forget to put a
 space inside the quotation marks after your last name?). If not, then repair the program and re-build and re-run it.
 Once the program runs, please reflect on this process. What step did you find to be the most challenging? Why? You
 should write your reflections in a file, called \reflection{}, that uses the Markdown writing language. To complete this
@@ -308,8 +314,8 @@ commands and Java code segments.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
-As verified by Checkstyle tool, the source code for the \mainprogram{} file must adhere to all of the requirements in
-the Google Java Style Guide available at \url{https://google.github.io/styleguide/javaguide.html}. The Markdown file
+As verified by the Checkstyle tool, the source code for the \mainprogram{} file must adhere to all of the requirements
+in the Google Java Style Guide available at \url{https://google.github.io/styleguide/javaguide.html}. The Markdown file
 that contains your reflection must adhere to the standards described in the Markdown Syntax Guide
 \url{https://guides.github.com/features/mastering-markdown/}. Finally, your \reflection{} file should adhere to the
 Markdown standards established by the \step{Markdown linting} tool available at
@@ -333,9 +339,9 @@ do have mistakes in your assignment, then you will need to review GatorGrader's 
 it. Once your program is building correctly, fulfilling at least some of the assignment's requirements, you should
 transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that
 the \mainprogramsource{} file has been changed and is ready for transfer to GitHub you would first type
-\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and checking to see that the transfer to GitHub
-is successful. If you notice that the network communication with GitHub did not work correctly, then please try to
-determine why, asking a teaching assistant or the instructor for assistance, if necessary.
+\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{}, and then checking to see that the transfer to
+GitHub is successful. If you notice that the network communication with GitHub did not work correctly, then please try
+to determine why, asking a teaching assistant or the instructor for assistance, if necessary.
 
 After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
 \gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
@@ -349,14 +355,16 @@ and writing, as further described in the \step{Evaluation} section of this assig
 instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
 towards your grade for this laboratory assignment.
 
-Some points to remember as your complete this laboratory assignment:
+In conclusions, here are some points to remember as you complete this laboratory assignment:
 
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
 
 \item The provided source code uses the {\tt Scanner} class; notice that it is imported at the top of the program. You
   may refer to the textbook for code demonstrating the use of the {\tt Scanner}; you need to use methods that support
-  the input for variables of type {\tt String}, {\tt int}, and {\tt double}.
+  the input for variables of type {\tt String}, {\tt int}, and {\tt double}. Picking the wrong data types for your
+  variables may cause the program to crash to produce incorrect output. See the instructor or an assistant if you are
+  not sure what types to use.
 
 \item Students who want to learn more about how to use the {\tt Scanner} class can refer to pages 90 and 91 of the
   textbook, focusing on the {\tt GasMileage} class provided in Listing 2.9.
@@ -408,11 +416,11 @@ instructor will reduce your grade for the assignment while still considering the
 your GitHub repository and the overall quality of your partially completed work. Please see the instructor if you have
 questions about the evaluation of this laboratory assignment.
 
-Please note that at the time this assignment was released, the Travis CI servers were not correctly configured for
-testing and thus you will not immediately be able to observe the \checkmark{} or \naughtmark{} in your commit listing on
-GitHub. Once this service again becomes available, you will be able to complete this step of the assignment, if you
-decide to do so. However, you can receive full credit for the assignment as long as your source code and writing pass
-the local checks run by typing \gatorgradercheck{}. Please see the instructor if you have questions about this issue.
+% Please note that at the time this assignment was released, the Travis CI servers were not correctly configured for
+% testing and thus you will not immediately be able to observe the \checkmark{} or \naughtmark{} in your commit listing on
+% GitHub. Once this service again becomes available, you will be able to complete this step of the assignment, if you
+% decide to do so. However, you can receive full credit for the assignment as long as your source code and writing pass
+% the local checks run by typing \gatorgradercheck{}. Please see the instructor if you have questions about this issue.
 
 \section*{Adhering to the Honor Code}
 
