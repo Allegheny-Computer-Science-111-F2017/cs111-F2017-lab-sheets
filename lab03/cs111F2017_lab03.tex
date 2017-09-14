@@ -309,10 +309,9 @@ the ``execute'' step that will run your program and produce the designated outpu
 date and three more lines of text. Make sure there are spaces separating words in your output (did you forget to put a
 space inside the quotation marks after your last name?). If not, then repair the program and re-build and re-run it.
 Once the program runs, please reflect on this process. What step did you find to be the most challenging? Why? You
-should write your reflections in a file, called \reflection{}, that uses the Markdown writing language. You can learn
-more about Markdown by viewing the aforementioned GitHub guide. To complete this aspect of the assignment, you should
-write one high-quality paragraph that reports on your experiences. Today, you should focus on building a better
-understanding of each command --- if there is one that you do not understand, please ask someone!
+should write your reflections in a file, called \reflection{}, that uses the Markdown writing language. To complete this
+aspect of the assignment, you should write one high-quality paragraph that reports on your experiences with the various
+commands and Java code segments.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
@@ -324,9 +323,15 @@ Markdown standards established by the \step{Markdown linting} tool available at
 \url{https://github.com/markdownlint/markdownlint/} and the writing standards set by the \step{prose linting} tool from
 \url{http://proselint.com/}. Instead of requiring you to manually check that your deliverables adhere to these
 industry-accepted standards, the GatorGrader tool that you will use in this laboratory assignment makes it easy for you
-to automatically check if your submission meets the standards for correctness. For instance, GatorGrader will check to
-ensure that \mainprogram{} produces exactly four lines of output and that you use the \command{new Date()} construct in
-the Java source code, and that you correctly compute the average distance to the moon in yards.
+to automatically check if your submission meets the standards for correctness.
+
+Since this is not your first laboratory assignment, you will notice that the provide source code does not contain all of
+the required comments at the top of the Java source code file. This means that you will have to inspect the source code
+from previous laboratory and practical assignments to review how to create the comments in the \mainprogramsource{}
+file. Moreover, the provided source code is missing many of the lines that are needed to pass the GatorGrader checks.
+For instance, GatorGrader will check to ensure that \mainprogram{} produces exactly ten lines of output, that you use
+the \command{new Date()} construct in the Java source code, and that the program correctly produces the same output as
+seen on the previous page.
 
 To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. Once this step
 completes you can type \gatorgradercheck{}. If your work does not meet all of the assignment's requirements, then you
@@ -351,6 +356,33 @@ and writing, as further described in the \step{Evaluation} section of this assig
 instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
 towards your grade for this laboratory assignment.
 
+Some points to remember as your complete this laboratory assignment:
+
+\begin{enumerate}
+  \setlength{\itemsep}{0pt}
+
+\item The provided source code uses the {\tt Scanner} class; notice that it is imported at the top of the program. You
+  may refer to the textbook for code demonstrating the use of the {\tt Scanner}; you need to use methods that support
+  the input for variables of type {\tt String}, {\tt int}, and {\tt double}.
+
+\item Students who want to learn more about how to use the {\tt Scanner} class can refer to pages 90 and 91 of the
+  textbook, focusing on the {\tt GasMileage} class provided in Listing 2.9.
+
+\item You should think carefully about what data type you want to use for your variables.
+
+\item As in past assignments, your program only needs to have one {\tt main} method.
+
+\item To display a dollar sign, you can just type ``\$'' inside the string of your output statement.
+
+\item Note that your program will alternate between printing and computing---this
+is okay!
+
+\item Don't forget to review the assignment sheets from the previous laboratory and practical assignments as they
+  contain insights that will support your completion of this assignment.
+
+\end{enumerate}
+
+
 \section*{Summary of the Required Deliverables}
 
 \noindent Students do not need to submit printed source code or technical writing for any assignment in this course.
@@ -367,7 +399,7 @@ Instead, this assignment invites you to submit, using GitHub, the following deli
 
 \item A properly documented, well-formatted, and correct version of \mainprogramsource{} that both meets all of the
   established requirements and produces the desired output. In particular, please recall that this Java program should
-  store the result of a computation in a variable and then output that variable's value.
+  read inputs from a file, perform computations, and display the correct outputs in the terminal window.
 
 \end{enumerate}
 
