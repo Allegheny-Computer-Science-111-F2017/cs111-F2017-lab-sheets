@@ -10,6 +10,7 @@ script:
 - mkdir _build
 - latexmk -pdf -outdir=_build lab01/cs111F2017_lab01.tex
 - latexmk -pdf -outdir=_build lab02/cs111F2017_lab02.tex
+- latexmk -pdf -outdir=_build lab03/cs111F2017_lab03.tex
 - latexmk -pdf -outdir=_build practical01/cs111F2017_practical01.tex
 
 # securely deploy the PDFs to the specified tag on GitHub
@@ -21,6 +22,7 @@ deploy:
   file:
     - _build/cs111F2017_lab01.pdf
     - _build/cs111F2017_lab02.pdf
+    - _build/cs111F2017_lab03.pdf
     - _build/cs111F2017_practical01.pdf
   skip_cleanup: true
   on:
