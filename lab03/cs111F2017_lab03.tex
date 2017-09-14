@@ -213,25 +213,25 @@ a neighbor and a \mbox{teaching assistant}.
 In order view the source code of a Java program or a Markdown-based writing assignment, you need a text editor. There
 are many different text editors on your workstation and you should feel free to explore these on your own. Since it is a
 powerful text editor known for helping computer scientists ``edit text at the speed of thought'', in this class we will
-normally use the text editor called \command{gvim}. Today, you will view and improve your second Java program in {\tt
-  gvim}! To load the source code of today's Java program into \program{gvim}, you should type \command{gvim
+normally use the text editor called \command{gvim}. Today, you will view and improve another Java program in {\tt gvim}!
+To load the source code of today's Java program into \program{gvim}, you should type \command{gvim
 src/main/java/labthree/TipCalculator.java} in your terminal window. This should cause a new window, the \program{gvim}
 text editor, to appear on your screen. Since \program{gvim} is a modal editor, you may notice that if you start typing,
 nothing appears (unless you happen to hit certain letters such as \command{i}, \command{o}, \command{a}, and a few
 others). This is because you are not in ``insert mode.'' To get into insert mode, just type the letter \command{i}
 (lower case). Once you do this, the window should show \command{--INSERT--} in the lower left corner.
 
-This laboratory assignment invites you to implement a Java program that displays exactly ten lines of output. The first
+This assignment invites you to implement a Java program that displays exactly ten lines of output. The first
 output line should display your name and then today's date. You can accomplish the first task by typing
 \command{System.out.println("Gregory M. Kapfhammer " + new Date());}, substituting your name for the name of the course
 instructor. Your program will produce nine additional lines of output once you add eight more
 \command{System.out.println} statements. Unlike your previous Java programs, this Java program must read input values
 from a file and then use these inputs to perform computations and to produce outputs. Please see the Java source code
-comments for more details! The remainder of this section summarizes purpose of the new program.
+comments for more details! The remainder of this section summarizes the purpose of the new program.
 
-This laboratory assignment asks you to write a Java program, \mainprogramsource{}, that will calculate the tip, the
-total bill for the user, and each person's share of the restaurant bill (if there are two or more people). In
-particular, your program needs to do the following:
+This assignment asks you to write a Java program, \mainprogramsource{}, that will calculate the tip, the total bill for
+the user, and each person's share of the restaurant bill (if there are two or more people). In particular, your program
+needs to do the following:
 
 \vspace*{-.1in}
 \begin{enumerate}
@@ -272,8 +272,7 @@ particular, your program needs to do the following:
 
 \end{enumerate}
 
-\noindent
-A sample run of this program is shown below:
+\noindent If a steps says to ``ask the user'' this means the program should read from a file. A sample run is:
 
 \begin{verbatim}
   Gregory M. Kapfhammer Thu Sep 14 12:50:07 EDT 2017
