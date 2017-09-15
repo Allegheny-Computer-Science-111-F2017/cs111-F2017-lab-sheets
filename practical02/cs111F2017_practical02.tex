@@ -108,7 +108,7 @@ descriptive commit message"}}
 \section*{Objectives}
 
 To continue practicing the use of GitHub to access the files for a practical assignment. Additionally, to practice using
-the Ubuntu operator system and software development programs such as a ``terminal window'' and the ``GVim text editor''.
+the Ubuntu operating system and software development programs such as a ``terminal window'' and the ``GVim text editor''.
 You will also continue to practice using Slack to support communication with the teaching assistants and the course
 instructor. Next, you will learn how to fix a Java program, further discovering how the course's automated grading tool
 assesses your progress towards correctly completing the project. Finally, you will continue to learn more about
@@ -193,9 +193,11 @@ instructor with documentation of the extenuating circumstances that you are faci
 that you automatically receive a failing grade for it. Please follow the steps from the previous laboratory assignments
 for finding your ``home base'' for this practical assignment; see the instructor if you are stuck on getting started.
 
-Now, study the documentation in the provided source code to understand the type
-of output that your program should produce. Note that the provided source code contains defects in it! You are
-responsible for finding and fixing all of these defects. Once you locate and resolve 
+Now, study the documentation in the provided source code to understand the type of output that your program should
+produce. Note that the provided source code contains defects in it! You are responsible for finding and fixing all of
+these defects. Once you locate and resolve one of these issues, please put a comment into the code to explain the
+problem that you found and the way in which you decided to handle it. As you complete this practical assignment, make
+sure that you regularly commit your code to GitHub and use descriptive messages that say what you fixed.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
@@ -208,16 +210,19 @@ window. Once this step completes you can type \gatorgradercheck{}. If your work
 does not meet all of the assignment's requirements, then you will see the
 following output in your terminal: \command{Overall, are there any mistakes in
 the assignment? Yes}. If you do have mistakes in your assignment, then you will
-need to review GatorGrader's output, find the mistake, and try to fix it. Once
-your program is building correctly, fulfilling at least some of the assignment's
-requirements, you should transfer your files to GitHub using the \gitcommit{}
-and \gitpush{} commands. For example, if you want to signal that the
-\mainprogramsource{} file has been changed and is ready for transfer to GitHub
-you would first type \gitcommitmainprogram{} in your terminal, followed by
-typing \gitpush{} and checking to see that the transfer to GitHub is successful.
-If you notice that transferring your code or writing to GitHub did not work
-correctly, then please try to determine why, asking an assistant or the
-instructor for assistance, if necessary.
+need to review GatorGrader's output, find the mistake, and try to fix it.
+Remember, this practical assignment provides you with Java source code that
+purposefully contains mistakes --- your task is to find and fix these problems!
+
+Once your program is building correctly, fulfilling at least some of the
+assignment's requirements, you should transfer your files to GitHub using the
+\gitcommit{} and \gitpush{} commands. For example, if you want to signal that
+the \mainprogramsource{} file has been changed and is ready for transfer to
+GitHub you would first type \gitcommitmainprogram{} in your terminal, followed
+by typing \gitpush{} and checking to see that the transfer to GitHub is
+successful. If you notice that transferring your code or writing to GitHub did
+not work correctly, then please try to determine why, asking a teaching
+assistant or the course instructor for help, if necessary.
 
 After the course instructor enables \step{continuous integration} with a system
 called Travis CI, when you use the \gitpush{} command to transfer your source
@@ -245,19 +250,25 @@ assignment, you are not required to complete any technical writing.
 
 \setlength{\itemsep}{0in}
 
-\item A properly documented, well-formatted, and correct version of \mainprogramsource{} that both meets all of the
-  established requirements and produces the desired output.
+\item A properly documented, well-formatted, and correct version of
+  \mainprogramsource{} that both meets all of the established requirements and
+  produces the desired output. In addition to your Java source code no longer
+  containing any defects that ``break the build'', it must feature comments that
+  explain each of the mistakes that you found and a clear statement of how you
+  fixed them.
 
 \end{enumerate}
 
 \section*{Evaluation of Your Practical Assignment}
 
-Practical assignments are graded on a completion --- or ``checkmark'' --- basis. If
-your GitHub repository has a \checkmark{} for the last commit before the
+Practical assignments are graded on a completion --- or ``checkmark'' --- basis.
+If your GitHub repository has a \checkmark{} for the last commit before the
 deadline then you will receive the highest possible grade for the assignment.
 However, you will fail the assignment if you do not complete it correctly, as
 evidenced by a red \naughtmark{} in your commit listing, by the set deadline for
-completing the project.
+completing the project. Please see the course instructor if you do not
+understand how practical assignments are graded or you do not know how to
+complete one of the specific tasks in this assignment.
 
 % \section*{Adhering to the Honor Code}
 
