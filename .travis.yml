@@ -12,7 +12,7 @@ script:
 - latexmk -pdf -outdir=_build lab02/cs111F2017_lab02.tex
 - latexmk -pdf -outdir=_build lab03/cs111F2017_lab03.tex
 - latexmk -pdf -outdir=_build practical01/cs111F2017_practical01.tex
-- latexmk -pdf -outdir=_build practical01/cs111F2017_practical02.tex
+- latexmk -pdf -outdir=_build practical02/cs111F2017_practical02.tex
 
 # securely deploy the PDFs to the specified tag on GitHub
 # GitHub's web site provides "releases" as a link near "commits"
