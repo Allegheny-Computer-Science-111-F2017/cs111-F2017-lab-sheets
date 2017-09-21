@@ -235,9 +235,26 @@ scene. In particular, it must do the following:
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
 
-  \item Contain at least four single-line comments and two multi-line comments
-  \item Declare and use the \command{CANVAS_HEIGHT} variable
-  \item Declare and use the \command{CANVAS_WIDTH} variable
+\item Contain at least four single-line comments and two multi-line comments.
+\item Declare and use the \command{CANVAS_HEIGHT} variable.
+\item Declare and use the \command{CANVAS_WIDTH} variable.
+
+\end{enumerate}
+
+Second, this assignment invites you to write another program, called \secondprogramsource{}, that will paint a graphical
+scene on a canvas.
+
+\vspace*{-.1in}
+\begin{enumerate}
+  \setlength{\itemsep}{0pt}
+
+\item Contain at least four single-line comments and two multi-line comments
+\item Declare and use the \command{CANVAS_HEIGHT} variable
+% \item Declare and use the `CANVAS_WIDTH` variable
+% \item Create at least five colors using the `page.setColor` method call
+% \item Create at least three rectangles using the `fillRect` method call
+% \item Create at least five ovals using the `fillOval` method call
+% \item Declare and use at least two `int` variable when creating graphics
 
 \end{enumerate}
 
@@ -310,23 +327,13 @@ In conclusion, here are some points to remember as you complete this laboratory 
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
 
-\item The provided source code uses the {\tt Scanner} class; notice that it is imported at the top of the program. You
-  may refer to the textbook for code demonstrating the use of the {\tt Scanner}; you need to use methods that support
-  the input for variables of type {\tt String}, {\tt int}, and {\tt double}. Picking the wrong data types for your
-  variables may cause the program to crash or to produce incorrect output. See the instructor or an assistant if you are
-  not sure what types to use.
-
-\item Students who want to learn more about how to use the {\tt Scanner} class can refer to pages 90 and 91 of the
-  textbook, focusing on the {\tt GasMileage} class provided in Listing 2.9.
-
-\item You should think carefully about what data type you want to use for your variables.
+\item You should think carefully about how your graphics can be displayed using variables.
 
 \item As in past assignments, your program only needs to have one {\tt main} method.
 
-\item To display a dollar sign, you can just type ``\$'' inside the string of your output statement.
+\item See Figure 2.10 for a listing of some common \command{Color} variables.
 
-\item Note that your program will alternate between printing and computing---this
-is okay!
+\item Your program will alternate between creating and displaying graphical output---this is okay!
 
 \item Don't forget to review the assignment sheets from the previous laboratory and practical assignments as they
   contain insights that will support your completion of this assignment.
