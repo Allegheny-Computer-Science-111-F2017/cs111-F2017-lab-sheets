@@ -20,6 +20,9 @@
 \newcommand{\mainprogram}{\lstinline{DisplayComplementaryDrawingCanvas}}
 \newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalthree/DisplayComplementaryDrawingCanvas.java}}
 
+\newcommand{\secondprogram}{\lstinline{PaintComplementaryDrawingCanvas}}
+\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalthree/PaintComplementaryDrawingCanvas.java}}
+
 % Edit this commands to describe key deliverables
 
 \newcommand{\reflection}{\lstinline{writing/reflection.md}}
@@ -219,6 +222,18 @@ by the user. Finally, you will need to again call the {\tt page.fillRect} method
 rectangle correctly drawn in the second half of the image. Please see the instructor or a teaching assistant if you have
 questions about these steps.
 
+After finishing the \mainprogramsource{} and \secondprogramsource{} files, you should repeatedly test you program to
+make sure that it is creating the correct graphical output. For instance, if the user inputs through a file the RGB
+value of $(255, 0, 0)$, then what are the colors in the left and right sides of the graphic? To test your program, you
+may want to try several different RGB values that are listed in Figure 2.10 of your textbook. More advanced testing of
+your program is possible by picking an RGB value from one side of the color wheel in {\tt gimp} and then checking that
+your program correctly displays its complement (the one ``across'' the color wheel) in the graphic. Does your testing
+reveal any limitations to our approach to calculating the complementary color?
+
+Students who are interested in an additional challenge can investigate other ways to calculate complementary colors.
+Another option for enterprising students is to further investigate the theory of color and actually implement ways to
+display other types of colors derived from the one input by the user. For instance, you might try to display a color
+that is ``analogous'' to the user's.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
