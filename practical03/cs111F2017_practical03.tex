@@ -182,7 +182,7 @@ computer graphics, you should review Chapters 1 and 2 in the textbook, ensuring 
 concepts that we discussed during class and investigated during prior practical and laboratory sessions. Please see the
 instructor or one of the teaching assistants if you have questions these reading assignments.
 
-\section*{Finding and Fixing Defects in Programs}
+\section*{Painting with Complementary Colors}
 
 To access the practical assignment, you should go into the \channel{\#announcements} channel in our Slack team and find
 the announcement that provides a link for it. Copy this link and paste it into your web browser. Now, you should accept
@@ -197,10 +197,28 @@ that you automatically receive a failing grade for it. Please follow the steps f
 for finding your ``home base'' for this practical assignment; see the instructor if you are stuck on getting started.
 
 Now, study the documentation in the provided source code to understand the type of output that your program should
-produce. Note that the provided source code contains defects in it! You are responsible for finding and fixing all of
-these defects. Once you locate and resolve one of these issues, please put a comment into the code to explain the
-problem that you found and the way in which you decided to handle it. As you complete this practical assignment, make
-sure that you regularly commit your code to GitHub and use descriptive messages that say what you fixed.
+produce. Of course, as you complete this practical assignment, make sure that you regularly commit your code to GitHub
+and use descriptive messages that say what you fixed. Specifically, the purpose of this program is to create a canvas
+that contains two colors in it. The first colored rectangle---which should take up exactly half of the page---should
+display the color that was requested by the user. For instance, if the user inputs the RGB value of $(255,0,0)$, then
+this region of the graphic should be filled with the color red. The second half of the image should be filled with the
+``complement'' of the color requested by the user. For example, the complement of the red value of $255$ is the value
+$255-255=0$ and the complement of the green value of $0$ is $255-0=255$. Intuitively, taking the complement of an RGB
+should give you the color that is on the ``opposite'' side of the color wheel that you can view in the {\tt gimp}
+program. So, what is the RGB value of the color red's complement? Does it appear on the opposite side of the color
+wheel?
+
+As a means of practicing the use of variables and expressions, and the creation of graphics in Java, you should make
+some small additions to this program so that it fulfills its intended purpose. To accomplish this task, the first thing
+that you must do is add a call to the {\tt page.fillRect} method so that it paints a rectangle of the color requested by
+the user. Next, you should store in the variable called {\tt userComplementaryColor} a color that is the complement of
+the one requested by the user. This means that you will have to write in the form of a Java expression the simple
+equations that were intuitively explained in the previous paragraph. Now, the source code line ``{\tt
+page.setColor(userComplementaryColor);}'' will cause the next shape to be filled with the complement of the color chosen
+by the user. Finally, you will need to again call the {\tt page.fillRect} method with the parameters that will yield a
+rectangle correctly drawn in the second half of the image. Please see the instructor or a teaching assistant if you have
+questions about these steps.
+
 
 \section*{Checking the Correctness of Your Program and Writing}
 
