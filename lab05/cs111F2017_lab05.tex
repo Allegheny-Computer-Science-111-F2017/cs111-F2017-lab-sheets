@@ -210,41 +210,44 @@ one directory from your current location, then you can type the command \command
 and directories do you see? What do you think is their purpose? Spend some time exploring, sharing your discoveries with
 a neighbor and a \mbox{teaching assistant}.
 
-\section*{Creating Sophisticated Graphical Output}
+\subsection*{Implementing and Evaluating a Steganography Program}
 
-In order view the source code of a Java program or a Markdown-based writing assignment, you need a text editor. There
-are many different text editors on your workstation and you should feel free to explore these on your own. Since it is a
-powerful text editor known for helping computer scientists ``edit text at the speed of thought'', in this class we will
-normally use the text editor called \command{gvim}. Today, you will view and improve another Java program in {\tt gvim}!
-To load the source code of today's Java program into \program{gvim}, you should type \command{gvim
-src/main/java/labfive/WordHide.java} in your terminal window. This should cause a new window, the \program{gvim}
-text editor, to appear on your screen. Since \program{gvim} is a modal editor, you may notice that if you start typing,
-nothing appears (unless you happen to hit certain letters such as \command{i}, \command{o}, \command{a}, and a few
-others). This is because you are not in ``insert mode.'' To get into insert mode, just type the letter \command{i}
-(lower case). Once you do this, the window should show \command{--INSERT--} in the lower left corner.
-
-This assignment invites you to implement desktop wallpaper art similar to the examples that are found on the web site
-called \url{http://simpledesktops.com/}. First, your Java program should display your name and then the date on which
-the program was run. You can accomplish this task with \command{JFrame window = new JFrame("Gregory M. Kapfhammer " +
-new Date());}, substituting your name for the name of the instructor. Please see the Java source code comments for more
-details about the program's purpose! The remainder of this section summarizes the goals for \mbox{this program}.
-
-First, this assignment asks you to write a program, \mainprogramsource{}, that will display a canvas for a graphical
-scene. In particular, it must do the following:
+Within the field of computer security, there are many sub-fields that develop strategies for sending, receiving, and
+storing secret messages. Involving the hiding of a secret ``in plain sight'', steganography is one way in which you can
+create and send a secret message. For this assignment, you and your partner will implement a program called {\tt
+WordHide.java} that will perform these operations:
 
 \vspace*{-.1in}
-\begin{enumerate}
-  \setlength{\itemsep}{0pt}
 
-\item Contain at least four single-line comments and two multi-line comments.
-\item Declare and use the \command{CANVAS_HEIGHT} variable.
-\item Declare and use the \command{CANVAS_WIDTH} variable.
+\begin{enumerate}
+
+  \itemsep0in
+
+  \item Prompt the user for a word that is exactly ten characters in length. For now, {\tt WordHide} should allow the
+    user to enter any type of ``padding character'' before or after a word that is less than ten characters. If the word
+    is longer than ten characters, then your program should simply discard all of the characters after the tenth one
+    (you may also implement better strategies).
+
+  \item Since the {\tt WordHide} program must output all of its character in a capitalized form, you should transform the
+    word provided by the user so that it only contains upper-case letters.
+
+  \item Finally, {\tt WordHide} should output a $20 \times 20$ ``grid'' of letters that contain the user's word
+    ``hidden'' inside of it. All of the letters in this grid should be capitalized. You and your partner should
+    brainstorm and prototype different techniques for effectively hiding the user's word in the grid of letters. As you
+    implement your program, you must make decisions about the following matters: (i) what letters will you add to the
+    grid to best hide the user's word? (ii) where will you place the user's word in the grid? (iii) what features of the
+    Java programming language will you use to ensure the grid is formatted properly in the terminal? As you answer these
+    questions and finish the implementation and testing of {\tt WordHide.java}, it may help to consider the fact that
+    the user's word might be better hidden if the grid contains both some randomly chosen letters and some letters found
+    in the user's input. Your team should devote a considerable amount of time to brainstorming, prototyping, and
+    evaluating (e.g., by asking a friend to try your program) different ways in which you can effectively hide words.
 
 \end{enumerate}
 
 \vspace*{-.1in}
-Second, this assignment invites you to write another program, called \secondprogramsource{}, that will paint a graphical
-scene on an already displayed canvas.
+
+In summary, this assignment asks you to write a program, \mainprogramsource{}, that will complete a word-hiding task. In
+particular, it must meet the following requirements:
 
 \vspace*{-.1in}
 \begin{enumerate}
@@ -253,10 +256,6 @@ scene on an already displayed canvas.
 \item Contain at least four single-line comments and two multi-line comments.
 \item Declare and use the \command{CANVAS_HEIGHT} variable.
 \item Declare and use the \command{CANVAS_WIDTH} variable.
-\item Create at least five colors using the \command{page.setColor} method call.
-\item Create at least three rectangles using the \command{fillRect} method call.
-\item Create at least five ovals using the \command{fillOval} method call.
-\item Declare and use at least two \command{int} variable when creating and displaying graphics.
 
 \end{enumerate}
 
