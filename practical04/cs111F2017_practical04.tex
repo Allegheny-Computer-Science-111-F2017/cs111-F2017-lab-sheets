@@ -72,6 +72,9 @@ descriptive commit message"}}
   breaklines=true
 }
 
+\usepackage{fancyvrb}
+\usepackage{color}
+
 \usepackage{fancyhdr}
 
 \usepackage[margin=1in]{geometry}
@@ -178,9 +181,12 @@ If you have not done so already, please read all of the relevant ``GitHub Guides
 \url{https://guides.github.com/}, that explain how to use many of the features that GitHub provides. In particular,
 please make sure that you have read guides such as ``Mastering Markdown'' and ``Documenting Your Projects on GitHub'';
 each of them will help you to understand how to use both GitHub and GitHub Classroom. Focusing on the content about
-computer graphics, you should review Chapters 1 and 2 and Sections 3.1 and 3.2 in the textbook, ensuring that you fully
-understand all of the concepts that we discussed during class and investigated during prior practical and laboratory
-sessions. Please see the instructor or one of the teaching assistants if you have questions these reading assignments.
+declaring and variables and reading from files, you should review Chapters 1 and 2 and Sections 3.1 and 3.2 in the
+textbook.
+
+% ensuring that you fully understand all of the concepts that we discussed during class and investigated during
+% the prior practical and laboratory sessions. Please see the course instructor or one of the teaching assistants if you
+% have questions these reading assignments.
 
 \section*{Implementing a ``Mad Libs'' Program}
 
@@ -196,13 +202,43 @@ instructor with documentation of the extenuating circumstances that you are faci
 that you automatically receive a failing grade for it. Please follow the steps from the previous laboratory assignments
 for finding your ``home base'' for this practical assignment; see the instructor if you are stuck on getting started.
 
+Figure~\ref{mad} contains the output from running a program like the one you must implement. To gain some inspiration
+and to learn more about Mad Libs and how your program should behave, please visit the site
+\url{http://www.madlibs.com/}. After finishing the \mainprogramsource{} file, you should repeatedly test you program to
+make sure that it is creating the correct textual output. This will involve you editing the input file so that it
+contains different words and numbers in it and then running your program to determine if it correctly displays the
+story.
 
+\begin{figure}[tb]
+\begin{Verbatim}[commandchars=\\\{\}]
+aldenv27:gkapfham$ \textcolor{red}{javac MadLib.java}
+aldenv27:gkapfham$ \textcolor{red}{java MadLib}
+Gregory M. Kapfhammer, Practical 5
+Thu March 3 13:11:17 EST 2016
 
+I read a singular noun: \textcolor{red}{noggin}
+I read an adjective: \textcolor{red}{verboten}
+I read another adjective: \textcolor{red}{glitzy}
+I read a non-zero whole number: \textcolor{red}{32}
+I read another non-zero whole number: \textcolor{red}{42}
+I read any number: \textcolor{red}{5.43}
+I read a singular verb: \textcolor{red}{snooze}
 
+----------------------------------
 
-After finishing the \mainprogramsource{} file, you should repeatedly test you program to make sure that it is creating
-the correct textual output. This will involve you editing the input file so that it contains different words and numbers
-in it and the running your program to determine if it correctly displays the story.
+Third-Grade Word Problem
+
+If you own 32 verboten noggins,
+and you purchase 42 glitzy noggins,
+how many more noggins do you need to snooze 5.43 noggins?
+
+Answer: You need -68.57 more noggins.
+\end{Verbatim}
+\vspace*{-.1in}
+\caption{Sample ``Mad Libs'' output with file input highlighted in red.}
+\label{mad}
+\end{figure}
+
 
 \section*{Checking the Correctness of Your Program and Writing}
 
@@ -212,15 +248,15 @@ assignments. However, to check your Java source code you can started with the us
 \gatorgraderstart{} in your terminal window. Once this step completes you can type \gatorgradercheck{}. If your work
 does not meet all of the assignment's requirements, then you will see the following output in your terminal:
 \command{Overall, are there any mistakes in the assignment? Yes}. If you do have mistakes in your assignment, then you
-will need to review GatorGrader's output, find the mistake, and try to fix it.
+will need to review GatorGrader's output, find the mistake, and try to fix it. Specifically, don't forget to add in the
+required comments!
 
 Once your program is building correctly, fulfilling at least some of the assignment's requirements, you should transfer
 your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that the
 \mainprogramsource{} file has been changed and is ready for transfer to GitHub you would first type
 \gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and checking to see that the transfer to GitHub
-is successful. Of course, you will also need to use \command{git} commands in your terminal to transfer the
-\secondprogramsource{} to GitHub. If you notice that transferring your code to GitHub did not work correctly, then
-please try to determine why, asking a teaching assistant or the course instructor for help, if necessary.
+is successful. If you notice that transferring your code to GitHub did not work correctly, then please try to determine
+why, asking a teaching assistant or the course instructor for help, if necessary.
 
 After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
 \gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
@@ -234,32 +270,32 @@ circumstances that you are facing, no late work will be considered towards your 
 assignment. You should aim to finish practical assignments on the day that they are assigned; please see the instructor
 if you do not understand this policy.
 
-% \section*{Additional Success Strategies for the Practical Sessions}
+\section*{Additional Success Strategies for the Practical Sessions}
 
-% Since this is one of our first practical assignments and you are still learning how to use the Java programming
-% language, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
-% about the necessary technology and the background and expertise of the other students in the class, the teaching
-% assistants, and the course instructor.
+Since this is one of our first practical assignments and you are still learning how to use the Java programming
+language, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
+about the necessary technology and the background and expertise of the other students in the class, the teaching
+assistants, and the course instructor.
 
-% \vspace*{-.05in}
-% \begin{itemize}
+\vspace*{-.05in}
+\begin{itemize}
 
-% \itemsep 0in
+\itemsep 0in
 
-% \item {\bf Experiment.} Practical sessions are for learning by doing without the pressure of grades or ``right/wrong''
-%   answers. So try things! To learn about files and variables, please intelligently experiment with the code, making small
-%   incremental changes and observing the output.
+\item {\bf Experiment.} Practical sessions are for learning by doing without the pressure of grades or ``right/wrong''
+  answers. So try things! To learn about files and variables, please intelligently experiment with the code, making small
+  incremental changes and observing the output.
 
-% \item {\bf Practice Key Laboratory Skills.} As you are completing this assignment, practice using the {\tt gvim} text
-%   editor and the terminal until you can easily use their most important features.
+\item {\bf Practice Key Laboratory Skills.} As you are completing this assignment, practice using the {\tt gvim} text
+  editor and the terminal until you can easily use their most important features.
 
-% \item {\bf Help One Another!} If your neighbor is struggling and you know what to do, offer your help. Don't ``do the
-%   work'' for them, but advise them on what to type or how to handle things. If you are stuck on a part of this practical
-%   assignment and you could not find any insights in either your textbook or online sources, formulate a question to ask
-%   your neighbor, a teaching assistant, or a course instructor. Try to strike the right balance between asking for help
-%   when you cannot solve a problem and working independently to find a solution.
+\item {\bf Help One Another!} If your neighbor is struggling and you know what to do, offer your help. Don't ``do the
+  work'' for them, but advise them on what to type or how to handle things. If you are stuck on a part of this practical
+  assignment and you could not find any insights in either your textbook or online sources, formulate a question to ask
+  your neighbor, a teaching assistant, or a course instructor. Try to strike the right balance between asking for help
+  when you cannot solve a problem and working independently to find a solution.
 
-% \end{itemize}
+\end{itemize}
 
 \section*{Summary of the Required Deliverables}
 
@@ -287,5 +323,14 @@ evidenced by a red \naughtmark{} in your commit listing, by the set deadline for
 completing the project. Please see the course instructor if you do not
 understand how practical assignments are graded or you do not know how to
 complete one of the specific tasks in this assignment.
+
+\section*{Adhering to the Honor Code}
+
+In adherence to the Honor Code, students should complete this practical assignment on an individual basis. While it is
+appropriate for students in this class to have high-level conversations about the assignment, it is necessary to
+distinguish carefully between the student who discusses the principles underlying a problem with others and the student
+who produces assignments that are identical to, or merely variations on, someone else's work. Deliverables (e.g., the
+Java source code) that are nearly identical to the work of others will be taken as evidence of violating the \mbox{Honor
+Code}. Please see the course instructor if you have questions about this policy.
 
 \end{document}
