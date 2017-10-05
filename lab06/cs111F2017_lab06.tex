@@ -17,8 +17,8 @@
 
 % Edit these commands to give the name to the main program
 
-\newcommand{\mainprogram}{\lstinline{WordHide}}
-\newcommand{\mainprogramsource}{\lstinline{src/main/java/labfive/WordHide.java}}
+\newcommand{\mainprogram}{\lstinline{ManipulateDna}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/labsix/ManipulateDna.java}}
 
 % Edit this commands to describe key deliverables
 
@@ -44,8 +44,8 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitaddmainprogram}{\command{git add src/main/java/labfive/WordHide.java}}
-\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/labfive/WordHide.java -m "Your
+\newcommand{\gitaddmainprogram}{\command{git add src/main/java/labsix/ManipulateDna.java}}
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/labsix/ManipulateDna.java -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -213,7 +213,7 @@ a neighbor and a \mbox{teaching assistant}.
 Within the field of computer security, there are many sub-fields that develop strategies for sending, receiving, and
 storing secret messages. Involving the hiding of a secret ``in plain sight'', steganography is one way in which you can
 create and send a secret message. For this laboratory assignment, you will implement a program, called {\tt
-WordHide.java}, that will perform these operations:
+ManipulateDna.java}, that will perform these operations:
 
 \vspace*{-.1in}
 
@@ -221,21 +221,21 @@ WordHide.java}, that will perform these operations:
 
   \itemsep0in
 
-  \item Prompt the user for a word that is exactly ten characters in length. For now, {\tt WordHide} should allow the
+  \item Prompt the user for a word that is exactly ten characters in length. For now, {\tt ManipulateDna} should allow the
     user to enter any type of ``padding character'' before or after a word that is less than ten characters. If the word
     is longer than ten characters, then your program should simply discard all of the characters after the tenth one
     (you may also implement better strategies).
 
-  \item Since the {\tt WordHide} program must output all of its character in a capitalized form, you should transform the
+  \item Since the {\tt ManipulateDna} program must output all of its character in a capitalized form, you should transform the
     word provided by the user so that it only contains upper-case letters.
 
-  \item Finally, {\tt WordHide} should output a $20 \times 20$ ``grid'' of letters that contain the user's word
+  \item Finally, {\tt ManipulateDna} should output a $20 \times 20$ ``grid'' of letters that contain the user's word
     ``hidden'' inside of it. All of the letters in this grid should be capitalized. You should brainstorm and prototype
     different techniques for effectively hiding the user's word in the grid of letters. As you implement your program,
     you must make decisions about the following matters: (i) what letters will you add to the grid to best hide the
     user's word? (ii) where and how will you place the user's word in the grid? (iii) what features of the Java
     programming language will you use to ensure the grid is formatted properly in the terminal window? As you answer
-    these questions and finish the implementation and testing of {\tt WordHide.java}, it may help to consider the fact
+    these questions and finish the implementation and testing of {\tt ManipulateDna.java}, it may help to consider the fact
     that the user's word might be better hidden if the grid contains both some randomly chosen letters and some letters
     found in the user's input. You should devote a considerable amount of time to brainstorming, prototyping, and
     evaluating (e.g., by asking a friend to try your program) different ways in which you can effectively hide words.
