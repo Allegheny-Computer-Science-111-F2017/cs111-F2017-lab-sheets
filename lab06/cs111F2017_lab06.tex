@@ -257,11 +257,12 @@ original} input string --- that is, they are not cumulative.
   String variable {\tt dnaString}, then I will say {\tt dnaString.replace(`A',`T');}, but there's still a trick in this
   case of getting the complement!)
 
-Another hint regarding the trick: As you make your substitutions to get your complementary string, remember that you are
-replacing, for example, \emph{A}'s to \emph{T}'s from the $S$ to make our complementary sequence ($S_{complementary}$).
-Do not simply perform such substitution directly because you will be unable to figure out which \emph{T}'s were original
-\emph{T}'s (and not the replaced ones) that you were supposed to change to \emph{A}'s. You can check your complementary
-sequence from the website  (using the \emph{Complement} option after you enter your sequence): \url{http://arep.med.harvard.edu/labgc/adnan/projects/Utilities/revcomp.html}.
+Another hint regarding this strategy: As you make your substitutions to get your complementary string, remember that you
+are replacing, for example, \emph{A}'s to \emph{T}'s from the $S$ to make our complementary sequence
+($S_{complementary}$). Do not simply perform such substitution directly because you will be unable to figure out which
+\emph{T}'s were original \emph{T}'s (and not the replaced ones) that you were supposed to change to \emph{A}'s. You can
+check your complementary sequence from the website  (using the \emph{Complement} option after you enter your sequence):
+\url{http://arep.med.harvard.edu/labgc/adnan/projects/Utilities/revcomp.html}.
 
 \item[NOTE:]
 
@@ -317,8 +318,7 @@ Have an awesome day.
 \end{verbatim}
 
 In the second example, nothing was changed in the last line---the {\tt ManipulateDNA} program randomly replaced the
-letter ``{\tt A}'' with the letter ``{\tt A}''!  This behavior is acceptable.
-
+letter ``{\tt A}'' with the letter ``{\tt A}''! This behavior is acceptable.
 
 Whenever you are finished typing text Java code in \program{gvim}, press the ESC key located in the upper left corner of
 the keyboard. This should remove the word \command{--INSERT--} from the bottom of the screen and take you out of insert
