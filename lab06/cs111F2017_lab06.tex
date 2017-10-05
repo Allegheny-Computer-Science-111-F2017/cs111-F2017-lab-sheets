@@ -212,7 +212,7 @@ a neighbor and a \mbox{teaching assistant}.
 Bioinformatics is the study of biological phenomena by the use of biology, mathematics, and computer science. One of the
 most important study areas in bioinformatics concerns DNA. Deoxyribonucleic acid is a molecule that encodes the
 genetic instructions (genes) which are used by all known living organisms and many viruses to build the proteins
-required to sustain existence. The genes of DNA are written in the nucleotides; guanine (G), adenine (A), thymine (T),
+required to sustain existence. The genes of DNA are written in the nucleotides guanine (G), adenine (A), thymine (T),
 and cytosine (C), (chemical compounds) which serve as the alphabet of the genetic language.  Essentially, a DNA string
 is a string consisting of only the letters {\tt A}, {\tt C}, {\tt G}, and {\tt T}, for instance, ``{\tt CAATGTCAC}''.
 These strings encode various genetic traits such as hair color, eye color, and many others.
@@ -222,9 +222,9 @@ T} are complements; so are {\tt G} and {\tt C}. Thus, the complement to the stri
 GTTACAGTG}''.  DNA sometimes undergoes a {\em mutation}. There are three types of mutation: insertion of a new letter
 somewhere in the string; removal of a letter from the string; and replacement of one letter by another. The following
 table shows the examples of the replacement of letters and the complement of the given sequence. Do you understand what
-took place during each of these replacements? Make sure that you explain the meaning of each row in the table to your
-partner. Of course, you may talk with the course instructor or a teaching assistant or post a question in our Slack team
-if you find these examples of DNA manipulation to be difficult to understand.
+took place during each of these replacements? Make sure that you fully understand the meaning of each row in the table.
+Of course, you may talk with the course instructor or a teaching assistant or post a question in our Slack team if you
+find these examples of DNA manipulation to be difficult to understand.
 
 \begin{center}
 
@@ -254,11 +254,11 @@ original} input string --- that is, they are not cumulative.
 
 \item Print the complement of {\tt dnaString}, appropriately labeled.  (Hint: use several applications of the String
   class's ``{\tt replace}'' method. For example, if I want to replace all characters `A' with characters `T' in the
-  String variable {\tt dnaString}, then I will say {\tt dnaString.replace(`A',`T');}, but there's still a trick in this
-  case of getting the complement!)
+  {\tt String} variable {\tt dnaString}, then I will say {\tt dnaString.replace(`A',`T')}. But there's still another step to
+  take in the case of getting the complement!)
 
 Another hint regarding this strategy: As you make your substitutions to get your complementary string, remember that you
-are replacing, for example, \emph{A}'s to \emph{T}'s from the $S$ to make our complementary sequence
+are replacing, for example, \emph{A}'s to \emph{T}'s from the $S$ to make the complementary sequence
 ($S_{complementary}$). Do not simply perform such substitution directly because you will be unable to figure out which
 \emph{T}'s were original \emph{T}'s (and not the replaced ones) that you were supposed to change to \emph{A}'s. You can
 check your complementary sequence from the website  (using the \emph{Complement} option after you enter your sequence):
@@ -266,9 +266,9 @@ check your complementary sequence from the website  (using the \emph{Complement}
 
 \item[NOTE:]
 
-The next three parts of your program will also use Java's {\tt java.util.Random} class. You may want to read about the
-{\tt Random} class in the textbook to understand the concepts behind the {\tt Random} class better; you may also ask
-your instructor for help with this Java class.
+  The next three parts of your program will also use Java's {\tt java.util.Random} class. You may want to read the
+  textbook's description of the inputs to the methods of the {\tt Random} class; you may also ask the course instructor
+  for help with generating random numbers in Java.
 
 \item \begin{sloppypar} Perform a random mutation consisting of inserting a randomly-chosen extra letter into {\tt
   dnaString}; it must be one of the four ``allowed'' letters for DNA. Print this, ensuring that it is appropriately
@@ -334,7 +334,7 @@ If you cannot build \mainprogram{} correctly, then please talk with a teaching a
 
 When all of the errors are eliminated, you can run your program by typing \gradlerun{} in the terminal window---this is
 the ``execute'' step that will run your program and produce the designated output. You should see your name, today's
-date, and the graphical output. Make sure there are spaces separating words in your output (did you forget to put a
+date, and the textual output. Make sure there are spaces separating words in your output (did you forget to put a
 space inside the quotation marks after your last name?). If not, then repair the program and re-build and re-run it.
 Once the program runs, please reflect on this process. What step did you find to be the most challenging? Why? You
 should write your reflections in a file, called \reflection{}, that uses the Markdown writing language. To complete this
@@ -385,7 +385,7 @@ satisfied all of the main checks, thereby allowing the course instructor to eval
 and writing, as further described in the \step{Evaluation} section of this assignment sheet. Unless you provide the
 instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
 towards your grade for this laboratory assignment. In conclusion, here are some points to remember for creating programs
-that performs steganography:
+that manipulates DNA:
 
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
@@ -402,7 +402,6 @@ that performs steganography:
 %   contain insights that will support your completion of this assignment.
 
 \end{enumerate}
-
 
 \section*{Summary of the Required Deliverables}
 
