@@ -207,58 +207,116 @@ one directory from your current location, then you can type the command \command
 and directories do you see? What do you think is their purpose? Spend some time exploring, sharing your discoveries with
 a neighbor and a \mbox{teaching assistant}.
 
-\subsection*{Implementing and Evaluating a Steganography Program}
+\section*{Creating a DNA Manipulation Program}
 
-Within the field of computer security, there are many sub-fields that develop strategies for sending, receiving, and
-storing secret messages. Involving the hiding of a secret ``in plain sight'', steganography is one way in which you can
-create and send a secret message. For this laboratory assignment, you will implement a program, called {\tt
-ManipulateDna.java}, that will perform these operations:
+Bioinformatics is the study of biological phenomena by the use of biology, mathematics, and computer science. One of the
+most important study areas in bioinformatics concerns DNA. Deoxyribonucleic acid is a molecule that encodes the
+genetic instructions (genes) which are used by all known living organisms and many viruses to build the proteins
+required to sustain existence. The genes of DNA are written in the nucleotides; guanine (G), adenine (A), thymine (T),
+and cytosine (C), (chemical compounds) which serve as the alphabet of the genetic language.  Essentially, a DNA string
+is a string consisting of only the letters {\tt A}, {\tt C}, {\tt G}, and {\tt T}, for instance, ``{\tt CAATGTCAC}''.
+These strings encode various genetic traits such as hair color, eye color, and many others.
 
-\vspace*{-.1in}
+Each DNA string has a {\em complement} formed by replacing each code letter by its complementary code. {\tt A} and {\tt
+T} are complements; so are {\tt G} and {\tt C}. Thus, the complement to the string ``{\tt CAATGTCAC}'' is ``{\tt
+GTTACAGTG}''.  DNA sometimes undergoes a {\em mutation}. There are three types of mutation: insertion of a new letter
+somewhere in the string; removal of a letter from the string; and replacement of one letter by another. The following
+table shows the examples of the replacement of letters and the complement of the given sequence. Do you understand what
+took place during each of these replacements? Make sure that you explain the meaning of each row in the table to your
+partner. Of course, you may talk with the course instructor or a teaching assistant or post a question in our Slack team
+if you find these examples of DNA manipulation to be difficult to understand.
+
+\begin{center}
+
+\begin{tabular}{|cc|}
+\hline
+\textbf{Strand} & \textbf{Sequence}\\
+\hline\hline
+$S$      & $\mathtt{ACGTGCCTCTTGGTAC}$ \\
+\hline
+A $\to$ T &  $\mathtt{TCGTGCCTCTTGGTTC}$ \\
+T $\to$ A &  $\mathtt{TCGAGCCACAAGGATC}$ \\
+C $\to$ G &  $\mathtt{TGGAGGGAGAAGGATG}$ \\
+G $\to$ C &  $\mathtt{TGCACGGAGAACCATG}$ \\
+\hline
+$S_{complementary}$ &  $\mathtt{TGCACGGAGAACCATG}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+You should design and implement a Java program that does the following.  Note that all changes are made to the {\em
+original} input string --- that is, they are not cumulative.
 
 \begin{enumerate}
 
-  \itemsep0in
+\item Prompt the user to type in a string of DNA, declare a variable and save the DNA string that the user inputs into a
+  variable called ``{\tt dnaString}''.
 
-  \item Prompt the user for a word that is exactly ten characters in length. For now, {\tt ManipulateDna} should allow the
-    user to enter any type of ``padding character'' before or after a word that is less than ten characters. If the word
-    is longer than ten characters, then your program should simply discard all of the characters after the tenth one
-    (you may also implement better strategies).
+\item Print the complement of {\tt dnaString}, appropriately labeled.  (Hint: use several applications of the String
+  class's ``{\tt replace}'' method. For example, if I want to replace all characters `A' with characters `T' in the
+  String variable {\tt dnaString}, then I will say {\tt dnaString.replace(`A',`T');}, but there's still a trick in this
+  case of getting the complement!)
 
-  \item Since the {\tt ManipulateDna} program must output all of its character in a capitalized form, you should transform the
-    word provided by the user so that it only contains upper-case letters.
+Another hint regarding the trick: As you make your substitutions to get your complementary string, remember that you are
+replacing, for example, \emph{A}'s to \emph{T}'s from the $S$ to make our complementary sequence ($S_{complementary}$).
+Do not simply perform such substitution directly because you will be unable to figure out which \emph{T}'s were original
+\emph{T}'s (and not the replaced ones) that you were supposed to change to \emph{A}'s. You can check your complementary
+sequence from the website  (using the \emph{Complement} option after you enter your sequence): \url{http://arep.med.harvard.edu/labgc/adnan/projects/Utilities/revcomp.html}.
 
-  \item Finally, {\tt ManipulateDna} should output a $20 \times 20$ ``grid'' of letters that contain the user's word
-    ``hidden'' inside of it. All of the letters in this grid should be capitalized. You should brainstorm and prototype
-    different techniques for effectively hiding the user's word in the grid of letters. As you implement your program,
-    you must make decisions about the following matters: (i) what letters will you add to the grid to best hide the
-    user's word? (ii) where and how will you place the user's word in the grid? (iii) what features of the Java
-    programming language will you use to ensure the grid is formatted properly in the terminal window? As you answer
-    these questions and finish the implementation and testing of {\tt ManipulateDna.java}, it may help to consider the fact
-    that the user's word might be better hidden if the grid contains both some randomly chosen letters and some letters
-    found in the user's input. You should devote a considerable amount of time to brainstorming, prototyping, and
-    evaluating (e.g., by asking a friend to try your program) different ways in which you can effectively hide words.
+\item[NOTE:]
 
-\end{enumerate}
+The next three parts of your program will also use Java's {\tt java.util.Random} class. You may want to read about the
+{\tt Random} class at the end of this document to understand the concepts behind the {\tt Random} class better; you may
+also ask your instructor for help with this Java class.
 
-\vspace*{-.1in}
+\item \begin{sloppypar} Perform a random mutation consisting of inserting a randomly-chosen extra letter into {\tt
+  dnaString}; it must be one of the four ``allowed'' letters for DNA. Print this, ensuring that it is appropriately
+labeled and identifying the position of the insertion and the letter inserted. \end{sloppypar}
 
-In summary, this assignment asks you to write a program, \mainprogramsource{}, that will complete a word-hiding task. In
-particular, it must meet the following requirements:
+\item Perform a random mutation consisting of removing a letter from a randomly-chosen position in the {\tt dnaString}.
+  Once again, display this in the terminal window, making sure that it is appropriately labeled and identifying the
+  position of the insertion and the letter removed.
 
-\vspace*{-.1in}
-\begin{enumerate}
-  \setlength{\itemsep}{0pt}
-
-\item Contain at least four single-line comments and two multi-line comments.
-\item Include calls to at least 12 \command{println} statements.
-\item Include at least one call to the \command{substring} and \command{charAt} methods.
-\item Declare at least 20 \command{String} variables for the lines of output.
-\item Produce a total of 26 lines of output.
-\item Display the contiguous word hidden in a $20 \times 20$ grid.
-\item Separate the three blocks of output with a blank horizontal line.
+\item Perform a random mutation consisting of altering a single letter from a randomly-chosen position in {\tt
+  dnaString}; it must be changed to a randomly-chosen letter from the set of allowed letters for DNA. Print it,
+  appropriately labeled and identifying the position of the replacement, the new letter, and the letter it replaces.
+  This is the last output your program must perform.
 
 \end{enumerate}
+
+The following gives two sample runs of a previously implemented version of the program. You will get different values,
+of course, since the changes are random, but the structure of the output will be the same. Please see the course
+instructor if you do not understand this program's output.
+
+\begin{verbatim}
+     aldenv5:lab6 jjumadinova$ java ManipulateDNA
+     Janyl Jumadinova
+     Lab 6
+     Thu Sep 30 12:51:58 EDT 2015
+
+     Enter a string containing only C, G, T, and A: actg
+     Complement of ACTG is TGAC
+     Inserting T at position 0 gives TACTG
+     Deleting from position 1 gives ATG
+     Changing position 2 gives ACGG
+\end{verbatim}
+
+\begin{verbatim}
+     aldenv5:lab6 jjumadinova$ java ManipulateDNA
+     Janyl Jumadinova
+     Lab 6
+     Thu Sep 30 12:52:58 EDT 2015
+
+     Enter a string containing only C, G, T, and A: actg
+     Complement of ACTG is TGAC
+     Inserting G at position 0 gives GACTG
+     Deleting from position 0 gives CTG
+     Changing position 0 gives ACTG
+\end{verbatim}
+
+In the second example, nothing was changed in the last line---the {\tt ManipulateDNA} program randomly replaced the
+letter ``{\tt A}'' with the letter ``{\tt A}''!  This behavior is acceptable.
+
 
 Whenever you are finished typing text Java code in \program{gvim}, press the ESC key located in the upper left corner of
 the keyboard. This should remove the word \command{--INSERT--} from the bottom of the screen and take you out of insert
@@ -330,7 +388,7 @@ that performs steganography:
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
 
-\item You should think carefully about how the $20 \times 20$ grid can be displayed using variables.
+\item You should think carefully about 
 
 \item As in past assignments, your program only needs to have one {\tt main} method in one file.
 
