@@ -181,14 +181,10 @@ If you have not done so already, please read all of the relevant ``GitHub Guides
 \url{https://guides.github.com/}, that explain how to use many of the features that GitHub provides. In particular,
 please make sure that you have read guides such as ``Mastering Markdown'' and ``Documenting Your Projects on GitHub'';
 each of them will help you to understand how to use both GitHub and GitHub Classroom. Focusing on the content about
-declaring and variables and reading from files, you should review Chapters 1 and 2 and Sections 3.1 and 3.2 in the
+declaring and variables and reading from files, you should review Chapters 1 through 3 and Sections 4.1 and 4.2 in the
 textbook.
 
-% ensuring that you fully understand all of the concepts that we discussed during class and investigated during
-% the prior practical and laboratory sessions. Please see the course instructor or one of the teaching assistants if you
-% have questions these reading assignments.
-
-\section*{Implementing a ``Mad Libs'' Program}
+\section*{Creating and Using Java Objects}
 
 To access the practical assignment, you should go into the \channel{\#announcements} channel in our Slack team and find
 the announcement that provides a link for it. Copy this link and paste it into your web browser. Now, you should accept
@@ -197,42 +193,30 @@ assignment's starting materials and to store the completed version of your assig
 GitHub repository for this assignment, please click the green ``Accept'' button and then click the link that is prefaced
 with the label ``Your assignment has been created here''. If you accepted the assignment and correctly followed these
 steps, you should have created a GitHub repository with a name like
-``Allegheny-Computer-Science-111-Fall-2017/computer-science-111-fall-2017-practical-4-gkapfham''. Unless you provide the
+``Allegheny-Computer-Science-111-Fall-2017/computer-science-111-fall-2017-practical-5-gkapfham''. Unless you provide the
 instructor with documentation of the extenuating circumstances that you are facing, not accepting the assignment means
 that you automatically receive a failing grade for it. Please follow the steps from the previous laboratory assignments
 for finding your ``home base'' for this practical assignment; see the instructor if you are stuck on getting started.
 
-Figure~\ref{mad} contains the output from running a program like the one you must implement. To gain some inspiration
-and to learn more about Mad Libs and how your program should behave, please visit the site
-\url{http://www.madlibs.com/}. After finishing the \mainprogramsource{} file, you should repeatedly test you program to
-make sure that it is creating the correct textual output. This will involve you editing the input file so that it
-contains different words and numbers in it and then running your program to determine if it correctly displays the
-story.
+Figure~\ref{mad} contains the output from running a program like the one you must implement. You should study the
+comments in the \mainprogramsource{} to see each step that you have to implement. Specifically, your program must create
+three instances of the \command{Die} class, display the face value of each one of these instances, sum these face values
+together, and then output the sum. After finishing the \mainprogramsource{} file, you should repeatedly test you program
+to make sure that it is creating the correct textual output. This will involve you building and running the program and
+checking the output to ensure that it produces different values and that the summation is correct. Don't forget that
+this practical assignment requires you to understand and edit two different files called \mainprogramsource{} and
+\secondprogramsource{}. This means that you must have correct formatting and documentation in both of these files. You
+should also be able to draw a diagram that explains the relationship between the two Java source code files.
 
 \begin{figure}[tb]
 \begin{Verbatim}[commandchars=\\\{\}]
-Gregory M. Kapfhammer Fri Sep 29 12:01:06 EDT 2017
-
-I read a singular noun: \textcolor{red}{noggin}
-I read an adjective: \textcolor{red}{verboten}
-I read another adjective: \textcolor{red}{glitzy}
-I read a non-zero whole number: \textcolor{red}{32}
-I read another non-zero whole number: \textcolor{red}{42}
-I read any number: \textcolor{red}{5.43}
-I read a singular verb: \textcolor{red}{snooze}
-
-----------------------------------
-
-Third-Grade Word Problem
-
-If you own 32 verboten noggins,
-and you purchase 42 glitzy noggins,
-how many more noggins do you need to snooze 5.43 noggins?
-
-Answer: You need -68.57 more noggins.
+Die One's Face Value: 1
+Die Two's Face Value: 5
+Die Three's Face Value: 6
+The Sum of the Three Die is: 12
 \end{Verbatim}
 \vspace*{-.1in}
-\caption{Sample ``Mad Libs'' output with values from file input highlighted in red.}
+\caption{Sample ``{\tt RollAndSumDice}'' output featuring randomly generated values.}
 \label{mad}
 \end{figure}
 
@@ -270,19 +254,27 @@ if you do not understand this policy.
 
 \section*{Additional Success Strategies for the Practical Sessions}
 
-Since this is one of our first practical assignments and you are still learning how to use the Java programming
-language, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
+Since this is one another challenging practical assignment and you are still learning how to use the Java classes and
+objects, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
 about the necessary technology and the background and expertise of the other students in the class, the teaching
 assistants, and the course instructor.
 
 \vspace*{-.05in}
 \begin{itemize}
 
-\itemsep 0in
+\item {\bf Review the Textbook.} Look at the technical diagrams in Section 4.2 of the textbook, paying close attention
+  to the meaning of each element and how it connects to the code.
 
-\item {\bf Experiment.} Practical sessions are for learning by doing without the pressure of grades or ``right/wrong''
-  answers. So try things! To learn about files and variables, please intelligently experiment with the code, making small
+\item {\bf Experiment.} Practical sessions are for learning by doing without the pressure of letter grades. So try
+  things! To learn more about classes and objects, please intelligently experiment with the code, making small
   incremental changes and observing the output.
+
+\item {\bf Write Exceptional Comments.} Remember, while it is true that we write Java programs to run on a computer, it
+  is also the case that we should create them so that they are understandable by human beings. As you are completing
+  this assignment, pay close attention to each of the comments that you write. Did you create comments that you will be
+  able to easily understand if you look at them several weeks from now? Do all of your comments accurately describe the
+  behavior of your Java source code? If you answered ``no'' to either one of these questions, then please take extra
+  time to revise the comments in your Java source code.
 
 \item {\bf Practice Key Laboratory Skills.} As you are completing this assignment, practice using the {\tt gvim} text
   editor and the terminal until you can easily use their most important features. If you would like, you can also try
