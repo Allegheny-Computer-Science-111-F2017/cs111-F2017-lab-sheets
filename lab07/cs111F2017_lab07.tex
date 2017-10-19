@@ -236,6 +236,33 @@ member should perform the typing when finding and fixing the next defect. Import
 assignment is for all of the team members to gain experience with using GitHub to collaborate in a team. Please see the
 course instructor if you do not understand how to use GitHub to complete this task.
 
+\subsection*{Extending the Geometry Calculator}
+
+\begin{sloppypar}
+  After reviewing the aforementioned programming projects on page 158 of your textbook, you will also notice that the {\tt
+  GeometricCalculator.java} does not contain methods for calculating the surface area of a sphere or a cylinder.  While
+  avoiding the types of mistakes that you corrected in the previous phase of this assignment, please add in new methods
+  to perform these calculations. In addition, you will need to add appropriate input and output statements and method
+  calls to the {\tt CommandLineGeometer} to ensure that the entire program works correctly. For instance, you will need to
+  implement a new method called {\tt calculateSphereSurfaceArea} to the {\tt GeometricCalculator.java} file and then add
+  input and output code to the {\tt CommandLineGeometer.java} file. Whenever possible, try to follow the correct
+  pattern established in the given source code. Please see the course instructor if you have questions!
+\end{sloppypar}
+
+As you continue to critically review the source code of the {\tt CommandLineGeometer}, you will notice that it does not
+always consistently produce output for the user.  For example, even though it displays the user-input radius before
+calling {\tt calculateSphereVolume}, it does not appropriately display the sides of the triangle for the {\tt
+computeTriangleArea} method---can you please add in this feature? Moreover, none of the output of the {\tt double}
+variables in the {\tt CommandLineGeometer} is formatted in a consistent fashion. To solve this problem, you should use
+one of the techniques described in Section 3.6 of your textbook to format the output of all decimals to contain four
+decimal points. For instance, you may consider creating an instance of the {\tt DecimalFormat} class.
+
+Please notice that most of the provided code is not commented. As part of this assignment, your team should add
+detailed comments to the code, following the JavaDoc standard. Please see the instructor if you are not sure how or
+where to add comments to your program. Don't forget that you and your partner should evenly divide up the work needed to
+complete this assignment. This means that both of your user names should appear in the commit log of your GitHub
+repository.
+
 \section*{Checking the Correctness of Your Program and Writing}
 
 As verified by Checkstyle, the code for the \mainprogramsource{} file must adhere to all of the requirements in the
