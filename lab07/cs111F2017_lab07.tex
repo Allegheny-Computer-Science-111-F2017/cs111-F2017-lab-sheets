@@ -178,15 +178,17 @@ questions about these readings.
 \section*{Accessing the Laboratory Assignment on GitHub}
 
 To access the laboratory assignment, you should go into the \channel{\#announcements} channel in our Slack team and find
-the announcement that provides a link for it. Copy this link and paste it into your web browser. Now, you should accept
-the laboratory assignment and see that GitHub Classroom created a new GitHub repository for you to access the
-assignment's starting materials and to store the completed version of your assignment. Specifically, to access your new
-GitHub repository for this assignment, please click the green ``Accept'' button and then click the link that is prefaced
-with the label ``Your assignment has been created here''. If you accepted the assignment and correctly followed these
-steps, you should have created a GitHub repository with a name like
-``Allegheny-Computer-Science-111-Fall-2017/computer-science-111-fall-2017-lab-6-gkapfham''. Unless you provide the
-instructor with documentation of the extenuating circumstances that you are facing, not accepting the assignment means
-that you automatically receive a failing grade for it.
+the announcement that provides a link for it. Now, make sure that the leader of your team also notes your team number
+and first copies this link and pastes it into their web browser. Next, the team leader (i.e., the first person in the
+team listing on Slack) will create their team with the name \command{Computer-Science-111-Fall-2017-Lab-7-Group<assigned
+team number>} and then accept the laboratory assignment and see that GitHub Classroom created a new GitHub repository
+for your team to access the assignment's starting materials and to store the completed version of your assignment. Note
+that the team leader will have to type their group name and number into a text field. For instance, if the team leader
+was in the second group then that person would type ``Group2'' into the text field. At this point, each additional
+member of the team can accept the assignment through GitHub. Please make sure that each of your team members joins the
+team to which the instructor assigned them to work. Unless you provide the instructor with documentation of the
+extenuating circumstances that you are facing, not accepting the assignment means that you automatically receive a
+failing grade for it. Please see the course instructor with any questions.
 
 Before you move to the next step of this assignment, please make sure that you read all of the content on the web site
 for your new GitHub repository, paying close attention to the technical details about the commands that you will type
@@ -199,7 +201,7 @@ will download all of the code for this assignment. For instance, if the course i
 command in the terminal, it would look like:
 
 \begin{lstlisting}
-  git clone https://github.com/Allegheny-Computer-Science-111-F2017/computer-science-111-fall-2017-lab-6-gkapfham.git
+  git clone git@github.com:Allegheny-Computer-Science-111-F2017/computer-science-111-fall-2017-lab-7-group2.git
 \end{lstlisting}
 
 After this command finishes, you can use \command{cd} to change into the new directory. If you want to \step{go back}
@@ -207,141 +209,6 @@ one directory from your current location, then you can type the command \command
 \command{cd} and \command{ls} commands to explore the files that you automatically downloaded from GitHub. What files
 and directories do you see? What do you think is their purpose? Spend some time exploring, sharing your discoveries with
 a neighbor and a \mbox{teaching assistant}.
-
-\section*{Creating a DNA Manipulation Program}
-
-Bioinformatics is the study of biological phenomena by the use of biology, mathematics, and computer science. One of the
-most important study areas in bioinformatics concerns DNA. Deoxyribonucleic acid is a molecule that encodes the
-genetic instructions (genes) which are used by all known living organisms and many viruses to build the proteins
-required to sustain existence. The genes of DNA are written in the nucleotides guanine (G), adenine (A), thymine (T),
-and cytosine (C), (chemical compounds) which serve as the alphabet of the genetic language.  Essentially, a DNA string
-is a string consisting of only the letters {\tt A}, {\tt C}, {\tt G}, and {\tt T}, for instance, ``{\tt CAATGTCAC}''.
-These strings encode various genetic traits such as hair color, eye color, and many others.
-
-Each DNA string has a {\em complement} formed by replacing each code letter by its complementary code. {\tt A} and {\tt
-T} are complements; so are {\tt G} and {\tt C}. Thus, the complement to the string ``{\tt CAATGTCAC}'' is ``{\tt
-GTTACAGTG}''.  DNA sometimes undergoes a {\em mutation}. There are three types of mutation: insertion of a new letter
-somewhere in the string; removal of a letter from the string; and replacement of one letter by another. The following
-table shows the examples of the replacement of letters and the complement of the given sequence. Do you understand what
-took place during each of these replacements? That is, make sure that you fully understand the meaning of each row in
-the table. Of course, you may talk with the course instructor or a teaching assistant or post a question in our Slack
-team if you find these examples of DNA manipulation to be difficult to understand.
-
-\begin{center}
-
-\begin{tabular}{|cc|}
-\hline
-\textbf{Strand} & \textbf{Sequence}\\
-\hline\hline
-$S$      & $\mathtt{ACGTGCCTCTTGGTAC}$ \\
-\hline
-A $\to$ T &  $\mathtt{TCGTGCCTCTTGGTTC}$ \\
-T $\to$ A &  $\mathtt{TCGAGCCACAAGGATC}$ \\
-C $\to$ G &  $\mathtt{TGGAGGGAGAAGGATG}$ \\
-G $\to$ C &  $\mathtt{TGCACGGAGAACCATG}$ \\
-\hline
-$S_{complementary}$ &  $\mathtt{TGCACGGAGAACCATG}$ \\
-\hline
-\end{tabular}
-\end{center}
-
-You should design and implement a Java program that does the following.  Note that all changes are made to the {\em
-original} input string --- that is, they are not cumulative.
-
-\begin{enumerate}
-
-\item Prompt the user to type in a string of DNA, declare a variable and save the DNA string that the user inputs into a
-  variable called ``{\tt dna}''.
-
-\item Print the complement of {\tt dna}, appropriately labeled.  (Hint: use several applications of the String class's
-  ``{\tt replace}'' method. For example, if I want to replace all characters `A' with characters `T' in the {\tt String}
-  variable called {\tt dna}, then I will say {\tt dna.replace(`A',`T')}. But there's still another step to take in the
-  case of getting the complement!)
-
-Another hint regarding this strategy: As you make your substitutions to get your complementary string, remember that you
-are replacing, for example, \emph{A}'s to \emph{T}'s from the $S$ to make the complementary sequence
-($S_{complementary}$). Do not simply perform such substitution directly because you will be unable to figure out which
-\emph{T}'s were original \emph{T}'s (and not the replaced ones) that you were supposed to change to \emph{A}'s. You can
-check your complementary sequence from the website  (using the \emph{Complement} option after you enter your sequence):
-\url{http://arep.med.harvard.edu/labgc/adnan/projects/Utilities/revcomp.html}.
-
-\item[NOTE:]
-
-  The next three parts of your program will also use Java's {\tt java.util.Random} class. You may want to read the
-  textbook's description of the inputs to the methods of the {\tt Random} class; you may also ask the course instructor
-  for help with generating random numbers in Java.
-
-\item \begin{sloppypar} Perform a random mutation consisting of inserting a randomly-chosen extra letter into {\tt
-  dna}; it must be one of the four ``allowed'' letters for DNA. Print this, ensuring that it is appropriately
-labeled and identifying the position of the insertion and the letter inserted. \end{sloppypar}
-
-\item Perform a random mutation consisting of removing a letter from a randomly-chosen position in the {\tt dna}.
-  Once again, display this in the terminal window, making sure that it is appropriately labeled and identifying the
-  position of the insertion and the letter removed.
-
-\item Perform a random mutation consisting of altering a single letter from a randomly-chosen position in {\tt
-  dna}; it must be changed to a randomly-chosen letter from the set of allowed letters for DNA. Print it,
-  appropriately labeled and identifying the position of the replacement, the new letter, and the letter it replaces.
-  This is the last output your program must perform.
-
-\end{enumerate}
-
-The following gives two sample runs of a previously implemented version of the program. You will get different values,
-of course, since the changes are random, but the structure of the output will be the same. Please see the course
-instructor if you do not understand this program's output.
-
-\begin{verbatim}
-Gregory M. Kapfhammer Thu Oct 05 10:19:43 EDT 2017
-Okay, I am going to manipulate the DNA string "actg".
-
-Enter a string containing only C, G, T, and A: actg
-Complement of ACTG is TGAC
-Inserting T at position 0 gives TACTG
-Deleting from position 1 gives ATG
-Changing position 2 gives ACGG
-
-Thanks for using the ManipulateDna program.
-Have an awesome day.
-\end{verbatim}
-
-\begin{verbatim}
-Gregory M. Kapfhammer Thu Oct 05 10:19:43 EDT 2017
-Okay, I am going to manipulate the DNA string "actg".
-
-Enter a string containing only C, G, T, and A: actg
-Complement of ACTG is TGAC
-Inserting G at position 0 gives GACTG
-Deleting from position 0 gives CTG
-Changing position 0 gives ACTG
-
-Thanks for using the ManipulateDna program.
-Have an awesome day.
-\end{verbatim}
-
-In the second example, nothing was changed in the last line---the {\tt ManipulateDNA} program randomly replaced the
-letter ``{\tt A}'' with the letter ``{\tt A}''! This behavior is acceptable.
-
-Whenever you are finished typing text Java code in \program{gvim}, press the ESC key located in the upper left corner of
-the keyboard. This should remove the word \command{--INSERT--} from the bottom of the screen and take you out of insert
-mode. Use the \option{File/Save} menu to save your program. Alternatively, if you would like to use the keyboard to save
-your file, you can press \command{:w} when you are not in insert mode. Leaving the {\tt gvim} window open, go back to
-your terminal window.
-
-If you want to \step{build} your program you can type the command \gradlebuild{} in your terminal, thereby causing the
-Java compiler to check your program for errors and get it ready to run. If you get any error messages, go back into
-\program{gvim} and try to figure out what you mis-typed and fix it. Once you have solved the problem, make a note of the
-error and the solution for resolving it. Re-save your program and then build it again by re-running the \gradlebuild{}.
-If you cannot build \mainprogram{} correctly, then please talk with a teaching assistant or the instructor.
-
-When all of the errors are eliminated, you can run your program by typing \gradlerun{} in the terminal window---this is
-the ``execute'' step that will run your program and produce the designated output. You should see your name, today's
-date, and the textual output. Make sure there are spaces separating words in your output (did you forget to put a
-space inside the quotation marks after your last name?). If not, then repair the program and re-build and re-run it.
-Once the program runs, please reflect on this process. What step did you find to be the most challenging? Why? You
-should write your reflections in a file, called \reflection{}, that uses the Markdown writing language. To complete this
-aspect of the assignment, you should write one high-quality paragraph that reports on your experiences with the various
-commands and Java code segments. You should also write a paragraph that describes your strategy for manipulating the DNA
-{\tt String}.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
