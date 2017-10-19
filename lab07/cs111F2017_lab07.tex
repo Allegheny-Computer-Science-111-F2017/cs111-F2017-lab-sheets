@@ -210,6 +210,26 @@ one directory from your current location, then you can type the command \command
 and directories do you see? What do you think is their purpose? Spend some time exploring, sharing your discoveries with
 a neighbor and a \mbox{teaching assistant}.
 
+\subsection*{Participating in a ``Bug Hunt''}
+
+You and your group members should explore your repository by using {\tt gvim} to study the source code of the {\tt
+CommandLineGeometer.java} and {\tt GeometricCalculator.java} files. What methods do these classes provide? How do they
+work? Does any of this code look incorrect? Why?
+
+After carefully reviewing the source code and PP 3.6, 3.7, and 3.9 on page 158 of your textbook and then compiling and
+running the {\tt CommandLineGeometer} class, you should notice that there are several defects in this program. As such,
+you will need to take part in a ``bug hunt'' to find and fix all of the problems. First, you should find the method
+responsible for calculating the volume of a sphere. Using the equation in PP 3.6 as a reference point, what is the
+defect in this method?
+
+The {\tt GeometricCalculator} also provides a method to calculate a triangle's area. Once again, there is a mistake in
+this method. Can you find and fix it? How did you know that this was the bug? If you investigate the source code of the
+method for calculating the volume of a cylinder, you will notice that there is another defect lurking in the source
+code. Wait! If you carefully study the way in which the {\tt CommandLineGeometer} calls the method provided by the {\tt
+GeometricCalculator} and then displays the resulting output, you will realize that there is another bug in this program.
+Make sure you have found all of the problems before continuing with this laboratory assignment.
+
+
 \section*{Checking the Correctness of Your Program and Writing}
 
 As verified by Checkstyle, the code for the \mainprogramsource{} file must adhere to all of the requirements in the
