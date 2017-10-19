@@ -210,7 +210,7 @@ one directory from your current location, then you can type the command \command
 and directories do you see? What do you think is their purpose? Spend some time exploring, sharing your discoveries with
 a neighbor and a \mbox{teaching assistant}.
 
-\subsection*{Participating in a ``Bug Hunt''}
+\section*{Participating in a ``Bug Hunt''}
 
 You and your group members should explore your repository by using {\tt gvim} to study the source code of the {\tt
 CommandLineGeometer.java} and {\tt GeometricCalculator.java} files. What methods do these classes provide? How do they
@@ -236,7 +236,7 @@ member should perform the typing when finding and fixing the next defect. Import
 assignment is for all of the team members to gain experience with using GitHub to collaborate in a team. Please see the
 course instructor if you do not understand how to use GitHub to complete this task.
 
-\subsection*{Extending the Geometry Calculator}
+\section*{Extending the Geometry Calculator}
 
 \begin{sloppypar}
   After reviewing the aforementioned programming projects on page 158 of your textbook, you will also notice that the {\tt
@@ -262,6 +262,31 @@ detailed comments to the code, following the JavaDoc standard. Please see the in
 where to add comments to your program. Don't forget that you and your partner should evenly divide up the work needed to
 complete this assignment. This means that both of your user names should appear in the commit log of your GitHub
 repository.
+
+\section*{Exploring the Features of the Java Language}
+
+The {\tt CommandLineGeometer} program uses an enumerated type, as described in Section 3.7, to store specific values in
+a variable. Intuitively, an enumerated type allows a variable to take on one of a pre-specified set of values or levels.
+In this case, the {\tt GeometricShape} enumerated type can take on three possible values. What are they? Why is it
+useful to use this type of variable?
+
+You will notice that this laboratory assignment organizes the methods into two separate classes, as you have seen in
+past assignments and in-class exercises. In particular, the {\tt CommandLineGeometer} provides the user interface for
+our program and the {\tt GeometricCalculator} furnishes the methods that perform the required computations.  If you want
+to make changes to the way in which the program accepts input or produces output, then you will need to modify the {\tt
+CommandLineGeometer}. Otherwise, if you want to modify the way in which the program performs a computation, or add a new
+computation, then you must make changes to the {\tt GeometricCalculator}. Overall, these two Java classes complete their
+work by following a pattern similar to that which is outlined in Figures 4.7 and 4.8 of your textbook. Please see the
+instructor if you have questions about this approach.
+
+Additionally, it is important to note that this assignment asks you to add new methods to the {\tt
+GeometricCalculator.java} file. To complete this task, you should directly copy the pattern that you see in the
+provided methods, only making changes to implement the new functionality. Also, these methods accept parameters, of
+type {\tt double}, that are passed from the {\tt main} method in the {\tt CommandLineGeometer} to one of the
+``calculate'' methods in the {\tt GeometricCalculator}. You should also notice that all of the methods return a {\tt
+double} variable to the method that calls it. Intuitively, the parameters are the ``input'' to a method and the return
+values are the ``output'' of the method. When you create the required new methods, you should follow the pattern of the
+previously implemented method, ensuring that you have the same types of input and output.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
@@ -355,13 +380,13 @@ instructor will reduce your grade for the assignment while still considering the
 your GitHub repository and the overall quality of your partially completed work. Please see the instructor if you have
 questions about the evaluation of this laboratory assignment.
 
-% \section*{Adhering to the Honor Code}
+\section*{Adhering to the Honor Code}
 
-% In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
-% for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
-% carefully between the student who discusses the principles underlying a problem with others and the student who produces
-% assignments that are identical to, or merely variations on, someone else's work. Deliverables (e.g., Java source code or
-% Markdown-based technical writing) that are nearly identical to the work of others will be taken as evidence of violating
-% the \mbox{Honor Code}. Please see the course instructor if you have questions about this policy.
+In adherence to the Honor Code, students should complete this assignment on with only their team member(s). While it is
+appropriate for students in this class to have high-level conversations about the assignment, it is necessary to
+distinguish carefully between the student who discusses the principles underlying a problem with others and the student
+who produces assignments that are identical to, or merely variations on, someone else's work. Deliverables (e.g., Java
+source code or Markdown-based technical writing) that are nearly identical to the work of others will be taken as
+evidence of violating the \mbox{Honor Code}. Please see the course instructor if you have questions about this policy.
 
 \end{document}
