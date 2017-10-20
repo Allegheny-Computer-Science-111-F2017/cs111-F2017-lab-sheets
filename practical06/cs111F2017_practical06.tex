@@ -18,11 +18,11 @@
 
 % Edit these commands to give the name to the main program
 
-\newcommand{\mainprogram}{\lstinline{RollAndSumDice}}
-\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalfive/RollAndSumDice.java}}
+\newcommand{\mainprogram}{\lstinline{YearCheckerMain}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalsix/YearCheckerMain.java}}
 
-\newcommand{\secondprogram}{\lstinline{Die}}
-\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalfive/Die.java}}
+\newcommand{\secondprogram}{\lstinline{YearChecker}}
+\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalsix/YearChecker.java}}
 
 % Edit this commands to describe key deliverables
 
@@ -50,7 +50,7 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalfive/RollAndSumDice.java -m "Your
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalsix/YearCheckerMain.java -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -192,14 +192,14 @@ assignment's starting materials and to store the completed version of your assig
 GitHub repository for this assignment, please click the green ``Accept'' button and then click the link that is prefaced
 with the label ``Your assignment has been created here''. If you accepted the assignment and correctly followed these
 steps, you should have created a GitHub repository with a name like
-``Allegheny-Computer-Science-111-Fall-2017/computer-science-111-fall-2017-practical-5-gkapfham''. Unless you provide the
+``Allegheny-Computer-Science-111-Fall-2017/computer-science-111-fall-2017-practical-6-gkapfham''. Unless you provide the
 instructor with documentation of the extenuating circumstances that you are facing, not accepting the assignment means
 that you automatically receive a failing grade for it. Please follow the steps from the previous laboratory assignments
 for finding your ``home base'' for this practical assignment; see the instructor if you are stuck on getting started.
 
 Figure~\ref{mad} contains the output from running a program like the one you must implement. You should study the
 comments in the \mainprogramsource{} to see each step that you have to implement. Specifically, your program must create
-three instances of the \command{Die} class, display the face value of each one of these instances, sum these face values
+three instances of the \command{YearChecker} class, display the face value of each one of these instances, sum these face values
 together, and then output the sum. After finishing the \mainprogramsource{} file, you should repeatedly test you program
 to make sure that it is creating the correct textual output. This will involve you building and running the program and
 checking the output to ensure that it produces different values and that the summation is correct. Don't forget that
@@ -209,13 +209,19 @@ should also be able to draw a diagram that explains the relationship between the
 
 \begin{figure}[tb]
 \begin{Verbatim}[commandchars=\\\{\}]
-Die One's Face Value: 1
-Die Two's Face Value: 5
-Die Three's Face Value: 6
-The Sum of the Three Die is: 12
+Gregory M. Kapfhammer Thu Oct 19 23:39:16 EDT 2017
+
+I will read in a year between 1000 and 3000.
+Okay, I read in the year 1452.
+
+Is the year 1452 a leap year? Yes
+Is the year 1452 a cicada emergence year? Yes
+Is the year 1452 a year of peak sunspot activity? Yes
+
+Thank you for using the YearChecker.
 \end{Verbatim}
 \vspace*{-.1in}
-\caption{Sample ``{\tt RollAndSumDice}'' output featuring randomly generated values.}
+\caption{Sample ``{\tt YearCheckerMain}'' output featuring output from conditional logic checks.}
 \label{mad}
 \end{figure}
 
