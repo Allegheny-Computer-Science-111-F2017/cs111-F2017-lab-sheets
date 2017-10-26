@@ -20,8 +20,8 @@
 \newcommand{\mainprogram}{\lstinline{CommandLineCalculator}}
 \newcommand{\mainprogramsource}{\lstinline{src/main/java/labeight/CommandLineCalculator.java}}
 
-\newcommand{\secondprogram}{\lstinline{GeometricCalculator}}
-\newcommand{\secondprogramsource}{\lstinline{src/main/java/labeight/GeometricCalculator.java}}
+\newcommand{\secondprogram}{\lstinline{NumericalCalculator}}
+\newcommand{\secondprogramsource}{\lstinline{src/main/java/labeight/NumericalCalculator.java}}
 
 % Edit this commands to describe key deliverables
 
@@ -72,6 +72,7 @@ descriptive commit message"}}
 }
 
 \usepackage{fancyhdr}
+\usepackage{fancyvrb}
 
 \usepackage[margin=1in]{geometry}
 \usepackage{fancyhdr}
@@ -209,80 +210,51 @@ one directory from your current location, then you can type the command \command
 and directories do you see? What do you think is their purpose? Spend some time exploring, sharing your discoveries with
 a neighbor and a \mbox{teaching assistant}.
 
-\section*{Participating in a Collaborative ``Bug Hunt''}
+\begin{figure}[tb]
+\begin{Verbatim}[commandchars=\\\{\}]
+  Gregory M. Kapfhammer Thu Oct 26 09:49:50 EDT 2017
+  Welcome to the Command Line Calculator!
+
+  Okay, I read in 5 values. Here they are:
+
+  25
+  125
+  19
+  -10
+  154
+
+  Nice, I found the minimum value: -10
+  Great, I found the maximum value: 154
+  Okay, I calculated the arithmetic mean as: 62.6
+
+  Thanks for using the CommandLineCalculator.
+\end{Verbatim}
+\vspace*{-.1in}
+\caption{Sample ``{\tt CommandLineCalculator}'' output featuring numerical values read from a file.}
+\label{fig:output}
+\end{figure}
+
+\section*{Collaboratively Implementing a Computation Engine}
 
 You and your group members should explore your repository by using {\tt gvim} to study the source code of the {\tt
-CommandLineCalculator.java} and {\tt GeometricCalculator.java} files. What methods do these classes provide? How do they
+CommandLineCalculator.java} and {\tt NumericalCalculator.java} files. What methods do these classes provide? How do they
 work? Does any of this code look incorrect? Why?
 
-After carefully reviewing the source code and PP 3.6, 3.7, and 3.9 on page 158 of your textbook and then compiling and
-running the {\tt CommandLineCalculator} class, you should notice that there are several defects in this program. As such,
-you will need to take part in a ``bug hunt'' to find and fix all of the problems. First, you should find the method
-responsible for calculating the volume of a sphere. Using the equation in PP 3.6 as a reference point, what is the
-defect in this method?
-
-The {\tt GeometricCalculator} also provides a method to calculate a triangle's area. Once again, there is a mistake in
-this method. Can you find and fix it? How did you know that this was the bug? If you investigate the source code of the
-method for calculating the volume of a cylinder, you will notice that there is another defect lurking in the source
-code. Wait! If you carefully study the way in which the {\tt CommandLineCalculator} calls the method provided by the {\tt
-GeometricCalculator} and then displays the resulting output, you will realize that there is another bug in this program.
-Make sure you have found all of the problems before continuing with this laboratory assignment.
-
-You and your group member(s) should complete this assignment by using GitHub and proceeding incrementally. That is, one
-member of the team should be in charge of typing when you find and fix the first defect. Then, that person should commit
-and push all of the repaired Java files and the other team member(s) should run \command{git pull}. Now, a new team
-member should perform the typing when finding and fixing the next defect. Importantly, one of the goals for this
-assignment is for all of the team members to gain experience with using GitHub to collaborate in a team. Please see the
-course instructor if you do not understand how to use GitHub to complete this task.
-
-\section*{Extending the Geometry Calculator}
-
-\begin{sloppypar}
-  After reviewing the aforementioned programming projects on page 158 of your textbook, you will also notice that the {\tt
-  GeometricCalculator.java} does not contain methods for calculating the surface area of a sphere or a cylinder. While
-  avoiding all of the mistake types that you corrected in the previous phase of this assignment, please add in new methods
-  to perform these calculations. In addition, you will need to add appropriate input and output statements and method
-  calls to the {\tt CommandLineCalculator} to ensure that the entire program works correctly. For instance, you will need to
-  implement a new method called {\tt calculateSphereSurfaceArea} to the {\tt GeometricCalculator.java} file and then add
-  input and output code to the {\tt CommandLineCalculator.java} file. Whenever possible, try to follow the correct
-  pattern established in the given source code. Please see the course instructor if you have questions!
-\end{sloppypar}
-
-As you continue to critically review the source code of the {\tt CommandLineCalculator}, you will notice that it does not
-always consistently produce output for the user. For example, even though it displays the user-input radius before
-calling {\tt calculateSphereVolume}, it does not appropriately display the sides of the triangle for the {\tt
-computeTriangleArea} method---can you please add in this feature? Moreover, none of the output of the {\tt double}
-variables in the {\tt CommandLineCalculator} is formatted in a consistent fashion. To solve this problem, you should use
-one of the techniques described in Section 3.6 of your textbook to format the output of all decimals to contain four
-decimal points. For instance, you may consider creating an instance of the {\tt DecimalFormat} class.
-
-Please notice that most of the provided code is not commented. As part of this assignment, your team should add
-detailed comments to the code, following the JavaDoc standard. Please see the instructor if you are not sure how or
-where to add comments to your program. Don't forget that you and your partner should evenly divide up the work needed to
-complete this assignment. This means that both of your user names should appear in the commit log of your GitHub
-repository.
-
-\section*{Exploring the Features of the Java Language}
-
-The {\tt CommandLineCalculator} program uses an enumerated type, as described in Section 3.7, to store specific values in
-a variable. Intuitively, an enumerated type allows a variable to take on one of a pre-specified set of values or levels.
-In this case, the {\tt GeometricShape} enumerated type can take on three possible values. What are they? Why is it
-useful to use this type of variable?
 
 You will notice that this laboratory assignment organizes the methods into two separate classes, as you have seen in
 past assignments and in-class exercises. In particular, the {\tt CommandLineCalculator} provides the user interface for
-our program and the {\tt GeometricCalculator} furnishes the methods that perform the required computations.  If you want
+our program and the {\tt NumericalCalculator} furnishes the methods that perform the required computations. If you want
 to make changes to the way in which the program accepts input or produces output, then you will need to modify the {\tt
 CommandLineCalculator}. Otherwise, if you want to modify the way in which the program performs a computation, or add a new
-computation, then you must make changes to the {\tt GeometricCalculator}. Overall, these two Java classes complete their
+computation, then you must make changes to the {\tt NumericalCalculator}. Overall, these two Java classes complete their
 work by following a pattern similar to that which is outlined in Figures 4.7 and 4.8 of your textbook. Please see the
 instructor if you have questions about this approach.
 
 Additionally, it is important to note that this assignment asks you to add new methods to the {\tt
-GeometricCalculator.java} file. To complete this task, you should directly copy the pattern that you see in the
+NumericalCalculator.java} file. To complete this task, you should directly copy the pattern that you see in the
 provided methods, only making changes to implement the new functionality. Also, these methods accept parameters, of
 type {\tt double}, that are passed from the {\tt main} method in the {\tt CommandLineCalculator} to one of the
-``calculate'' methods in the {\tt GeometricCalculator}. You should also notice that all of the methods return a {\tt
+``calculate'' methods in the {\tt NumericalCalculator}. You should also notice that all of the methods return a {\tt
 double} variable to the method that calls it. Intuitively, the parameters are the ``input'' to a method and the return
 values are the ``output'' of the method. When you create the required new methods, you should follow the pattern of the
 previously implemented method, ensuring that you have the same types of input and output.
