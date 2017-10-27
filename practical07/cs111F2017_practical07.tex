@@ -18,11 +18,11 @@
 
 % Edit these commands to give the name to the main program
 
-\newcommand{\mainprogram}{\lstinline{YearCheckerMain}}
-\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalsix/YearCheckerMain.java}}
+\newcommand{\mainprogram}{\lstinline{PasswordCheckerMain}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalsix/PasswordCheckerMain.java}}
 
-\newcommand{\secondprogram}{\lstinline{YearChecker}}
-\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalsix/YearChecker.java}}
+\newcommand{\secondprogram}{\lstinline{PasswordChecker}}
+\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalsix/PasswordChecker.java}}
 
 % Edit this commands to describe key deliverables
 
@@ -50,7 +50,7 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalsix/YearCheckerMain.java -m "Your
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalsix/PasswordCheckerMain.java -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -198,8 +198,8 @@ that you automatically receive a failing grade for it. Please follow the steps f
 for finding your ``home base'' for this practical assignment; see the instructor if you are stuck on getting started.
 
 This practical assignment is inspired by a quotation is from Allegheny College's Alma Mater. In one of the classes for
-this assignment, {\tt YearChecker.java}, you will write methods that, for the file's input from {\tt
-YearCheckerMain.java}, determine which of the following events occurs that year: \begin{itemize}
+this assignment, {\tt PasswordChecker.java}, you will write methods that, for the file's input from {\tt
+PasswordCheckerMain.java}, determine which of the following events occurs that year: \begin{itemize}
 
 \item
 it is designated as a leap year
@@ -237,19 +237,17 @@ other checks. You should also be able to draw a diagram explaining the relations
 
 \begin{figure}[tb]
 \begin{Verbatim}[commandchars=\\\{\}]
-Gregory M. Kapfhammer Thu Oct 19 23:39:16 EDT 2017
+Gregory M. Kapfhammer Fri Oct 27 07:49:57 EDT 2017
 
-I will read in a year between 1000 and 3000.
-Okay, I read in the year 1452.
+I will read in a password from a file.
+Okay, I read in the password "computerscience2017".
 
-Is the year 1452 a leap year? Yes
-Is the year 1452 a cicada emergence year? Yes
-Is the year 1452 a year of peak sunspot activity? Yes
+Is the password "computerscience2017" a valid password? No
 
-Thank you for using the YearChecker.
+Thank you for using the PasswordChecker.
 \end{Verbatim}
 \vspace*{-.1in}
-\caption{Sample ``{\tt YearCheckerMain}'' output featuring output from conditional logic checks.}
+\caption{Sample ``{\tt PasswordCheckerMain}'' output featuring output from conditional logic checks.}
 \label{mad}
 \end{figure}
 
