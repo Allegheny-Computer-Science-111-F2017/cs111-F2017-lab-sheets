@@ -19,10 +19,10 @@
 % Edit these commands to give the name to the main program
 
 \newcommand{\mainprogram}{\lstinline{PasswordCheckerMain}}
-\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalsix/PasswordCheckerMain.java}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalseven/PasswordCheckerMain.java}}
 
 \newcommand{\secondprogram}{\lstinline{PasswordChecker}}
-\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalsix/PasswordChecker.java}}
+\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalseven/PasswordChecker.java}}
 
 % Edit this commands to describe key deliverables
 
@@ -50,7 +50,7 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalsix/PasswordCheckerMain.java -m "Your
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalseven/PasswordCheckerMain.java -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -181,10 +181,10 @@ If you have not done so already, please read all of the relevant ``GitHub Guides
 \url{https://guides.github.com/}, that explain how to use many of the GitHub's features. In particular, please make sure
 that you have read guides such as ``Mastering Markdown'' and ``Documenting Your Projects on GitHub''; each of them will
 help you to understand how to use both GitHub and GitHub Classroom. Focusing on the content about creating and using
-Java objects and writing conditional logic, you should review Chapters 1 through 4 and Sections 5.1 and 5.3 in the
+Java objects and writing conditional logic, you should review Chapters 1 through 4 and Sections 5.1 and 5.8 in the
 textbook.
 
-\section*{Using Conditional Logic in a Java Program}
+\section*{Implementing and Evaluating a Password Checker}
 
 To access the practical assignment, you should go into the \channel{\#announcements} channel in our Slack team and find
 the announcement that provides a link for it. Copy this link and paste it into your web browser. Now, you should accept
@@ -193,38 +193,24 @@ assignment's starting materials and to store the completed version of your assig
 GitHub repository for this assignment, please click the green ``Accept'' button and then click the link that is prefaced
 with the label ``Your assignment has been created here''. If you accepted the assignment and correctly followed these
 steps, you should have created a GitHub repository with a name like
-``Allegheny-Computer-Science-111-Fall-2017/computer-science-111-fall-2017-practical-6-gkapfham''. Unless you provide the
+``Allegheny-Computer-Science-111-Fall-2017/computer-science-111-fall-2017-practical-7-gkapfham''. Unless you provide the
 instructor with documentation of the extenuating circumstances that you are facing, not accepting the assignment means
 that you automatically receive a failing grade for it. Please follow the steps from the previous laboratory assignments
 for finding your ``home base'' for this practical assignment; see the instructor if you are stuck on getting started.
 
-This practical assignment is inspired by a quotation is from Allegheny College's Alma Mater. In one of the classes for
+This practical assignment invites you to create a program that will check an input password. In one of the classes for
 this assignment, {\tt PasswordChecker.java}, you will write methods that, for the file's input from {\tt
-PasswordCheckerMain.java}, determine which of the following events occurs that year: \begin{itemize}
+PasswordCheckerMain.java}, determine if the chosen password:
 
-\item
-it is designated as a leap year
+\begin{itemize}
 
-\item
-the emergence of the 17-year cicadas (more specifically, Brood II)
+\item Contains ten or more characters
 
-\item
-it is predicted to be a peak year of sunspot activity
+\item Contains at least one upper-case and lower-case letter
+
+\item Contains at least one number
 
 \end{itemize}
-
-\noindent A year is a {\em leap year\/} if it is divisible by 4, {\em unless\/} it is a century year. If it is a century
-year, it is a leap year if it is divisible by 400. For instance, 1968 and 1972 are leap years since they are divisible
-by 4; 1967 and 1970 are not. The year 2000 is a leap year because it is divisible by 400; however, 1900 is not (even
-though 1900 is divisible by 4---century years are treated differently).
-
-\noindent The 17-year cicadas emerge from underground every 17 years. There are several ``broods''---the one in which we
-have interest emerged most recently in 2013. That is, any year that differs from 2013 by a multiple of 17 is also an
-emergence year for Brood II (e.g., 2040, 1996, 1928, and 3713).
-
-\noindent Sunspot activity usually peaks every 11 years. The year 2013 was supposed to be such a ``solar max'' year.
-This means that any year that differs from 2013 by a multiple of 11 should also be a solar max year. For instance, 2002,
-2024, and 1793 are all years predicted to exhibit peak activity.
 
 Figure~\ref{mad} contains the output from running a program like the one you must implement. You should study the
 comments in the \mainprogramsource{} to see each step that you have to implement. You should also look at the
