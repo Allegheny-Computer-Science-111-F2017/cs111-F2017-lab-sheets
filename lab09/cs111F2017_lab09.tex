@@ -18,10 +18,13 @@
 % Edit these commands to give the name to the main program
 
 \newcommand{\mainprogram}{\lstinline{TodoListManager}}
-\newcommand{\mainprogramsource}{\lstinline{src/main/java/labeight/TodoListManager.java}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/labnine/TodoListManager.java}}
 
 \newcommand{\secondprogram}{\lstinline{TodoList}}
-\newcommand{\secondprogramsource}{\lstinline{src/main/java/labeight/TodoList.java}}
+\newcommand{\secondprogramsource}{\lstinline{src/main/java/labnine/TodoList.java}}
+
+\newcommand{\thirdprogram}{\lstinline{TodoListItem}}
+\newcommand{\thirdprogramsource}{\lstinline{src/main/java/labnine/TodoListItem.java}}
 
 % Edit this commands to describe key deliverables
 
@@ -48,8 +51,8 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitaddmainprogram}{\command{git add src/main/java/labeight/TodoListManager.java}}
-\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/labeight/TodoListManager.java -m "Your
+\newcommand{\gitaddmainprogram}{\command{git add src/main/java/labnine/TodoListManager.java}}
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/labnine/TodoListManager.java -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -326,9 +329,9 @@ public void markTaskAsDone(int toMarkId) {
 
 \section*{Checking the Correctness of Your Program and Writing}
 
-As verified by Checkstyle, the code for the \mainprogramsource{} file must adhere to all of the requirements in the
-Google Java Style Guide available at \url{https://google.github.io/styleguide/javaguide.html}. The Markdown file that
-contains your reflection must adhere to the standards described in the Markdown Syntax Guide
+As verified by Checkstyle, the Java source code for all three of your files must adhere to all of the requirements in
+the Google Java Style Guide available at \url{https://google.github.io/styleguide/javaguide.html}. The Markdown file
+that contains your reflection must adhere to the standards described in the Markdown Syntax Guide
 \url{https://guides.github.com/features/mastering-markdown/}. Finally, your \reflection{} file should adhere to the
 Markdown standards established by the \step{Markdown linting} tool available at
 \url{https://github.com/markdownlint/markdownlint/} and the writing standards set by the \step{prose linting} tool from
@@ -368,19 +371,16 @@ assignment's due date. Yet, if the green \checkmark{} appears on the last commit
 satisfied all of the main checks, thereby allowing the course instructor to evaluate other aspects of your source code
 and writing, as further described in the \step{Evaluation} section of this assignment sheet. Unless you provide the
 instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
-towards your grade for this laboratory assignment. In conclusion, here are some points to remember for creating programs
-that performs computations:
+towards your grade for this laboratory assignment.
+
+In conclusion, here are some points to remember for creating a program that manages a list:
 
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
 
 \item The provide source code is incomplete---make sure that you add all of the needed features.
 
-\item Your team should draw a technical diagram to show the relationships between Java classes.
-
 \item As in past assignments, your program only needs to have one {\tt main} method in one file.
-
-\item Your program will alternate between creating and displaying textual output---this is okay!
 
 \item Don't forget that you and your team member(s) should all contribute evenly by typing in text and using commands,
   like \command{git push} and \command{git pull}, to transfer files to and from GitHub.
@@ -406,6 +406,9 @@ Instead, this assignment invites you to submit, using GitHub, the following deli
   desired textual output in the terminal.
 
 \item A complete and correct version of \secondprogramsource{} that meets all of the set requirements and supports the
+  desired textual output in the terminal.
+
+\item A complete and correct version of \thirdprogramsource{} that meets all of the set requirements and supports the
   desired textual output in the terminal.
 
 \item The commit log in your GitHub repository should clearly show that the team members effectively collaborated. That
