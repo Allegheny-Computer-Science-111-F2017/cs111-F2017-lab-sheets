@@ -4,9 +4,9 @@
 
 % Edit these commands for each assignment
 
-\newcommand{\assignmentduedate}{November 2}
-\newcommand{\assignmentassignedate}{October 26}
-\newcommand{\assignmentnumber}{Eight}
+\newcommand{\assignmentduedate}{November 9}
+\newcommand{\assignmentassignedate}{November 2}
+\newcommand{\assignmentnumber}{Nine}
 
 \newcommand{\labyear}{2017}
 \newcommand{\labday}{Thursday}
@@ -17,11 +17,11 @@
 
 % Edit these commands to give the name to the main program
 
-\newcommand{\mainprogram}{\lstinline{CommandLineCalculator}}
-\newcommand{\mainprogramsource}{\lstinline{src/main/java/labeight/CommandLineCalculator.java}}
+\newcommand{\mainprogram}{\lstinline{TodoListManager}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/labeight/TodoListManager.java}}
 
-\newcommand{\secondprogram}{\lstinline{NumericalCalculator}}
-\newcommand{\secondprogramsource}{\lstinline{src/main/java/labeight/NumericalCalculator.java}}
+\newcommand{\secondprogram}{\lstinline{TodoList}}
+\newcommand{\secondprogramsource}{\lstinline{src/main/java/labeight/TodoList.java}}
 
 % Edit this commands to describe key deliverables
 
@@ -48,8 +48,8 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitaddmainprogram}{\command{git add src/main/java/labeight/CommandLineCalculator.java}}
-\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/labeight/CommandLineCalculator.java -m "Your
+\newcommand{\gitaddmainprogram}{\command{git add src/main/java/labeight/TodoListManager.java}}
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/labeight/TodoListManager.java -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -233,29 +233,29 @@ a neighbor and a \mbox{teaching assistant}.
   Thanks for using the Command Line Calculator.
 \end{Verbatim}
 \vspace*{-.1in}
-\caption{Sample ``{\tt CommandLineCalculator}'' output featuring numerical values read from a file.}
+\caption{Sample ``{\tt TodoListManager}'' output featuring numerical values read from a file.}
 \label{fig:output}
 \end{figure}
 
 \section*{Collaboratively Implementing a Computation Engine}
 
 You and your group members should explore your repository by using a text editor to study the source code of the {\tt
-CommandLineCalculator.java} and {\tt NumericalCalculator.java} files. What methods do these classes provide? How do they
+TodoListManager.java} and {\tt TodoList.java} files. What methods do these classes provide? How do they
 work? Can you draw a picture that depicts the relationship between these two Java classes? Before you and your group
 members move onto the next step of this assignment, make sure that you understand what parts of the system are already
 implemented and what you have to extend and add in order to complete the assignment.
 
 You will notice that this assignment organizes the methods into two separate classes, as you have seen in past
-assignments and in-class exercises. In particular, the {\tt CommandLineCalculator} provides the user interface for our
-program and the {\tt NumericalCalculator} furnishes the methods that perform the required computations. If you want to
+assignments and in-class exercises. In particular, the {\tt TodoListManager} provides the user interface for our
+program and the {\tt TodoList} furnishes the methods that perform the required computations. If you want to
 make changes to the way in which the program accepts input or produces output, then you will need to modify the {\tt
-CommandLineCalculator}. Otherwise, if you want to modify the way in which the program performs a computation, or add a
-new computation, then you must make changes to the {\tt NumericalCalculator}. Overall, these two Java classes complete
+TodoListManager}. Otherwise, if you want to modify the way in which the program performs a computation, or add a
+new computation, then you must make changes to the {\tt TodoList}. Overall, these two Java classes complete
 their work by following a pattern similar to that which is outlined in Figures 4.7 and 4.8 of your textbook. Please see
 the instructor if you have questions about this approach.
 
 Additionally, it is important to note that this assignment asks you to finish segments in both the {\tt
-CommandLineCalculator.java} and {\tt NumericalCalculator.java} files. For instance, step three and steps five through
+TodoListManager.java} and {\tt TodoList.java} files. For instance, step three and steps five through
 nine are not finished in the \mainprogram{}. This means that you will have to refer to previous assignments to learn
 more about how to read input from a file. Then, to perform computations you will invoke all of the methods in the
 \secondprogram{}. Yet, the \secondprogram{} also contains several methods in need of a finished implementation. Please
