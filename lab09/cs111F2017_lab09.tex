@@ -309,9 +309,9 @@ provided priority level. For instance, using the example todo list above on this
 priority tasks would return those with {\tt id} values of zero and one. Similarly, the use of the category-search
 operation will require you to iterate through all of the {\tt TodoItem}s managed by a {\tt TodoList} as you find those
 that match the requested category. For the aforementioned list and a search for the ``Explain'' category, the search
-would only one task. The {\tt markTaskAsDone} method, as shown below, gives a concrete example of how to iterate through
-the {\tt todoItems} and use conditional logic to check if a specific {\tt todoItem} has the requested {\tt toMarkId}.
-You can use this method as an inspiration for those methods that you must implement.
+would find only one task. The {\tt markTaskAsDone} method, as shown below, gives a concrete example of how to iterate
+through the {\tt todoItems} and use conditional logic to check if a specific {\tt todoItem} has the requested {\tt
+toMarkId}. You can use this method as an inspiration for those methods that you must implement.
 
 \vspace{-0.05in}
 \begin{verbatim}
