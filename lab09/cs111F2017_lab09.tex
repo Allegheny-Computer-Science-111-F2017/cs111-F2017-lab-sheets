@@ -295,15 +295,15 @@ does not include the source code to implement the priority-search and category-s
 the following output that the todo list manager can already read the todo list from the file, mark a task as done, list
 the existing tasks, and stop running the program. Can you also compile and run this program and produce this output?
 
-To complete this assignment, you and your partner are responsible for adding all of the source code that is needed to
-implement the priority-search and category-search features. This means that you will first have to add code that can
-determine when the user has input the word ``{\tt priority-search}'' or ``{\tt category-search}''---what file should
-contain this code? Please notice that you will need to finish implementing the methods that perform these operations!
-Both of these operations will involve you using a {\tt java.util.Iterator} to iterate through all of the instances of
-the {\tt TodoItem} class.
+To complete this assignment, your team is responsible for adding all of the source code that is needed to implement the
+priority-search and category-search features. This means that you will first have to add code that can determine when
+the user has input the word ``{\tt priority-search}'' or ``{\tt category-search}''---what file should contain this code?
+Please notice that you will need to finish implementing the methods that perform these operations! Both of these
+operations will involve you using a {\tt java.util.Iterator} to iterate through all of the instances of the {\tt
+TodoItem} class.
 
 When you are performing a priority-search, you will need to collect and return all of the {\tt TodoItem}s that match the
-provided priority level. For instance, using the example todo list on the previous page, a request for the ``{\tt A}''
+provided priority level. For instance, using the example todo list above on this page, a request for the ``{\tt A}''
 priority tasks would return those with {\tt id} values of zero and one. Similarly, the use of the category-search
 operation will require you to iterate through all of the {\tt TodoItem}s managed by a {\tt TodoList} as you find those
 that match the requested category. Again using the aforementioned example todo list, this operation would also return
