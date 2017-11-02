@@ -251,29 +251,78 @@ a neighbor and a \mbox{teaching assistant}.
 \label{fig:output}
 \end{figure}
 
-\section*{Collaboratively Implementing a Computation Engine}
+\section*{Collaboratively Implementing a List Management Tool}
 
 You and your group members should explore your repository by using a text editor to study the source code of the {\tt
-TodoListManager.java} and {\tt TodoList.java} files. What methods do these classes provide? How do they
-work? Can you draw a picture that depicts the relationship between these two Java classes? Before you and your group
-members move onto the next step of this assignment, make sure that you understand what parts of the system are already
-implemented and what you have to extend and add in order to complete the assignment.
+TodoListManager.java}, {\tt TodoListItem.java}, and {\tt TodoList.java} files. What methods do these classes provide?
+How do they work? Can you draw a picture that depicts the relationship between these three Java classes? Before you and
+your group members move onto the next step of this assignment, make sure that you understand what parts of the system
+are already implemented and what you have to extend and add in order to complete the assignment.
 
-You will notice that this assignment organizes the methods into two separate classes, as you have seen in past
-assignments and in-class exercises. In particular, the {\tt TodoListManager} provides the user interface for our
-program and the {\tt TodoList} furnishes the methods that perform the required computations. If you want to
-make changes to the way in which the program accepts input or produces output, then you will need to modify the {\tt
-TodoListManager}. Otherwise, if you want to modify the way in which the program performs a computation, or add a
-new computation, then you must make changes to the {\tt TodoList}. Overall, these two Java classes complete
-their work by following a pattern similar to that which is outlined in Figures 4.7 and 4.8 of your textbook. Please see
-the instructor if you have questions about this approach.
+You will notice that this assignment organizes the methods into three separate classes, as you have seen in past
+assignments and in-class exercises. In particular, the {\tt TodoListManager} provides the user interface for our program
+and the {\tt TodoList} furnishes the methods that perform the required computations and the {\tt TodoListItem}
+represents an entry inside of a task list. If you want to make changes to the way in which the program accepts input or
+processes variables to produce output, then you will need to modify the {\tt TodoListManager}. Otherwise, if you want to
+modify the way in which the program performs a computation, or add a new computation, then you must make changes to
+either the {\tt TodoList} or the {\tt TodoListItem}. Although more complex than this example, these three Java classes
+complete their work by following a pattern similar to that which is in Figures 4.7 and 4.8. Please see the instructor if
+you have questions about this approach.
 
-Additionally, it is important to note that this assignment asks you to finish segments in both the {\tt
-TodoListManager.java} and {\tt TodoList.java} files. For instance, step three and steps five through
-nine are not finished in the \mainprogram{}. This means that you will have to refer to previous assignments to learn
-more about how to read input from a file. Then, to perform computations you will invoke all of the methods in the
-\secondprogram{}. Yet, the \secondprogram{} also contains several methods in need of a finished implementation. Please
-refer to the \readme{} file in your repository for all of the requirements associated with these files.
+The current implementation of the {\tt TodoListManager} reads from a file called ``{\tt todo.txt}'', an example of which
+is included below this paragraph. An individual line in the ``{\tt todo.txt}'' file always adheres to the format
+``Priority, Category, Task'' where ``{\tt A}'' is the most important priority (with ``{\tt B}'' being the next level,
+and so on), ``{\tt Understand}'' being an example of a category, and ``{\tt Use the LJV to see the TodoList}'' is a
+task.  Following this format for a task, you should consider adding in all of items that you and your partner must
+complete in order to successfully finish this assignment. That is, you can actually use your {\tt TodoListManager} to
+assist you as you complete both this project, later practical and laboratory assignments, and the upcoming final
+project!
+
+% \vspace{-0.1in}
+\begin{verbatim}
+  A,Understand,Draw diagram(s) to explain classes
+  A,Understand,Use the LJV to see TodoList
+  B,Explain,Add comments to all of the Todo classes
+\end{verbatim}
+% \vspace{-0.1in}
+
+% As always, please refer to the \readme{} file in your repository for all of the requirements associated with these
+% files.
+
+The final version of your {\tt TodoListManager} should provide features to read the todo list, search for specific tasks
+according to both priority and category, mark a task as done, and list all of the current tasks. Currently, the system
+does not include the source code to implement the priority-search and category-search features. Yet, you can see from
+the following output that the todo list manager can already read the todo list from the file, mark a task as done, list
+the existing tasks, and stop running the program. Can you also compile and run this program and produce this output? 
+
+To complete this assignment, you and your partner are responsible for adding all of the source code that is needed to
+implement the priority-search and category-search features. This means that you will first have to add code that can
+determine when the user has input the word ``{\tt priority-search}'' or ``{\tt category-search}''---what file should
+contain this code? Please notice that you will need to finish implementing the methods that perform these operations!
+Both of these operations will involve you using a {\tt java.util.Iterator} to iterate through all of the instances of
+the {\tt TodoItem} class.
+
+When you are performing a priority-search, you will need to collect and return all of the {\tt TodoItem}s that match the
+provided priority level. For instance, using the example todo list on the previous page, a request for the ``{\tt A}''
+priority tasks would return those with {\tt id} values of zero and one. Similarly, the use of the category-search operation
+will require you to iterate through all of the {\tt TodoItem}s managed by a {\tt TodoList} as you find those that match
+the requested category. Again using the aforementioned example todo list, this operation would also return the first two tasks.
+The {\tt markTaskAsDone} method, as shown below, gives a concrete example of how to iterate through the {\tt todoItems}
+and use conditional logic to check if a specific {\tt todoItem} has the requested {\tt toMarkId}. You can use this
+method as an inspiration for those methods that you must implement.
+
+\vspace{-0.1in}
+\begin{verbatim}
+public void markTaskAsDone(int toMarkId) {
+    Iterator<TodoListItem> iterator = todoItems.iterator();
+    while (iterator.hasNext()) {
+      TodoListItem todoItem = iterator.next();
+      if (todoItem.getId() == toMarkId) {
+        todoItem.markDone();
+      }
+    }
+  }
+\end{verbatim}
 
 \section*{Checking the Correctness of Your Program and Writing}
 
