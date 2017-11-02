@@ -281,17 +281,21 @@ complete in order to successfully finish this assignment. That is, you can actua
 assist you as you complete both this project, later practical and laboratory assignments, and the upcoming final
 project!
 
+\vspace{-0.05in}
 \begin{verbatim}
   A,Understand,Draw diagram(s) to explain classes
   A,Understand,Use the LJV to see TodoList
   B,Explain,Add comments to all of the Todo classes
 \end{verbatim}
+\vspace{-0.05in}
 
-The final version of your {\tt TodoListManager} should provide features to read the todo list, search for specific tasks
-according to both priority and category, mark a task as done, and list all of the current tasks. Currently, the system
-does not include the source code to implement the priority-search and category-search features. Yet, you can see from
-the following output that the todo list manager can already read the todo list from the file, mark a task as done, list
-the existing tasks, and stop running the program. Can you also compile and run this program and produce this output?
+As shown in Figure~\ref{fig:output}, the finished version of the {\tt TodoListManager} should provide features to read
+the todo list, search for specific tasks according to both priority and category, mark a task as done, and list all of
+the current tasks. Currently, the system does not include the source code to implement the priority-search and
+category-search features. Yet, you can see from the provided source code that the {\tt TodoListManager} can already read
+the todo list from the file, mark a task as done, list the existing tasks, and stop running the program. For this
+assignment, you must run the program by typing \command{gradle -q --console plain run}. Can you also build and run this
+program?
 
 To complete this assignment, your team is responsible for adding all of the source code that is needed to implement the
 priority-search and category-search features. This means that you will first have to add code that can determine when
@@ -309,7 +313,7 @@ would only one task. The {\tt markTaskAsDone} method, as shown below, gives a co
 the {\tt todoItems} and use conditional logic to check if a specific {\tt todoItem} has the requested {\tt toMarkId}.
 You can use this method as an inspiration for those methods that you must implement.
 
-\vspace{-0.1in}
+\vspace{-0.05in}
 \begin{verbatim}
 public void markTaskAsDone(int toMarkId) {
     Iterator<TodoListItem> iterator = todoItems.iterator();
