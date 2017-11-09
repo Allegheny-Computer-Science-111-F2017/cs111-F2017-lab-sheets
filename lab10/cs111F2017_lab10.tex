@@ -26,6 +26,8 @@
 % Edit this commands to describe key deliverables
 
 \newcommand{\reflection}{\lstinline{writing/reflection.md}}
+\newcommand{\timefile}{\lstinline{writing/time.md}}
+\newcommand{\colorfile}{\lstinline{writing/color.md}}
 \newcommand{\readme}{\lstinline{README.md}}
 
 % Commands to describe key development tasks
@@ -239,7 +241,7 @@ changes the resulting visualization. Along with recording the execution time for
 save each distinct graphic with a unique name and upload it to your Bitbucket repository.
 
 \noindent
-Now, find the line in the {\tt MandelbrotColor.java} file that is written in the following fashion:
+Now, find the line in the \secondprogramsource{} file that is written as:
 
 \vspace*{.5em}
 {\tt colors[i] = Color.HSBtoRGB(i/256f, 1, i/(i+8f));}
@@ -253,20 +255,26 @@ again use \command{/usr/bin/time} to measure the program's performance. In addit
 each program configuration, you should save each graphic with a unique name in your repository. As you vary both this
 value and the value of the {\tt max} variable, you should determine how execution time varies and how the image changes.
 
-\noindent
-In conclusion, here are some points to remember when creating your program that manages a list:
+It is worth making several additional points to ensure that you successfully complete this laboratory assignment. First,
+you and your partner should alternate taking turns as you complete the work. For instance, one person can run the Java
+program and then save its output to a file with a unique name. You can complete this task by first using
+\program{gradle} and then using the \program{cp} command that accepts as a parameter a source and destination file name
+so as to copy the source file to the destination. Please save all of your graphics files to the \program{graphics/}
+directory. Also, when you record the execution timings from running the \secondprogram{}, you should record the
+numerical values in a Markdown-based table stored in your version control repository. Finally, please add comments to
+the Java source codes that explain your intuition about how the program works; your final submitted version of the Java
+files should be the one corresponding to their last run.
 
-\begin{enumerate}
-  \setlength{\itemsep}{0pt}
+% \noindent
+% In conclusion, here are some points to remember when creating your program that manages a list:
 
-\item The provide source code is incomplete---make sure that you add all of the needed features.
-
-\item As in past assignments, your program only needs to have one {\tt main} method in one file.
-
-\item Don't forget that you and your team member(s) should all contribute evenly by typing in text and using commands,
-  like \command{git push} and \command{git pull}, to transfer files to and from GitHub.
-
-\end{enumerate}
+% \begin{enumerate}
+%   \setlength{\itemsep}{0pt}
+% \item The provide source code is incomplete---make sure that you add all of the needed features.
+% \item As in past assignments, your program only needs to have one {\tt main} method in one file.
+% \item Don't forget that you and your team member(s) should all contribute evenly by typing in text and using commands,
+%   like \command{git push} and \command{git pull}, to transfer files to and from GitHub.
+% \end{enumerate}
 
 \section*{Summary of the Required Deliverables}
 
@@ -277,15 +285,28 @@ Instead, this assignment invites you to submit, using GitHub, the following deli
 
   \setlength{\itemsep}{0in}
 
-\item Stored in \reflection{}, a three-paragraph reflection on the commands that you typed in \command{gvim} and the
-  terminal window. This Markdown-based document should explain the input, output, and behavior of each command and the
-  challenges that you confronted when using it. For every challenge that you encountered, please explain your solution
-  for it. This document should also explain how your team collaborated to finish the assignment, with each team member
-  writing their own paragraph inside of this Markdown file.
+  \item Completed, fully commented, and properly formatted versions of the two source code files.
+  \item The black and white version of the Mandelbrot graphic, saved with the default file name.
+  \item Appropriately named files for all of the color versions of the Mandelbrot graphics.
+  \item Data tables that show the performance timings associated with varying the two parameters.
 
-\item A commit log in your GitHub repository that clearly shows that the team members effectively collaborated. That is,
-  the commit log should show that commits were evenly made by all team members; the photograph of each member should
-  appear in the commit log.
+  % \item A written report, saved in {\tt time}, explaining the trends in your Mandelbrot data tables.
+  % \item A written report, saved in {\tt color}, discussing how the Mandelbrot graphic changes.
+  % \item A written reflection, saved in {\tt reflection}, about the challenges you faced during this lab.
+
+  \item A written report, saved in the file \timefile{}, explaining the execution time trends in your Mandelbrot data tables.
+    This Markdown-based document should furnish tables of executing timing numbers. Also, a written report, saved in
+    the file \colorfile{}, discussing how the shape and color of the Mandelbrot graphic changes.
+
+  \item Stored in \reflection{}, a three-paragraph reflection on the commands that you typed in \command{gvim} and the
+    terminal window. This Markdown-based document should explain the input, output, and behavior of each command and the
+    challenges that you confronted when using it. For every challenge that you encountered, please explain your solution
+    for it. This document should also explain how your team collaborated to finish the assignment, with each team member
+    writing their own paragraph inside of this Markdown file.
+
+  \item A commit log in your GitHub repository that clearly shows that the team members effectively collaborated. That is,
+    the commit log should show that commits were evenly made by all team members; the photograph of each member should
+    appear in the commit log.
 
 \end{enumerate}
 
@@ -293,12 +314,9 @@ Instead, this assignment invites you to submit, using GitHub, the following deli
 
 Using a report that the instructor shares with you through the commit log in GitHub, you will privately received a grade
 on this assignment and feedback on your submitted deliverables. Your grade for the assignment will be a function of the
-whether or not it was submitted in a timely fashion and if your program received a green \checkmark{} indicating that it
-met all of the requirements. Other factors will also influence your final grade on the assignment. In addition to
-studying the efficiency and effectiveness of your Java source code, the instructor will also evaluate the accuracy of
-both your technical writing and the comments in your source code. If your submission receives a red \naughtmark{}, the
-instructor will reduce your grade for the assignment while still considering the regularity with which you committed to
-your GitHub repository and the overall quality of your partially completed work. Please see the instructor if you have
+whether or not it was submitted in a timely fashion and if your repository contains all of the required Markdown and
+graphics files. Other factors will also influence your final grade on the assignment. The instructor will also evaluate
+the accuracy of both your technical writing and the comments in your source code. Please see the instructor if you have
 questions about the evaluation of this laboratory assignment.
 
 All team members will receive the same baseline grade for the laboratory assignment. If there are extenuating
