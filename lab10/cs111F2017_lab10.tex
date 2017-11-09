@@ -216,7 +216,42 @@ one directory from your current location, then you can type the command \command
 and directories do you see? What do you think is their purpose? Spend some time exploring, sharing your discoveries with
 your partner and a \mbox{teaching assistant}.
 
+\section*{Understanding and Empirically Evaluating a Fractal Generator}
 
+After developing a basic understanding of the \mainprogramsource{} and \secondprogramsource{} files, you should try to
+compile and run these programs. To run the version of the program that produces a black-and-white image, you can type
+the following command in your terminal window: \command{gradle -b build-bw.gradle run}. Alternatively, you can run the
+program version that produces a color image by running the command \command{gradle -b build-color.gradle run}. Please
+notice that these programs do not produce any output in the terminal window. Instead, you should see that they create a
+graphics file in the same directory from where you run it. For instance, if you run the \secondprogram{} program
+you will see that it creates a \command{mandelbrot-color.png} file. If you want to view the contents of this file, you
+can type the command \command{xdg-open mandelbrot-color.png} in your terminal window. What do you now see on the screen?
+What are the characteristics of this image?
+
+Please use {\tt gvim} to display and edit the source code of the {\tt MandelbrotColor.java} file, noticing that it
+declares an {\tt int} variable called {\tt max} and initializes it to the value of $1000$. How does the value of this
+variable influence the time taken to create the Mandelbrot graphic? To answer this question, you can change the value of
+max to, for instance, $100$, and recompile and run ``{\tt /usr/bin/time java MandelbrotColor}'' in your terminal.
+After running this command, the number that is postfixed with the ``{\tt user}'' label will give the amount of time need
+to create the fractal. As part of this assignment, you should set the {\tt max} variable to take on the values of $10,
+100, 1000, \mbox{and}, \- 10000$, timing the execution with {\tt /usr/bin/time} and using {\tt xdg-open} to see how this
+changes the resulting visualization. Along with recording the execution time for each program configuration, you should
+save each distinct graphic with a unique name and upload it to your Bitbucket repository.
+
+\noindent
+Now, find the line in the {\tt MandelbrotColor.java} file that is written in the following fashion:
+
+\vspace*{.5em}
+{\tt colors[i] = Color.HSBtoRGB(i/256f, 1, i/(i+8f));}
+\vspace*{.5em}
+
+\noindent This line of code configures the way in which \secondprogram{} will display the colors in the fractal. What
+happens when you change the value of ``{\tt 256f}'' to a different floating point value? Will changing this value
+influence the efficiency of the fractal generator? To answer these questions you should set this value to the values of
+$32, 64, 128, 256, 512, \mbox{and}, 1024$---while keeping the value of {\tt max} set to the default of $1000$---and then
+again use \command{/usr/bin/time} to measure the program's performance. In addition to recording the running time for
+each program configuration, you should save each graphic with a unique name in your repository. As you vary both this
+value and the value of the {\tt max} variable, you should determine how execution time varies and how the image changes.
 
 \noindent
 In conclusion, here are some points to remember when creating your program that manages a list:
