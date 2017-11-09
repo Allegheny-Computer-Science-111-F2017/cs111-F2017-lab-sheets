@@ -117,7 +117,7 @@ To learn more about how to use iteration constructs, such as the {\tt while} and
 programs. In addition, to explore some of the advanced graphical features that Java provides. Finally, to learn how to
 conduct an empirical study that uses operating system timers to evaluate how the number of loop iterations influences
 the execution time of a Java program. Since you will complete this assignment with a partner, the last objective for
-this project is to further hone your team-work skills and better your ability to use a shared GitHub repository.
+this project is to further hone your team-work skills and enhance your ability to use a shared GitHub repository.
 
 \section*{Suggestions for Success}
 
@@ -177,7 +177,7 @@ this project is to further hone your team-work skills and better your ability to
 Review Section 6.4 to learn more about the structure and behavior of the {\tt for} loop construct provided by the Java
 programming language, paying close attention to the three key parts of the {\tt for} loop's declaration. Please also
 review Section 5.4 to refresh your knowledge of the {\tt while} loop and skim Sections 11.1 through 11.6 to learn about
-the concepts associated with exception handling. To learn the basics about arrays, then please review Section 8.1 of the
+the concepts associated with exception handling. To learn the basics about arrays, please study Section 8.1 of the
 textbook. Finally, to learn more about fractals, and the Mandelbrot set that we will visualize in this laboratory
 assignment, please study the following Web site available at
 \url{http://jonisalonen.com/2013/lets-draw-the-mandelbrot-set}. Students who have never explored the concept of fractals
@@ -225,20 +225,20 @@ compile and run these programs. To run the version of the program that produces 
 the following command in your terminal window: \command{gradle -b build-bw.gradle run}. Alternatively, you can run the
 program version that produces a color image by running the command \command{gradle -b build-color.gradle run}. Please
 notice that these programs do not produce any output in the terminal window. Instead, you should see that they create a
-graphics file in the same directory from where you run it. For instance, if you run the \secondprogram{} program
-you will see that it creates a \command{mandelbrot-color.png} file. If you want to view the contents of this file, you
+graphics file in the same directory from where you run it. For instance, if you run the \secondprogram{} program you
+will see that it creates a \command{mandelbrot-color.png} file. If you want to view the contents of this file, then you
 can type the command \command{xdg-open mandelbrot-color.png} in your terminal window. What do you now see on the screen?
-What are the characteristics of this image?
+What are the characteristics of this image? How did the program create it?
 
 Please use {\tt gvim} to display and edit the source code of the {\tt MandelbrotColor.java} file, noticing that it
 declares an {\tt int} variable called {\tt max} and initializes it to the value of $1000$. How does the value of this
 variable influence the time taken to create the Mandelbrot graphic? To answer this question, you can change the value of
-max to, for instance, $100$, and recompile and run ``{\tt /usr/bin/time java MandelbrotColor}'' in your terminal.
-After running this command, the number that is postfixed with the ``{\tt user}'' label will give the amount of time need
-to create the fractal. As part of this assignment, you should set the {\tt max} variable to take on the values of $10,
-100, 1000, \mbox{and}, \- 10000$, timing the execution with {\tt /usr/bin/time} and using {\tt xdg-open} to see how this
-changes the resulting visualization. Along with recording the execution time for each program configuration, you should
-save each distinct graphic with a unique name and upload it to your Bitbucket repository.
+max to, for instance, $100$, and rebuild and preface the \program{gradle} command with ``{\tt /usr/bin/time}'' in your
+terminal. After running this command, the number that is postfixed with the ``{\tt user}'' label will give the amount of
+time needed to create the fractal. As part of this assignment, you should set the {\tt max} variable to take on the
+values of $10, 100, 1000, \mbox{and}, \- 10000$, timing the execution with {\tt /usr/bin/time} and using {\tt xdg-open}
+to see how this changes the resulting visualization. Along with recording the execution time for each program
+configuration, you should save each distinct graphic with a unique name and upload it to your GitHub repository.
 
 \noindent
 Now, find the line in the \secondprogramsource{} file that is written as:
@@ -256,14 +256,15 @@ each program configuration, you should save each graphic with a unique name in y
 value and the value of the {\tt max} variable, you should determine how execution time varies and how the image changes.
 
 It is worth making several additional points to ensure that you successfully complete this laboratory assignment. First,
-you and your partner should alternate taking turns as you complete the work. For instance, one person can run the Java
-program and then save its output to a file with a unique name. You can complete this task by first using
-\program{gradle} and then using the \program{cp} command that accepts as a parameter a source and destination file name
-so as to copy the source file to the destination. Please save all of your graphics files to the \program{graphics/}
-directory. Also, when you record the execution timings from running the \secondprogram{}, you should record the
-numerical values in a Markdown-based table stored in your version control repository. Finally, please add comments to
-the Java source codes that explain your intuition about how the program works; your final submitted version of the Java
-files should be the one corresponding to their last run.
+you and your partner should alternate taking turns as you complete the work. For instance, you can share the task of
+running the Java program and then saving its output to a file with a unique name. You can complete this task by first
+using \program{gradle} and then using the \program{cp} command that accepts as a parameter a source and destination file
+name so as to copy the source file to the destination. Please save all of your graphics files to the \program{graphics/}
+directory. Then, another team member can help to create the data tables in Markdown. Specifically, when you record the
+execution timings from running \secondprogram{}, you should record the numerical values in a Markdown-based table stored
+in your version control repository. Finally, please add comments to the Java source codes that explain your intuition
+about how the program works; your final submitted version of the Java files should be the one corresponding to their
+last run.
 
 % \noindent
 % In conclusion, here are some points to remember when creating your program that manages a list:
@@ -286,7 +287,7 @@ Instead, this assignment invites you to submit, using GitHub, the following deli
   \setlength{\itemsep}{0in}
 
   \item Completed, fully commented, and properly formatted versions of the two source code files.
-  \item The black and white version of the Mandelbrot graphic, saved with the default file name.
+  \item The black-and-white version of the Mandelbrot graphic, saved with the default file name.
   \item Appropriately named files for all of the color versions of the Mandelbrot graphics.
   \item Data tables that show the performance timings associated with varying the two parameters.
 
@@ -311,10 +312,10 @@ Instead, this assignment invites you to submit, using GitHub, the following deli
 
 Using a report that the instructor shares with you through the commit log in GitHub, you will privately received a grade
 on this assignment and feedback on your submitted deliverables. Your grade for the assignment will be a function of the
-whether or not it was submitted in a timely fashion and if your repository contains all of the required Markdown and
-graphics files. Other factors will also influence your final grade on the assignment. The instructor will also evaluate
-the accuracy of both your technical writing and the comments in your source code. Please see the instructor if you have
-questions about the evaluation of this laboratory assignment.
+whether or not it was submitted in a timely fashion and if your repository contains correct versions of all of the
+required Markdown and graphics files. Other factors will also influence your final grade on the assignment. The
+instructor will also evaluate the accuracy of both your technical writing and the comments in your source code. Please
+see the instructor if you have questions about the evaluation of this laboratory assignment.
 
 All team members will receive the same baseline grade for the laboratory assignment. If there are extenuating
 circumstances in which one or more of the team members do not effectively collaborate to complete this assignment, then
