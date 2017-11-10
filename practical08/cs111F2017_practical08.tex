@@ -18,11 +18,11 @@
 
 % Edit these commands to give the name to the main program
 
-\newcommand{\mainprogram}{\lstinline{PasswordCheckerMain}}
-\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalseven/PasswordCheckerMain.java}}
+\newcommand{\mainprogram}{\lstinline{DisplaySymbols}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicaleight/DisplaySymbols.java}}
 
 \newcommand{\secondprogram}{\lstinline{PasswordChecker}}
-\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalseven/PasswordChecker.java}}
+\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicaleight/PasswordChecker.java}}
 
 % Edit this commands to describe key deliverables
 
@@ -50,7 +50,7 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalseven/PasswordCheckerMain.java -m "Your
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicaleight/DisplaySymbols.java -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -183,7 +183,7 @@ help you to understand how to use both GitHub and GitHub Classroom. Focusing on 
 Java objects and writing conditional logic, you should review Chapters 1 through 5 and Sections 6.1 through 6.4 in the
 textbook.
 
-\section*{Implementing and Evaluating a Password Checker}
+\section*{Enhancing a Program to Display Symbols in Shapes}
 
 To access the practical assignment, you should go into the \channel{\#announcements} channel in our Slack team and find
 the announcement that provides a link for it. Copy this link and paste it into your web browser. Now, you should accept
@@ -197,29 +197,14 @@ instructor with documentation of the extenuating circumstances that you are faci
 that you automatically receive a failing grade for it. Please follow the steps from the previous laboratory assignments
 for finding your ``home base'' for this practical assignment; see the instructor if you are stuck on getting started.
 
-This practical assignment invites you to create a program that will check an input password. In one of the classes for
-this assignment, {\tt PasswordChecker.java}, you will write methods that, for the file's input from {\tt
-PasswordCheckerMain.java}, determine if the chosen password:
-
-\begin{itemize}
-
-\item Contains ten or more characters
-
-\item Contains at least one upper-case and lower-case letter
-
-\item Contains at least one number
-
-\end{itemize}
-
 Figure~\ref{mad} contains the output from running a program like the one you must implement. You should study the
-comments in the \mainprogramsource{} to see each step that you have to implement. You should also look at the
-\secondprogramsource{} to see the methods that will ultimately contain the conditional logic. After finishing the both
-of these files, you should repeatedly test you program to make sure that it is creating the correct textual output. This
-will involve you editing the input file and then building and running the program and checking the output to ensure that
-it produces different values and that the checks are correct. Don't forget that this assignment requires you to
-understand and edit two different files called \mainprogramsource{} and \secondprogramsource{}. This means that you must
-have correct formatting and documentation in both of these files; check the {\tt README.md} file for a statement of
-other checks. You should also be able to draw a diagram explaining the relationship between the two files.
+comments in the \mainprogramsource{} to see each step that you have to finish. Please notice that your program already
+reads in a symbol and a number from a file. It is designed to then use a \program{for} loop to display the chosen symbol
+in two different triangular shapes, in adherence to the symbol count read in from the file. After finishing this file,
+you should repeatedly test you program to make sure that it is creating the correct textual output. This will involve
+you editing the input file and then building and running the program and checking the output to ensure that it produces
+different values and that the checks are correct. This means that you must have correct formatting and documentation in
+both of these files; check the {\tt README.md} file for a statement of other checks.
 
 \begin{figure}[tb]
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -275,16 +260,6 @@ Thank you for using the DisplaySymbols program.
 \label{mad}
 \end{figure}
 
-When you are testing your \mainprogramsource{}, please make sure that you try both valid and invalid passwords. For
-instance, the output in Figure~\ref{mad} shows how the program should work when you input an invalid password. What does
-the program's output look like when you input a valid password? Finally, you should notice that there are several ways
-in which you could enhance this password checker. For example, while the program currently accepts a single password, it
-would be more useful if it could read and check a list of passwords. Although it is not a requirement of this
-assignment, you should think about how to add this feature. Moreover, the output in Figure~\ref{mad} shows that the
-program currently does not explain why the password is invalid. Again, even though it is not a requirement for this
-assignment, you should think about how to enhance the {\tt PasswordCheckerMain} so that it can report precisely why the
-password is not valid. Please see the instructor with questions about how to add these extra features.
-
 \section*{Checking the Correctness of Your Program and Writing}
 
 As in the past assignments, you are provided with an automated tool for checking the quality of your source code. Please
@@ -304,22 +279,21 @@ your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example
 is successful. If you notice that transferring your code to GitHub did not work correctly, then please try to determine
 why, asking a teaching assistant or the course instructor for help, if necessary.
 
+% If both your source code and writing meet all of the established requirements, then you will see a green \checkmark{}
+% in the listing of commits in GitHub after awhile. If your submission does not meet the requirements, a red
+% \naughtmark{} will appear instead. The instructor will reduce a student's grade for this assignment if the red
+% \naughtmark{} appears on the last commit in GitHub immediately before the assignment's due date. Yet, if the green
+% \checkmark{} appears on the last commit in your GitHub repository, then you satisfied all of the main checks. Unless
+% you provide the course instructor with documentation of the extenuating circumstances that you are facing, no late work
+% will be considered towards your completion grade for this practical assignment. You should aim to finish practical
+% assignments on the day that they are assigned; please see the instructor if you do not understand this policy.
+
 After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
 \gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
-your assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of
-the established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub after awhile.
-If your submission does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a
-student's grade for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the
-assignment's due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you
-satisfied all of the main checks. Unless you provide the course instructor with documentation of the extenuating
-circumstances that you are facing, no late work will be considered towards your completion grade for this practical
-assignment. You should aim to finish practical assignments on the day that they are assigned; please see the instructor
-if you do not understand this policy.
-
-Since this is another challenging practical assignment and you are still learning how to use the Java classes and
-objects, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
-about the necessary technology and the background and expertise of the other students in the class, the teaching
-assistants, and the course instructor.
+your assignment, checking to see if it meets all of the requirements. Since this is another challenging practical
+assignment and you are still learning how to use the Java classes and objects, don't become frustrated if you make a
+mistake. Instead, use your mistakes as an opportunity for learning both about the necessary technology and the
+background and expertise of the other students in the class, the teaching assistants, and the course instructor.
 
 \noindent Students do not need to submit printed source code or technical writing for any assignment in this course.
 Instead, this assignment invites you to submit, using GitHub, the following deliverables. Because this is a practical
@@ -331,9 +305,6 @@ assignment, you are not required to complete any technical writing.
 
 \item A correct version of \mainprogramsource{} that meets all of the established source code requirements and produces
   the desired text-based output.
-
-\item A correct version of \secondprogramsource{} that meets all of the established source code requirements and
-  produces the desired text-based output.
 
 \end{enumerate}
 
