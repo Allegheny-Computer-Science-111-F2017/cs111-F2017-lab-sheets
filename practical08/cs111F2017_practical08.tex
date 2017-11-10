@@ -4,9 +4,9 @@
 
 % Edit these commands for each assignment
 
-\newcommand{\assignmentduedate}{October 30}
-\newcommand{\assignmentassignedate}{October 27}
-\newcommand{\assignmentnumber}{Seven}
+\newcommand{\assignmentduedate}{November 13}
+\newcommand{\assignmentassignedate}{November 10}
+\newcommand{\assignmentnumber}{Eight}
 
 \newcommand{\labyear}{2017}
 \newcommand{\labdueday}{Monday}
@@ -117,10 +117,9 @@ descriptive commit message"}}
 To continue practicing the use of GitHub to access the files for a practical assignment. Additionally, to practice using
 the Ubuntu operating system and software development programs such as a ``terminal window'' and the ``GVim text
 editor''. You will continue to practice using Slack to support communication with the teaching assistants and the course
-instructor. Next, you will create and then call methods that determine if certain events occurred during the year input
-from the file. For this task you will use {\tt if/else} statements and boolean logic operators such as ``{\tt \&\&}'' or
-``{\tt ||}''. Finally, you will continue to learn more about creating and using Java classes and objects as you create a
-password checker that a systems administrator could use to ensure computer security.
+instructor. Next, you will create and then call methods that display a symbol in the context of certain geometric
+shapes. For this task you will use {\tt for} loops. Finally, you will continue to learn more about how to perform file
+input and output and create console output using the {\tt println} statement.
 
 \section*{Suggestions for Success}
 
@@ -181,7 +180,7 @@ If you have not done so already, please read all of the relevant ``GitHub Guides
 \url{https://guides.github.com/}, that explain how to use many of the GitHub's features. In particular, please make sure
 that you have read guides such as ``Mastering Markdown'' and ``Documenting Your Projects on GitHub''; each of them will
 help you to understand how to use both GitHub and GitHub Classroom. Focusing on the content about creating and using
-Java objects and writing conditional logic, you should review Chapters 1 through 4 and Sections 5.1 and 5.8 in the
+Java objects and writing conditional logic, you should review Chapters 1 through 5 and Sections 6.1 through 6.4 in the
 textbook.
 
 \section*{Implementing and Evaluating a Password Checker}
@@ -193,7 +192,7 @@ assignment's starting materials and to store the completed version of your assig
 GitHub repository for this assignment, please click the green ``Accept'' button and then click the link that is prefaced
 with the label ``Your assignment has been created here''. If you accepted the assignment and correctly followed these
 steps, you should have created a GitHub repository with a name like
-``Allegheny-Computer-Science-111-Fall-2017/computer-science-111-fall-2017-practical-7-gkapfham''. Unless you provide the
+``Allegheny-Computer-Science-111-Fall-2017/computer-science-111-fall-2017-practical-8-gkapfham''. Unless you provide the
 instructor with documentation of the extenuating circumstances that you are facing, not accepting the assignment means
 that you automatically receive a failing grade for it. Please follow the steps from the previous laboratory assignments
 for finding your ``home base'' for this practical assignment; see the instructor if you are stuck on getting started.
@@ -224,17 +223,55 @@ other checks. You should also be able to draw a diagram explaining the relations
 
 \begin{figure}[tb]
 \begin{Verbatim}[commandchars=\\\{\}]
-Gregory M. Kapfhammer Fri Oct 27 07:49:57 EDT 2017
+Gregory M. Kapfhammer Thu Nov 09 23:02:20 EST 2017
 
-I will read in a password from a file.
-Okay, I read in the password "computerscience2017".
+I will read in a symbol from a file.
+Okay, I read in the symbol *.
 
-Is the password "computerscience2017" a valid password? No
+I will read in the number of rows from a file.
+Okay, I read in the row count of 10.
 
-Thank you for using the PasswordChecker.
+Now, I will display a single triangle.
+
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+
+Now, I will display a double triangle.
+
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+Thank you for using the DisplaySymbols program.
+
 \end{Verbatim}
 \vspace*{-.1in}
-\caption{Sample ``{\tt PasswordCheckerMain}'' output featuring output from conditional logic checks.}
+\caption{Sample ``{\tt DisplaySymbols}'' output featuring output from the use of nested \program{for} loops.}
 \label{mad}
 \end{figure}
 
