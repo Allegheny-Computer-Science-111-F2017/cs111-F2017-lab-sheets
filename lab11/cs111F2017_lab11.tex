@@ -241,66 +241,8 @@ additional tips to help you design, implement, and test the Java source code for
   \item Make sure that your \program{build.gradle} file is setup to support graphical and/or textual output.
   \item Remember that all of your Java source code must meet Google's programming standards.
   \item Recall that there are no GatorGrader checks for this assignment since each project is different.
+  \item In GatorGrader's absence, your team should establish correctness checks for your source code.
 \end{itemize}
-
-\section*{Understanding and Empirically Evaluating a Fractal Generator}
-
-After developing a basic understanding of the \mainprogramsource{} and \secondprogramsource{} files, you should try to
-compile and run these programs. To run the version of the program that produces a black-and-white image, you can type
-the following command in your terminal window: \command{gradle -b build-bw.gradle run}. Alternatively, you can run the
-program version that produces a color image by running the command \command{gradle -b build-color.gradle run}. Please
-notice that these programs do not produce any output in the terminal window. Instead, you should see that they create a
-graphics file in the same directory from where you run it. For instance, if you run the \secondprogram{} program you
-will see that it creates a \command{mandelbrot-color.png} file. If you want to view the contents of this file, then you
-can type the command \command{xdg-open mandelbrot-color.png} in your terminal window. What do you now see on the screen?
-What are the characteristics of this image? How did the program create it?
-
-Please use {\tt gvim} to display and edit the source code of the {\tt MandelbrotColor.java} file, noticing that it
-declares an {\tt int} variable called {\tt max} and initializes it to the value of $1000$. How does the value of this
-variable influence the time taken to create the Mandelbrot graphic? To answer this question, you can change the value of
-max to, for instance, $100$, and rebuild and preface the \program{gradle} command with ``{\tt /usr/bin/time}'' in your
-terminal. After running this command, the number that is postfixed with the ``{\tt user}'' label will give the amount of
-time needed to create the fractal. As part of this assignment, you should set the {\tt max} variable to take on the
-values of $10, 100, 1000, \mbox{and}, \- 10000$, timing the execution with {\tt /usr/bin/time} and using {\tt xdg-open}
-to see how this changes the resulting visualization. Along with recording the execution time for each program
-configuration, you should save each distinct graphic with a unique name and upload it to your GitHub repository.
-
-\noindent
-Now, find the line in the \secondprogramsource{} file that is written as:
-
-\vspace*{.5em}
-{\tt colors[i] = Color.HSBtoRGB(i/256f, 1, i/(i+8f));}
-\vspace*{.5em}
-
-\noindent This line of code configures the way in which \secondprogram{} will display the colors in the fractal. What
-happens when you change the value of ``{\tt 256f}'' to a different floating point value? Will changing this value
-influence the efficiency of the fractal generator? To answer these questions you should set this value to the values of
-$32, 64, 128, 256, 512, \mbox{and}, 1024$---while keeping the value of {\tt max} set to the default of $1000$---and then
-again use \command{/usr/bin/time} to measure the program's performance. In addition to recording the running time for
-each program configuration, you should save each graphic with a unique name in your repository. As you vary both this
-value and the value of the {\tt max} variable, you should determine how execution time varies and how the image changes.
-
-It is worth making several additional points to ensure that you successfully complete this laboratory assignment. First,
-you and your partner should alternate taking turns as you complete the work. For instance, you can share the task of
-running the Java program and then saving its output to a file with a unique name. You can complete this task by first
-using \program{gradle} and then using the \program{cp} command that accepts as a parameter a source and destination file
-name so as to copy the source file to the destination. Please save all of your graphics files to the \program{graphics/}
-directory. Then, another team member can help to create the data tables in Markdown. Specifically, when you record the
-execution timings from running \secondprogram{}, you should record the numerical values in a Markdown-based table stored
-in your version control repository. Finally, please add comments to the Java source codes that explain your intuition
-about how the program works; your final submitted version of the Java files should be the one corresponding to their
-last run.
-
-% \noindent
-% In conclusion, here are some points to remember when creating your program that manages a list:
-
-% \begin{enumerate}
-%   \setlength{\itemsep}{0pt}
-% \item The provide source code is incomplete---make sure that you add all of the needed features.
-% \item As in past assignments, your program only needs to have one {\tt main} method in one file.
-% \item Don't forget that you and your team member(s) should all contribute evenly by typing in text and using commands,
-%   like \command{git push} and \command{git pull}, to transfer files to and from GitHub.
-% \end{enumerate}
 
 \section*{Summary of the Required Deliverables}
 
