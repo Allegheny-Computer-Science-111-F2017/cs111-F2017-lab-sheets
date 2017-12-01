@@ -18,15 +18,15 @@
 
 % Edit these commands to give the name to the main program
 
-\newcommand{\mainprogram}{\lstinline{DisplaySymbols}}
-\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicaleight/DisplaySymbols.java}}
+\newcommand{\mainprogram}{\lstinline{InvestigateExceptions}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalnine/InvestigateExceptions.java}}
 
-\newcommand{\secondprogram}{\lstinline{PasswordChecker}}
-\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicaleight/PasswordChecker.java}}
+\newcommand{\secondprogram}{\lstinline{InvestigateExceptions}}
+\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalnine/InvestigateExceptions.java}}
 
 % Edit this commands to describe key deliverables
 
-\newcommand{\reflection}{\lstinline{writing/reflection.md}}
+\newcommand{\reflection}{\lstinline{writing/exceptions.md}}
 
 % Commands to describe key development tasks
 
@@ -50,7 +50,7 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicaleight/DisplaySymbols.java -m "Your
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalnine/InvestigateExceptions.java -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -196,15 +196,18 @@ instructor with documentation of the extenuating circumstances that you are faci
 that you automatically receive a failing grade for it. Please follow the steps from the previous laboratory assignments
 for finding your ``home base'' for this practical assignment; see the instructor if you are stuck on getting started.
 
+After reviewing the provided source code file, please use Gradle to build and run the \mainprogramsource{} program. At
+the outset, you will see that this program does not throw any exceptions at all. So, what you should do next is to
+incrementally and individually uncomment each of the calls to the {\tt throwsExceptions} method and observe and record
+the output from the program. The idea is that you will uncomment a method call in {\tt main}, build and run the
+program, observe and understand the program's output, comment out that line again, and then move onto the next line of
+code in the program's {\tt main} method.
 
-
-
-
-
-
-
-
-
+Each time the program throws a different exception, make sure that you understand why it does so. Next, you will notice
+that, in certain cases, the program does not output a full ``stack trace'' that prints out in the terminal window which
+exception is thrown. As such, you may want to add code to the catch blocks of {\tt ExceptionExample} that can print the
+stack trace. Finally, you must create a file called \reflection{} that explains the output from your various runs of the
+program. Please write about what exception was thrown and explain why it was thrown.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
@@ -253,14 +256,7 @@ assignment. However, you will fail the assignment if you do not complete it corr
 \naughtmark{} in your commit listing or the absence of a functioning GitHub repository for this practical assignment,
 after the set deadline for completing the project. Please see the course instructor if you do not understand how
 practical assignments are graded or you do not know how to complete one of the specific tasks in this assignment.
-
-\section*{Adhering to the Honor Code}
-
-In adherence to the Honor Code, students should complete this practical assignment on an individual basis. While it is
-appropriate for students in this class to have high-level conversations about the assignment, it is necessary to
-distinguish carefully between the student who discusses the principles underlying a problem with others and the student
-who produces assignments that are identical to, or merely variations on, someone else's work. Deliverables (e.g., the
-Java source code) that are nearly identical to the work of others will be taken as evidence of violating the \mbox{Honor
-Code}. Please see the course instructor if you have any questions about this policy.
+Finally, remember that, in adherence to the Honor Code, students should complete this practical assignment on an
+individual basis. Please see the course instructor if you have any questions about this course policy.
 
 \end{document}
