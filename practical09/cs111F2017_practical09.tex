@@ -177,11 +177,12 @@ type of exception to be thrown. Finally, you will continue to practice using a G
 If you have not done so already, please read all of the relevant ``GitHub Guides'', available at
 \url{https://guides.github.com/}, that explain how to use many of GitHub's features. In particular, please make sure
 that you have read guides such as ``Mastering Markdown'' and ``Documenting Your Projects on GitHub''; each of them will
-help you to understand how to use both GitHub and GitHub Classroom. Focusing on the content about creating and using
-iteration constructs like the \program{for} loop, you should review Chapters 1 through 5 and Sections 6.1 through 6.4 in
-the textbook.
+help you to understand how to use both GitHub and GitHub Classroom. To learn more about the concepts associated with
+exception handling in the Java programming language, please study the content in Chapter 11. In particular, make sure
+that you understand the purpose of exceptions, the messages displayed in the terminal when an exception is uncaught, and
+the structure and meaning of the {\tt try-catch-finally} blocks.
 
-\section*{Enhancing a Program to Display Symbols in Shapes}
+\section*{Using and Extending a Program that Throws Exceptions}
 
 To access the practical assignment, you should go into the \channel{\#announcements} channel in our Slack team and find
 the announcement that provides a link for it. Copy this link and paste it into your web browser. Now, you should accept
@@ -190,73 +191,20 @@ assignment's starting materials and to store the completed version of your assig
 GitHub repository for this assignment, please click the green ``Accept'' button and then click the link that is prefaced
 with the label ``Your assignment has been created here''. If you accepted the assignment and correctly followed these
 steps, you should have created a GitHub repository with a name like
-``Allegheny-Computer-Science-111-Fall-2017/computer-science-111-fall-2017-practical-8-gkapfham''. Unless you provide the
+``Allegheny-Computer-Science-111-Fall-2017/computer-science-111-fall-2017-practical-9-gkapfham''. Unless you provide the
 instructor with documentation of the extenuating circumstances that you are facing, not accepting the assignment means
 that you automatically receive a failing grade for it. Please follow the steps from the previous laboratory assignments
 for finding your ``home base'' for this practical assignment; see the instructor if you are stuck on getting started.
 
-Figure~\ref{mad} contains the output from running a program like the one you must implement. You should study the
-comments in the \mainprogramsource{} file to see each step that you have to finish. Please notice that your program
-already reads in a symbol and a number from a file. It is designed to then use a \program{for} loop to display the
-chosen symbol in two different triangular shapes, in adherence to the symbol count read in from the file. Notice that
-the first triangle in exactly the same as the one produced by a program that we studied during a classroom session.
-Creating the second triangle will require you to write \program{for} loops that print a triangle that ``mirrors`` the
-first one. Finally, make sure that you have correct formatting and documentation in both of these files; check the {\tt
-README.md} file for a statement of other checks.
 
-\begin{figure}[tb]
-\begin{Verbatim}[commandchars=\\\{\}]
-Gregory M. Kapfhammer Thu Nov 09 23:02:20 EST 2017
 
-I will read in a symbol from a file.
-Okay, I read in the symbol *.
 
-I will read in the number of rows from a file.
-Okay, I read in the row count of 10.
 
-Now, I will display a single triangle.
 
-*
-**
-***
-****
-*****
-******
-*******
-********
-*********
-**********
 
-Now, I will display a double triangle.
 
-*
-**
-***
-****
-*****
-******
-*******
-********
-*********
-**********
-**********
-*********
-********
-*******
-******
-*****
-****
-***
-**
-*
 
-Thank you for using the DisplaySymbols program.
 
-\end{Verbatim}
-\vspace*{-.1in}
-\caption{Sample ``{\tt DisplaySymbols}'' output featuring output from the use of nested \program{for} loops.}
-\label{mad}
-\end{figure}
 
 \section*{Checking the Correctness of Your Program and Writing}
 
@@ -277,15 +225,6 @@ your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example
 is successful. If you notice that transferring your code to GitHub did not work correctly, then please try to determine
 why, asking a teaching assistant or the course instructor for help, if necessary.
 
-% If both your source code and writing meet all of the established requirements, then you will see a green \checkmark{}
-% in the listing of commits in GitHub after awhile. If your submission does not meet the requirements, a red
-% \naughtmark{} will appear instead. The instructor will reduce a student's grade for this assignment if the red
-% \naughtmark{} appears on the last commit in GitHub immediately before the assignment's due date. Yet, if the green
-% \checkmark{} appears on the last commit in your GitHub repository, then you satisfied all of the main checks. Unless
-% you provide the course instructor with documentation of the extenuating circumstances that you are facing, no late work
-% will be considered towards your completion grade for this practical assignment. You should aim to finish practical
-% assignments on the day that they are assigned; please see the instructor if you do not understand this policy.
-
 After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
 \gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
 your assignment, checking to see if it meets all of the requirements. Since this is another challenging practical
@@ -301,8 +240,8 @@ assignment, you are not required to complete any technical writing.
 
 \setlength{\itemsep}{0in}
 
-\item A correct version of \mainprogramsource{} that meets all of the established source code requirements and produces
-  the desired text-based output.
+\item A completed version of the \program{writing/exceptions.md} file that reports on the output and behavior of the
+  provided program when it individually triggers each exception.
 
 \end{enumerate}
 
