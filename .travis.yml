@@ -28,6 +28,7 @@ script:
 - latexmk -pdf -outdir=_build practical07/cs111F2017_practical07.tex
 - latexmk -pdf -outdir=_build practical08/cs111F2017_practical08.tex
 - latexmk -pdf -outdir=_build practical09/cs111F2017_practical09.tex
+- latexmk -pdf -outdir=_build practical10/cs111F2017_practical10.tex
 - latexmk -pdf -outdir=_build quiz01/cs111F2017_studyguide_quiz01.tex
 - latexmk -pdf -outdir=_build exam01/cs111F2017_studyguide_exam01.tex
 - latexmk -pdf -outdir=_build quiz02/cs111F2017_studyguide_quiz02.tex
@@ -58,6 +59,7 @@ deploy:
     - _build/cs111F2017_practical07.pdf
     - _build/cs111F2017_practical08.pdf
     - _build/cs111F2017_practical09.pdf
+    - _build/cs111F2017_practical10.pdf
     - _build/cs111F2017_studyguide_quiz01.pdf
     - _build/cs111F2017_studyguide_exam01.pdf
     - _build/cs111F2017_studyguide_quiz02.pdf
