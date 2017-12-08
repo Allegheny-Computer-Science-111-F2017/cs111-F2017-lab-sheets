@@ -203,23 +203,38 @@ for finding your ``home base'' for this practical assignment; see the instructor
 After reviewing the provided source code file, please use Gradle to build and
 run the \mainprogramsource{} program. You should notice that this program reads
 in a numerical value from a file and then sums the numbers from $1$ to this
-numerical input.
+numerical input. Please modify the number in the input file and first check to
+see that the program correctly computes the summation using a recursive method.
+Does the program compute the value correctly?
 
-
-Finally, you must create a file called \reflection{} that explains the output from your various runs of the
-program. Please write about what exception was thrown and explain why it was thrown.
+Next, you should try to better understand how this recursive method works. Try
+to locate the place in the {\tt sum} method that stops the recursion --- we call
+this the ``base case''. Now, see if you can find the place in this method where
+it recursively calls itself --- we call this the ``recursive case''. Also, did
+you notice the difference between the recursive call and the current call to the
+method? After you found both of these source code locations, go ahead and run
+the program after repeatedly changing the number inside of the input file. Given
+a specific number in the input file, can you determine how many recursive calls
+will occur when the program runs? Finally, you must create a file called
+\reflection{} that explains the issues discussed in this paragraph.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
-As in the past assignments, you are provided with an automated tool for checking the quality of your source code. Please
-note that the practical assignments do not require you to produce a writing document as you do in the laboratory
-assignments. However, to check your Java source code you can started with the use of GatorGrader, type the command
-\gatorgraderstart{} in your terminal window. Once this step completes you can type \gatorgradercheck{}. If your work
-does not meet all of the assignment's requirements, then you will see the following output in your terminal:
-\command{Overall, are there any mistakes in the assignment? Yes}. If you do have mistakes in your assignment, then you
-will need to review GatorGrader's output, find the mistake, and try to fix it. Specifically, don't forget to add in the
-required writing! If you are having trouble running GatorGrader locally, don't forget to ensure that you still transfer
-all of your source code to GitHub. Please see the course instructor if you have questions about this step.
+As in the past assignments, you are provided with an automated tool for checking
+the quality of your source code and writing. Please note that the practical
+assignments do not normally require you to produce a writing document as you do
+in the laboratory assignments. However, this assignment does! To check your
+writing about the Java source code you can started with the use of GatorGrader,
+type the command \gatorgraderstart{} in your terminal window. Once this step
+completes you can type \gatorgradercheck{}. If your work does not meet all of
+the assignment's requirements, then you will see the following output in your
+terminal: \command{Overall, are there any mistakes in the assignment? Yes}. If
+you do have mistakes in your assignment, then you will need to review
+GatorGrader's output, find the mistake, and try to fix it. Specifically, don't
+forget to add in the required writing! If you are having trouble running
+GatorGrader locally, don't forget to ensure that you still transfer all of your
+source code to GitHub. Please see the course instructor if you have questions
+about using GatorGrader to check your writing about recursion.
 
 Once your program is building correctly, fulfilling at least some of the assignment's requirements, you should transfer
 your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that the
@@ -244,7 +259,7 @@ assignment, you are not required to submit a separate ``reflection''.
 \setlength{\itemsep}{0in}
 
 \item A completed version of the \program{writing/exceptions.md} file that reports on the output and behavior of the
-  provided program when it individually triggers each exception.
+  provided program when it performs a recursive computation.
 
 \end{enumerate}
 
