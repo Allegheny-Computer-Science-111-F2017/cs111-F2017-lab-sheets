@@ -19,10 +19,10 @@
 % Edit these commands to give the name to the main program
 
 \newcommand{\mainprogram}{\lstinline{InvestigateRecursiveSum}}
-\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalnine/InvestigateRecursiveSum.java}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalten/InvestigateRecursiveSum.java}}
 
 \newcommand{\secondprogram}{\lstinline{InvestigateRecursiveSum}}
-\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalnine/InvestigateRecursiveSum.java}}
+\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalten/InvestigateRecursiveSum.java}}
 
 % Edit this commands to describe key deliverables
 
@@ -50,7 +50,7 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalnine/InvestigateRecursiveSum.java -m "Your
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalten/InvestigateRecursiveSum.java -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -200,17 +200,13 @@ instructor with documentation of the extenuating circumstances that you are faci
 that you automatically receive a failing grade for it. Please follow the steps from the previous laboratory assignments
 for finding your ``home base'' for this practical assignment; see the instructor if you are stuck on getting started.
 
-After reviewing the provided source code file, please use Gradle to build and run the \mainprogramsource{} program. At
-the outset, you will see that this program does not throw any exceptions at all. So, what you should do next is to
-incrementally and individually uncomment each of the calls to the {\tt throwsExceptions} method and observe and
-understand the output from the program. The idea is that you will uncomment a method call in {\tt main}, build and run
-the program, observe and understand the program's output, comment out that line again, and then move onto the next line
-of code in the program's {\tt main} method.
+After reviewing the provided source code file, please use Gradle to build and
+run the \mainprogramsource{} program. You should notice that this program reads
+in a numerical value from a file and then sums the numbers from $1$ to this
+numerical input.
 
-Each time the program throws a different exception, make sure that you understand why it does so. Next, you will notice
-that, in certain cases, the program does not output a full ``stack trace'' that prints out in the terminal window which
-exception is thrown. As such, you may want to add code to the catch blocks of {\tt ExceptionExample} that can print the
-stack trace. Finally, you must create a file called \reflection{} that explains the output from your various runs of the
+
+Finally, you must create a file called \reflection{} that explains the output from your various runs of the
 program. Please write about what exception was thrown and explain why it was thrown.
 
 \section*{Checking the Correctness of Your Program and Writing}
