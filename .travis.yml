@@ -49,6 +49,7 @@ deploy:
     - _build/cs111F2017_lab06.pdf
     - _build/cs111F2017_lab07.pdf
     - _build/cs111F2017_lab08.pdf
+    - _build/cs111F2017_lab09.pdf
     - _build/cs111F2017_lab10.pdf
     - _build/cs111F2017_lab11.pdf
     - _build/cs111F2017_practical01.pdf
